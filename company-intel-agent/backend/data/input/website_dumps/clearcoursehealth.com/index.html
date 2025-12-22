@@ -1,0 +1,1823 @@
+<!doctype html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      class="">
+<head>
+    <meta charset="utf-8">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    window._currentDevice = 'desktop';
+    window.Parameters = window.Parameters || {
+        HomeUrl: 'https://www.clearcoursehealth.com/',
+        AccountUUID: 'f1f51f0c8fbf4e1184293e46afee1a9a',
+        SystemID: 'US_DIRECT_PRODUCTION',
+        SiteAlias: '1c245020',
+        SiteType: atob('RFVEQU9ORQ=='),
+        PublicationDate: 'Tue Feb 11 11:44:38 UTC 2025',
+        ExternalUid: null,
+        IsSiteMultilingual: false,
+        InitialPostAlias: '',
+        InitialPostPageUuid: '',
+        InitialDynamicItem: '',
+        DynamicPageInfo: {
+            isDynamicPage: false,
+            base64JsonRowData: 'null',
+        },
+        InitialPageAlias: 'home',
+        InitialPageUuid: '91c573d0120d44cea5c0c6446ae55adf',
+        InitialPageId: '34206032',
+        InitialEncodedPageAlias: 'aG9tZQ==',
+        InitialHeaderUuid: '481bc47ea1d642d3b8108f3f4f0e0bbb',
+        CurrentPageUrl: '',
+        IsCurrentHomePage: true,
+        AllowAjax: false,
+        AfterAjaxCommand: null,
+        HomeLinkText: 'Back To Home',
+        UseGalleryModule: false,
+        CurrentThemeName: 'Layout Theme',
+        ThemeVersion: '51810',
+        DefaultPageAlias: '',
+        RemoveDID: true,
+        WidgetStyleID: null,
+        IsHeaderFixed: false,
+        IsHeaderSkinny: false,
+        IsBfs: true,
+        StorePageAlias: 'null',
+        StorePagesUrls: 'e30=',
+        IsNewStore: 'false',
+        StorePath: '',
+        StoreId: 'null',
+        StoreVersion: 0,
+        StoreBaseUrl: '',
+        StoreCleanUrl: true,
+        StoreDisableScrolling: true,
+        IsStoreSuspended: false,
+        HasCustomDomain: true,
+        SimpleSite: false,
+        showCookieNotification: false,
+        cookiesNotificationMarkup: 'null',
+        translatedPageUrl: '',
+        isFastMigrationSite: false,
+        sidebarPosition: 'NA',
+        currentLanguage: 'en',
+        currentLocale: 'en',
+        NavItems: '{}',
+        errors: {
+            general: 'There was an error connecting to the page.<br/> Make sure you are not offline.',
+            password: 'Incorrect name/password combination',
+            tryAgain: 'Try again'
+        },
+        NavigationAreaParams: {
+            ShowBackToHomeOnInnerPages: true,
+            NavbarSize: -1,
+            NavbarLiveHomePage: 'https://www.clearcoursehealth.com/',
+            BlockContainerSelector: '.dmBody',
+            NavbarSelector: '#dmNav:has(a)',
+            SubNavbarSelector: '#subnav_main'
+        },
+        hasCustomCode: true,
+        planID: '7',
+        customTemplateId: 'null',
+        siteTemplateId: 'null',
+        productId: 'DM_DIRECT',
+        disableTracking: false,
+        pageType: 'FROM_SCRATCH',
+        isRuntimeServer: true,
+        isInEditor: false,
+        hasNativeStore: false,
+        defaultLang: 'en',
+        hamburgerMigration: null,
+        isFlexSite: false
+    };
+
+    window.Parameters.LayoutID = {};
+    window.Parameters.LayoutID[window._currentDevice] = 6;
+    window.Parameters.LayoutVariationID = {};
+    window.Parameters.LayoutVariationID[window._currentDevice] = 5;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Injecting site-wide to the head -->
+
+
+
+
+<!-- End Injecting site-wide to the head -->
+
+<!-- Inject secured cdn script -->
+
+
+<!-- ========= Meta Tags ========= -->
+<!-- PWA settings -->
+<script>
+    function toHash(str) {
+        var hash = 5381, i = str.length;
+        while (i) {
+            hash = hash * 33 ^ str.charCodeAt(--i)
+        }
+        return hash >>> 0
+    }
+</script>
+<script>
+    (function (global) {
+    //const cacheKey = global.cacheKey;
+    const isOffline = 'onLine' in navigator && navigator.onLine === false;
+    const hasServiceWorkerSupport = 'serviceWorker' in navigator;
+    if (isOffline) {
+        console.log('offline mode');
+    }
+    if (!hasServiceWorkerSupport) {
+        console.log('service worker is not supported');
+    }
+    if (hasServiceWorkerSupport && !isOffline) {
+        window.addEventListener('load', function () {
+            const serviceWorkerPath = '/runtime-service-worker.js?v=3';
+            navigator.serviceWorker
+                .register(serviceWorkerPath, { scope: './' })
+                .then(
+                    function (registration) {
+                        // Registration was successful
+                        console.log(
+                            'ServiceWorker registration successful with scope: ',
+                            registration.scope
+                        );
+                    },
+                    function (err) {
+                        // registration failed :(
+                        console.log('ServiceWorker registration failed: ', err);
+                    }
+                )
+                .catch(function (err) {
+                    console.log(err);
+                });
+        });
+
+        // helper function to refresh the page
+        var refreshPage = (function () {
+            var refreshing;
+            return function () {
+                if (refreshing) return;
+                // prevent multiple refreshes
+                var refreshkey = 'refreshed' + location.href;
+                var prevRefresh = localStorage.getItem(refreshkey);
+                if (prevRefresh) {
+                    localStorage.removeItem(refreshkey);
+                    if (Date.now() - prevRefresh < 30000) {
+                        return; // dont go into a refresh loop
+                    }
+                }
+                refreshing = true;
+                localStorage.setItem(refreshkey, Date.now());
+                console.log('refereshing page');
+                window.location.reload();
+            };
+        })();
+
+        function messageServiceWorker(data) {
+            return new Promise(function (resolve, reject) {
+                if (navigator.serviceWorker.controller) {
+                    var worker = navigator.serviceWorker.controller;
+                    var messageChannel = new MessageChannel();
+                    messageChannel.port1.onmessage = replyHandler;
+                    worker.postMessage(data, [messageChannel.port2]);
+                    function replyHandler(event) {
+                        resolve(event.data);
+                    }
+                } else {
+                    resolve();
+                }
+            });
+        }
+    }
+})(window);
+</script>
+<!-- Add manifest -->
+<!-- End PWA settings -->
+
+
+
+<link rel="canonical" href="https://www.clearcoursehealth.com/">
+
+<meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<!--Add favorites icons-->
+
+<link rel="apple-touch-icon"
+      href="https://irp.cdn-website.com/1c245020/dms3rep/multi/ClearCourse+Health+Favicon.png"/>
+
+<link rel="icon" type="image/x-icon" href="https://irp.cdn-website.com/1c245020/site_favicon_16_1709921651199.ico"/>
+
+<!-- End favorite icons -->
+<link rel="preconnect" href="https://lirp.cdn-website.com/"/>
+
+
+
+<!-- render the required CSS and JS in the head section -->
+<script id='d-js-dmapi'>
+    window.SystemID = 'US_DIRECT_PRODUCTION';
+
+    if (!window.dmAPI) {
+        window.dmAPI = {
+            registerExternalRuntimeComponent: function () {
+            },
+            getCurrentDeviceType: function () {
+                return window._currentDevice;
+            },
+            runOnReady: (ns, fn) => {
+                const safeFn = dmAPI.toSafeFn(fn);
+                ns = ns || 'global_' + Math.random().toString(36).slice(2, 11);
+                const eventName = 'afterAjax.' + ns;
+
+                if (document.readyState === 'complete') {
+                    $.DM.events.off(eventName).on(eventName, safeFn);
+                    setTimeout(function () {
+                        safeFn({
+                            isAjax: false,
+                        });
+                    }, 0);
+                } else {
+                    window?.waitForDeferred?.('dmAjax', () => {
+                        $.DM.events.off(eventName).on(eventName, safeFn);
+                        safeFn({
+                            isAjax: false,
+                        });
+                    });
+                }
+            },
+            toSafeFn: (fn) => {
+                if (fn?.safe) {
+                    return fn;
+                }
+                const safeFn = function (...args) {
+                    try {
+                        return fn?.apply(null, args);
+                    } catch (e) {
+                        console.log('function failed ' + e.message);
+                    }
+                };
+                safeFn.safe = true;
+                return safeFn;
+            }
+        };
+    }
+
+    if (!window.requestIdleCallback) {
+        window.requestIdleCallback = function (fn) {
+            setTimeout(fn, 0);
+        }
+    }
+</script>
+
+<!-- loadCSS function header.jsp-->
+
+
+
+
+
+
+<script id="d-js-load-css">
+/**
+ * There are a few <link> tags with CSS resource in them that are preloaded in the page
+ * in each of those there is a "onload" handler which invokes the loadCSS callback
+ * defined here.
+ * We are monitoring 3 main CSS files - the runtime, the global and the page.
+ * When each load we check to see if we can append them all in a batch. If threre
+ * is no page css (which may happen on inner pages) then we do not wait for it
+ */
+(function () {
+  let cssLinks = {};
+  function loadCssLink(link) {
+    link.onload = null;
+    link.rel = "stylesheet";
+    link.type = "text/css";
+  }
+  
+    function checkCss() {
+      const pageCssLink = document.querySelector("[id*='CssLink']");
+      const widgetCssLink = document.querySelector("[id*='widgetCSS']");
+
+        if (cssLinks && cssLinks.runtime && cssLinks.global && (!pageCssLink || cssLinks.page) && (!widgetCssLink || cssLinks.widget)) {
+            const storedRuntimeCssLink = cssLinks.runtime;
+            const storedPageCssLink = cssLinks.page;
+            const storedGlobalCssLink = cssLinks.global;
+            const storedWidgetCssLink = cssLinks.widget;
+
+            storedGlobalCssLink.disabled = true;
+            loadCssLink(storedGlobalCssLink);
+
+            if (storedPageCssLink) {
+                storedPageCssLink.disabled = true;
+                loadCssLink(storedPageCssLink);
+            }
+
+            if(storedWidgetCssLink) {
+                storedWidgetCssLink.disabled = true;
+                loadCssLink(storedWidgetCssLink);
+            }
+
+            storedRuntimeCssLink.disabled = true;
+            loadCssLink(storedRuntimeCssLink);
+
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    storedRuntimeCssLink.disabled = false;
+                    storedGlobalCssLink.disabled = false;
+                    if (storedPageCssLink) {
+                      storedPageCssLink.disabled = false;
+                    }
+                    if (storedWidgetCssLink) {
+                      storedWidgetCssLink.disabled = false;
+                    }
+                    // (SUP-4179) Clear the accumulated cssLinks only when we're
+                    // sure that the document has finished loading and the document 
+                    // has been parsed.
+                    if(document.readyState === 'interactive') {
+                      cssLinks = null;
+                    }
+                }, 0);
+            });
+        }
+    }
+  
+
+  function loadCSS(link) {
+    try {
+      var urlParams = new URLSearchParams(window.location.search);
+      var noCSS = !!urlParams.get("nocss");
+      var cssTimeout = urlParams.get("cssTimeout") || 0;
+
+      if (noCSS) {
+        return;
+      }
+      if (link.href && link.href.includes("d-css-runtime")) {
+        cssLinks.runtime = link;
+        checkCss();
+      } else if (link.id === "siteGlobalCss") {
+        cssLinks.global = link;
+        checkCss();
+      } 
+      
+      else if (link.id && link.id.includes("CssLink")) {
+        cssLinks.page = link;
+        checkCss();
+      } else if (link.id && link.id.includes("widgetCSS")) {
+        cssLinks.widget = link;
+        checkCss();
+      }
+      
+      else {
+        requestIdleCallback(function () {
+          window.setTimeout(function () {
+            loadCssLink(link);
+          }, parseInt(cssTimeout, 10));
+        });
+      }
+    } catch (e) {
+      throw e
+    }
+  }
+  window.loadCSS = window.loadCSS || loadCSS;
+})();
+</script>
+
+
+
+<script data-role="deferred-init" type="text/javascript">
+    /* usage: window.getDeferred(<deferred name>).resolve() or window.getDeferred(<deferred name>).promise.then(...)*/
+    function Def() {
+        this.promise = new Promise((function (a, b) {
+            this.resolve = a, this.reject = b
+        }).bind(this))
+    }
+
+    const defs = {};
+    window.getDeferred = function (a) {
+        return null == defs[a] && (defs[a] = new Def), defs[a]
+    }
+    window.waitForDeferred = function (b, a, c) {
+        let d = window?.getDeferred?.(b);
+        d
+            ? d.promise.then(a)
+            : c && ["complete", "interactive"].includes(document.readyState)
+                ? setTimeout(a, 1)
+                : c
+                    ? document.addEventListener("DOMContentLoaded", a)
+                    : console.error(`Deferred  does not exist`);
+    };
+</script>
+<style id="forceCssIncludes">
+    /* This file is auto-generated from a `scss` file with the same name */
+
+.videobgwrapper{overflow:hidden;position:absolute;z-index:0;width:100%;height:100%;top:0;left:0;pointer-events:none;border-radius:inherit}.videobgframe{position:absolute;width:101%;height:100%;top:50%;left:50%;transform:translateY(-50%) translateX(-50%);object-fit:fill}#dm video.videobgframe{margin:0}@media (max-width:767px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:80vh}}@media (min-width:1025px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}@media (min-width:768px) and (max-width:1024px){.responsiveTablet .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}#dm [data-show-on-page-only]{display:none!important}#dmRoot div.stickyHeaderFix div.site_content{margin-top:0!important}#dmRoot div.stickyHeaderFix div.hamburger-header-container{position:relative}
+    
+
+</style>
+<style id="cssVariables" type="text/css">
+    :root {
+  --color_1: rgba(37, 180, 226, 1);
+  --color_2: rgba(50, 62, 72, 1);
+  --color_3: rgba(67, 171, 62, 1);
+  --color_4: rgba(244, 244, 244, 1);
+  --color_5: rgba(85, 85, 85, 1);
+  --color_6: rgba(65, 132, 197, 1);
+}
+</style>
+
+<!-- ========= JS Section ========= -->
+<script>
+    var isWLR = true;
+
+    window.customWidgetsFunctions = {};
+    window.customWidgetsStrings = {};
+    window.collections = {};
+    window.currentLanguage = "ENGLISH"
+    window.isSitePreview = false;
+</script>
+<script type="text/javascript">
+
+    var d_version = "production_6010";
+    var build = "2025-12-11T14_05_31";
+    window['v' + 'ersion'] = d_version;
+
+    function buildEditorParent() {
+        window.isMultiScreen = true;
+        window.editorParent = {};
+        window.previewParent = {};
+        window.assetsCacheQueryParam = "?version=2025-12-11T14_05_31";
+        try {
+            var _p = window.parent;
+            if (_p && _p.document && _p.$ && _p.$.dmfw) {
+                window.editorParent = _p;
+            } else if (_p.isSitePreview) {
+                window.previewParent = _p;
+            }
+        } catch (e) {
+
+        }
+    }
+
+    buildEditorParent();
+</script>
+
+<!-- Load jQuery -->
+<script type="text/javascript" id='d-js-jquery'
+        src="https://static.cdn-website.com/libs/jquery/jquery-3.7.0.min.js"></script>
+<!-- End Load jQuery -->
+<!-- Injecting site-wide before scripts -->
+<!-- End Injecting site-wide to the head -->
+
+
+<script>
+    var _jquery = window.$;
+
+    var jqueryAliases = ['$', 'jquery', 'jQuery'];
+
+    jqueryAliases.forEach((alias) => {
+        Object.defineProperty(window, alias, {
+            get() {
+                return _jquery;
+            },
+            set() {
+                console.warn("Trying to over-write the global jquery object!");
+            }
+        });
+    });
+    window.jQuery.migrateMute = true;
+</script>
+<script>
+    window.cookiesNotificationMarkupPreview = 'null';
+</script>
+
+<!-- HEAD RT JS Include -->
+<script id='d-js-params'>
+    window.INSITE = window.INSITE || {};
+    window.INSITE.device = "desktop";
+
+    window.rtCommonProps = {};
+    rtCommonProps["rt.ajax.ajaxScriptsFix"] =true;
+    rtCommonProps["rt.pushnotifs.sslframe.encoded"] = 'aHR0cHM6Ly97c3ViZG9tYWlufS5wdXNoLW5vdGlmcy5jb20=';
+    rtCommonProps["runtimecollector.url"] = 'https://rtc.multiscreensite.com';
+    rtCommonProps["performance.tabletPreview.removeScroll"] = 'false';
+    rtCommonProps["inlineEditGrid.snap"] =true;
+    rtCommonProps["popup.insite.cookie.ttl"] = '0.5';
+    rtCommonProps["rt.pushnotifs.force.button"] =true;
+    rtCommonProps["common.mapbox.token"] = 'pk.eyJ1IjoiZGFubnliMTIzIiwiYSI6ImNqMGljZ256dzAwMDAycXBkdWxwbDgzeXYifQ.Ck5P-0NKPVKAZ6SH98gxxw';
+    rtCommonProps["common.mapbox.js.override"] =false;
+    rtCommonProps["common.here.appId"] = 'iYvDjIQ2quyEu0rg0hLo';
+    rtCommonProps["common.here.appCode"] = '1hcIxLJcbybmtBYTD9Z1UA';
+    rtCommonProps["isCoverage.test"] =false;
+    rtCommonProps["ecommerce.ecwid.script"] = 'https://app.multiscreenstore.com/script.js';
+    rtCommonProps["common.resources.dist.cdn"] =true;
+    rtCommonProps["common.build.dist.folder"] = 'production/6010';
+    rtCommonProps["common.resources.cdn.host"] = 'https://static.cdn-website.com';
+    rtCommonProps["common.resources.folder"] = 'https://static.cdn-website.com/mnlt/production/6010';
+    rtCommonProps["feature.flag.runtime.backgroundSlider.preload.slowly"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.enabled"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.jitAnimation.enabled"] =true;
+    rtCommonProps["feature.flag.sites.google.analytics.gtag"] =true;
+    rtCommonProps["feature.flag.runOnReadyNewTask"] =true;
+    rtCommonProps["isAutomation.test"] =false;
+    rtCommonProps["booking.cal.api.domain"] = 'api.cal.com';
+
+    
+    rtCommonProps['common.mapsProvider'] = 'mapbox';
+    
+    rtCommonProps['common.mapsProvider.version'] = '0.52.0';
+    rtCommonProps['common.geocodeProvider'] = 'mapbox';
+    rtCommonProps['server.for.resources'] = '';
+    rtCommonProps['feature.flag.lazy.widgets'] = true;
+    rtCommonProps['feature.flag.single.wow'] = false;
+    rtCommonProps['feature.flag.disallowPopupsInEditor'] = true;
+    rtCommonProps['feature.flag.mark.anchors'] = true;
+    rtCommonProps['captcha.public.key'] = '6LffcBsUAAAAAMU-MYacU-6QHY4iDtUEYv_Ppwlz';
+    rtCommonProps['captcha.invisible.public.key'] = '6LeiWB8UAAAAAHYnVJM7_-7ap6bXCUNGiv7bBPME';
+    rtCommonProps["images.sizes.small"] =160;
+    rtCommonProps["images.sizes.mobile"] =640;
+    rtCommonProps["images.sizes.tablet"] =1280;
+    rtCommonProps["images.sizes.desktop"] =1920;
+    rtCommonProps["modules.resources.cdn"] =true;
+    rtCommonProps["import.images.storage.imageCDN"] = 'https://lirp.cdn-website.com/';
+    rtCommonProps["feature.flag.runtime.inp.threshold"] =150;
+    rtCommonProps["feature.flag.performance.logs"] =true;
+    rtCommonProps["site.widget.form.captcha.type"] = 'g_recaptcha';
+    rtCommonProps["friendly.captcha.site.key"] = 'FCMGSQG9GVNMFS8K';
+    rtCommonProps["cookiebot.mapbox.consent.category"] = 'marketing';
+    // feature flags that's used out of runtime module (in  legacy files)
+    rtCommonProps["platform.monolith.personalization.dateTimeCondition.popupMsgAction.moveToclient.enabled"] =true;
+    rtCommonProps["streamline.personalization.decodeTimeZone.enabled"] =false;
+
+    window.rtFlags = {};
+    rtFlags["unsuspendEcwidStoreOnRuntime.enabled"] =true;
+    rtFlags["scripts.widgetCount.enabled"] =true;
+    rtFlags["fnb.animations.tracking.enabled"] =true;
+    rtFlags["ecom.ecwidNewUrlStructure.enabled"] = false;
+    rtFlags["ecom.ecwid.accountPage.emptyBaseUrl.enabled"] = true;
+    rtFlags["ecom.ecwid.pages.links.disable.listeners"] = true;
+    rtFlags["ecom.ecwid.storefrontV3.enabled"] = false;
+    rtFlags["ecom.ecwid.old.store.fix.facebook.share"] = true;
+    rtFlags["feature.flag.photo.gallery.exact.size"] =true;
+    rtFlags["geocode.search.localize"] =false;
+    rtFlags["feature.flag.runtime.newAnimation.asyncInit.setTimeout.enabled"] =false;
+    rtFlags["twitter.heightLimit.enabled"] = true;
+    rtFlags["runtime.lottieOverflow"] =false;
+    rtFlags["runtime.monitoring.sentry.ignoreErrors"] = "";
+    rtFlags["contact.form.browserValidation.enabled"] =true;
+    rtFlags["streamline.monolith.personalization.supportMultipleConditions.enabled"] =false;
+    rtFlags["flex.animation.design.panel.layout"] =false;
+    rtFlags["runtime.cwv.report.cls.enabled"] =true;
+    rtFlags["runtime.cwv.report.lcp.enabled"] =false;
+    rtFlags["flex.runtime.popup.with.show"] =true;
+    rtFlags["contact.form.useActiveForm"] =true;
+    rtFlags["runtime.ssr.productStore.internal.observer"] =true;
+    rtFlags["runtime.ssr.productCustomizations"] =true;
+</script>
+<script src="https://static.cdn-website.com/mnlt/production/6010/_dm/s/rt/dist/scripts/d-js-one-runtime-unified-desktop.min.js"  id="d-js-core"></script>
+<!-- End of HEAD RT JS Include -->
+<script src="https://static.cdn-website.com/mnlt/production/6010/_dm/s/rt/dist/scripts/d-js-jquery-migrate.min.js" ></script>
+<script>
+    
+    $(window).bind("orientationchange", function (e) {
+        $.layoutManager.initLayout();
+        
+    });
+    $(document).resize(function () {
+        
+    });
+</script>
+
+
+
+<style id="hideAnimFix">
+  .dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) [data-anim-extended] {
+    visibility: hidden;
+  }
+
+  .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-extended] {
+    visibility: hidden !important;
+  }
+
+
+  #dmRoot:not(.editGrid) .flex-element [data-anim-extended] {
+    visibility: hidden;
+  }
+
+</style>
+
+
+
+<style id="criticalCss">
+    @charset "UTF-8";@font-face{font-family:FontAwesome;font-display:block;src:url(https://static.cdn-website.com/fonts/fontawesome-webfont.eot?v=6);src:url(https://static.cdn-website.com/fonts/fontawesome-webfont.eot?#iefix&v=6) format("embedded-opentype"),url(https://static.cdn-website.com/fonts/fontawesome-webfont.woff?v=6) format("woff"),url(https://static.cdn-website.com/fonts/fontawesome-webfont.ttf?v=6) format("truetype"),url(https://static.cdn-website.com/fonts/fontawesome-webfont.svg#fontawesomeregular?v=6) format("svg");font-weight:400;font-style:normal}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300 800;font-stretch:100%;font-display:swap;src:url(https://irp.cdn-website.com/fonts/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTVOmu1aB.woff2) format('woff2');unicode-range:U+0302-0303,U+0305,U+0307-0308,U+0310,U+0312,U+0315,U+031A,U+0326-0327,U+032C,U+032F-0330,U+0332-0333,U+0338,U+033A,U+0346,U+034D,U+0391-03A1,U+03A3-03A9,U+03B1-03C9,U+03D1,U+03D5-03D6,U+03F0-03F1,U+03F4-03F5,U+2016-2017,U+2034-2038,U+203C,U+2040,U+2043,U+2047,U+2050,U+2057,U+205F,U+2070-2071,U+2074-208E,U+2090-209C,U+20D0-20DC,U+20E1,U+20E5-20EF,U+2100-2112,U+2114-2115,U+2117-2121,U+2123-214F,U+2190,U+2192,U+2194-21AE,U+21B0-21E5,U+21F1-21F2,U+21F4-2211,U+2213-2214,U+2216-22FF,U+2308-230B,U+2310,U+2319,U+231C-2321,U+2336-237A,U+237C,U+2395,U+239B-23B7,U+23D0,U+23DC-23E1,U+2474-2475,U+25AF,U+25B3,U+25B7,U+25BD,U+25C1,U+25CA,U+25CC,U+25FB,U+266D-266F,U+27C0-27FF,U+2900-2AFF,U+2B0E-2B11,U+2B30-2B4C,U+2BFE,U+3030,U+FF5B,U+FF5D,U+1D400-1D7FF,U+1EE00-1EEFF}@font-face{font-family:'Open Sans';font-style:italic;font-weight:300 800;font-stretch:100%;font-display:swap;src:url(https://irp.cdn-website.com/fonts/s/opensans/v40/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuU6F.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}:root{--color_1:rgba(37, 180, 226, 1);--color_2:rgba(50, 62, 72, 1);--color_3:rgba(67, 171, 62, 1);--color_4:rgba(244, 244, 244, 1);--color_5:rgba(85, 85, 85, 1);--color_6:rgba(65, 132, 197, 1)}.dmInner{min-height:100vh!important;position:relative}[dmtemplateid*=amburger] .dmLayoutWrapper{overflow:hidden}#dm .dmWidget .icon{font-size:26px}body.dmRoot #dm .dmOuter .dmInner .dmWidget .icon.hasFontIcon{height:26px;margin-top:-13px;line-height:normal;text-align:center;background-image:none}.dmRoot .hasFontIcon{background-image:none!important}.dmPopupMask{position:fixed;margin:0;display:none;width:10px;z-index:1000000999;top:0;left:0}#dmRoot .dmPopup,.dmPopup,.dmPopupClose:before,[data-display-type=block]{display:block}.dmPopup{text-align:left;position:fixed;top:10px;left:0;width:93%;z-index:1000009999!important;box-sizing:border-box;background:#f5f5f5;overflow-y:auto;height:100%}.dmPopup .dmPopupTitle{text-align:left;font:700 19px Helvetica,Arial;margin:20px 20px 35px;color:#999}#dmPopup{opacity:0}.dmPopupClose,.dmPopupClose:before{position:absolute;visibility:visible}.dmPopupClose{border-radius:25px;width:27px;height:27px;z-index:1;background-color:rgba(255,255,255,.4);top:12px;right:12px}.dmPopupClose:before{font-size:20px;color:#000;top:3px;right:3px}body.dmDesktopBody:not(.mac) .data::-webkit-scrollbar{width:5px;height:5px}body.dmDesktopBody:not(.mac) .data::-webkit-scrollbar-track{background:rgba(0,0,0,.1)}body.dmDesktopBody:not(.mac) .data::-webkit-scrollbar-thumb{background:#c8c8c8;box-shadow:inset 0 1px 2px #454545;border-radius:45px}#dm .header-over-content #stickyHeaderSpacer{height:0!important}#dm .header-over-content .site_content{margin-top:0!important}#dm .dmRespRow .dmRespColsWrapper{display:flex}#dm .dmInner .dmWidget.align-center,.align-center{margin-left:auto;margin-right:auto}.text-align-center{text-align:center}body.fix-mobile-scrolling{overflow:initial}#dmRoot{text-decoration-skip-ink:none}[data-flex-id]{position:relative}[data-flex-id][data-layout-section]{min-height:32px}.flex-widgets-container{display:none}@media (min-width:1025px){#dmRoot.responsiveTablet #dm #dmStyle_outerContainer #dmStyle_innerContainer .showOnMedium{display:none!important}#dmRoot.responsiveTablet #dm [data-responsive-name=ResponsiveDesktopTopTabletHamburger] .site_content{margin-top:0!important}:root{--btn-text-font-size:14px}}@media (min-width:768px) and (max-width:1024px){#dmRoot.responsiveTablet #dm #dmStyle_outerContainer #dmStyle_innerContainer #hamburger-header-container~#stickyHeaderSpacer,#dmRoot.responsiveTablet #dm #dmStyle_outerContainer #dmStyle_innerContainer .showOnLarge{display:none!important}}@media (max-width:767px){#dmRoot.responsiveTablet #dm #dmStyle_outerContainer #dmStyle_innerContainer #hamburger-header-container~#stickyHeaderSpacer,#dmRoot.responsiveTablet #dm #dmStyle_outerContainer #dmStyle_innerContainer .showOnLarge{display:none!important}}[data-layout-grid]{display:-ms-grid;display:grid;justify-content:start;align-items:start;-ms-grid-columns:minmax(0,1fr);grid-template-columns:minmax(0,1fr);-ms-grid-rows:minmax(8px,max-content);grid-template-rows:minmax(8px,-webkit-max-content);grid-template-rows:minmax(8px,max-content)}[data-layout-grid]>.flex-element.group{display:flex;flex-direction:row;justify-content:flex-start;align-items:center;justify-self:center;align-self:start;order:0;max-width:1200px}[data-layout-grid],[data-layout-grid]>.flex-element.group,[data-layout-grid]>.flex-element.group>.flex-element.group{background-size:cover;background-repeat:no-repeat;background-position:50% 50%;position:relative}[data-layout-grid]>.flex-element.group>.flex-element.group{display:flex;flex-direction:column;max-width:100%;align-self:stretch;justify-content:center;align-items:flex-start}.flex-element.widget-wrapper{position:relative;min-width:10px;min-height:10px}#dm [data-flex-id] .widget-wrapper>[data-element-type]{width:100%;height:100%;margin:0;padding:0}[data-flex-id] .widget-wrapper [data-element-type=image] img,[data-flex-id] .widget-wrapper [data-element-type=image] img[width][height]{object-fit:cover;width:100%;height:100%}[data-flex-id] .flex-element.grid>.flex-element{-ms-grid-column:1;grid-column-start:1;-ms-grid-column-span:1;grid-column-end:span 1;-ms-grid-row:1;grid-row-start:1;-ms-grid-row-span:1;grid-row-end:span 1}@media (max-width:467px){[data-hidden-on-mobile_portrait]{display:none!important}}@media (min-width:768px) and (max-width:1024px){[data-hidden-on-tablet]{display:none!important}:root{--btn-text-font-size:14px}}@media (min-width:1025px) and (max-width:1399px){[data-hidden-on-desktop]{display:none!important}}body{-webkit-overflow-scrolling:touch}:not(.runtime-module-container) .layout-drawer,:not(.runtime-module-container) .layout-drawer-hamburger,:not(.runtime-module-container) .layout-drawer-overlay{visibility:hidden}:not(.runtime-module-container) .layout-drawer{position:fixed;transform:translate(-100%,-100%)}:not(.runtime-module-container) .layout-drawer-overlay{opacity:0}.runtime-module-container{width:100%}.runtime-module-container[dmtemplateid*=amburger] #site_content,.runtime-module-container[dmtemplateid*=amburger] .dmInner{position:static}.runtime-module-container[dmtemplateid*=amburger] #site_content .site_content{position:relative}.runtime-module-container[dmtemplateid*=amburger] .dmLayoutWrapper{background-color:transparent}.runtime-module-container .hamburger-header-container{position:fixed;z-index:2;top:0;left:0;width:100%}.runtime-module-container .hamburger-header-container .hamburger-header{min-height:43px}.runtime-module-container .layout-drawer,.runtime-module-container .layout-drawer-hamburger,.runtime-module-container .layout-drawer-overlay{visibility:visible}.runtime-module-container[dmtemplateid*=amburger] .site_content{margin-top:59px}.runtime-module-container .layout-drawer,.runtime-module-container .layout-drawer-overlay{height:100%;position:fixed;top:0;left:0}.runtime-module-container .layout-drawer{background-color:#fff;width:75vw;transform:translate(-100%,0);overflow:auto;-webkit-overflow-scrolling:auto;z-index:13;display:flex;flex-direction:column}.runtime-module-container .layout-drawer .dmRespRow:not(.dmPlaceHolderRespRow) .dmRespColsWrapper .dmRespCol:not(.content-removed):only-child:empty{min-height:0}.runtime-module-container .layout-drawer[data-origin=top]{min-height:20vh;min-width:40vw;max-height:100%;height:auto;width:100%;transform:translate(0,-100%)}.runtime-module-container .layout-drawer-overlay{width:100vw;background-color:rgba(0,0,0,.4);opacity:0;z-index:6}body:not([data-flex-site]) .layout-drawer .dmRespRow:not(:first-of-type):not(:last-of-type){flex:1 1 auto}.layout-drawer-hamburger{background:0 0;-webkit-appearance:none;appearance:none;position:fixed;left:18px;margin-left:env(safe-area-inset-left);padding:17px 11px;z-index:14;width:52px;height:52px;color:#787878;display:flex;flex-direction:column;border:0;justify-content:space-between;align-items:stretch;top:18px;border-radius:0}.layout-drawer-hamburger:not(:focus){outline:unset}.layout-drawer-hamburger .hamburger__slice{display:block;height:0;width:100%;border:1px solid currentColor;transform-origin:center}@media (max-width:767px){.layout-drawer-hamburger{background:0 0;-webkit-appearance:none;appearance:none;position:fixed;left:10px;margin-left:env(safe-area-inset-left);padding:13px 9px;z-index:14;width:40px;height:40px;color:#787878;display:flex;flex-direction:column;border:0;justify-content:space-between;align-items:stretch;top:10px;border-radius:0}.layout-drawer-hamburger:not(:focus){outline:unset}.layout-drawer-hamburger .hamburger__slice{display:block;height:0;width:100%;border:1px solid currentColor;transform-origin:center}}.hamburger-reverse .layout-drawer-hamburger{left:auto;right:10px;margin-right:env(safe-area-inset-right)}#dm-outer-wrapper #hamburger-header-container #hamburger-header .dmRespCol{display:flex;flex-direction:column;justify-content:center}nav,section{display:block}html{font-family:Source Sans Pro;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}h1{font-size:2em;margin:.67em 0}img{border:0;max-width:100%;-ms-interpolation-mode:bicubic;display:inline-block}button{font-family:inherit;font-size:100%;margin:0;line-height:normal;text-transform:none;-webkit-appearance:button}button::-moz-focus-inner{border:0;padding:0}*,:after,:before{box-sizing:border-box}.dmRespRow{padding-top:15px;padding-bottom:15px}.dmRespRow:after,.dmRespRow:before{content:' ';display:table}.dmRespRow:after{clear:both}.dmRespRow,.dmRespRow .dmRespColsWrapper{max-width:960px;position:relative;margin:0 auto;width:100%}@media screen and (min-width:1200px){.rows-1200 .dmRespRow:not(.fullBleedMode) .dmRespColsWrapper{max-width:1200px}}.dmHeader,.dmRespRow .dmRespCol>*{max-width:100%}.dmRespRow .dmRespCol{position:relative;width:100%;display:inline-block;vertical-align:top;float:left}.dmDesktopBody .dmRespRow .large-2{position:relative;width:16.66667%}.dmDesktopBody .dmRespRow .large-8{position:relative;width:66.66667%}.dmDesktopBody .dmRespRow .large-12{position:relative;width:100%}.socialHubIcon,[class*=' dm-common-icons-'],[class*=' dm-social-icons-']{font-family:dm-social-icons!important;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.dm-social-icons-email:before{content:'\eace'}[class*=' dm-common-icons-']{font-family:dm-common-icons!important}.dm-common-icons-close:before{content:'\e901'}#dm div.dmContent [class*=' icon-'],[class*=' icon-']{font-family:FontAwesome!important;font-weight:400;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased}[class*=' icon-']:before{text-decoration:none;display:inline-block;speak:none}a [class*=' icon-']{display:inline}[class*=' icon-']{display:inline;width:auto;height:auto;line-height:normal;vertical-align:baseline;background-image:none;background-position:0 0;background-repeat:repeat;margin-top:0}.icon-star:before{content:'\f005'}.icon-angle-right:before{content:'\f105'}.icon-angle-down:before{content:'\f107'}#dm .dmRespRow .dmRespCol>.dmWidget{overflow:initial}@media (min-width:768px){.hamburger-reverse .layout-drawer-hamburger{right:18px}#dm .dmRespRow .dmRespCol>.dmWidget{width:280px;max-width:100%}#dm .dmRespRow .dmRespCol.large-2>.dmWidget{width:100%}}@media (max-width:767px){#dm .dmInner .dmWidget{width:100%}}#dm .dmInner .dmWidget:not(.displayNone){display:inline-block}#dm .dmInner .dmWidget:not(.flexButton):not(.displayNone)[data-display-type=block]{display:block}#dm .dmInner .dmWidget{text-decoration:none;margin:10px 0;clear:both;position:relative;text-align:center;line-height:22px;box-shadow:none;background-image:none;padding:0;height:auto;border-style:solid;white-space:nowrap}#dm .dmInner .dmWidget:after{content:'';display:inline-block;height:100%;vertical-align:middle;width:0;margin-right:-.25em}.imageWidget img[width][height],img[width][height]{height:auto}#dm .dmInner .dmWidget .iconBg{position:absolute;left:0;width:50px;top:50%;margin-top:-13px}#dm .dmWidget .text{display:inline-block;vertical-align:middle;font-size:1.125em;line-height:normal;white-space:normal;padding:10px 7px;max-width:98%}.dmInner{min-width:768px!important}html:not(.ios-preview) #dm .hasStickyHeader .dmInner div.dmHeaderContainer{position:fixed!important;z-index:101;width:100%;min-width:768px}#dm .header-over-content .dmHeaderContainer{position:absolute;z-index:101;width:100%}.dmNewParagraph[data-version]{line-height:initial}.dmNewParagraph[data-version] h1,.dmNewParagraph[data-version] h2{margin-top:0;margin-bottom:0}.socialHubIcon{display:flex!important;align-items:center;justify-content:center}#dm [blog-posts-feature-flag=true][dmle_extension=internal_blog_list][show-author=false] .authorBar,#dm [dmle_extension=internal_blog_list][show-author=false] .authorBar{display:none}.imageWidget{position:relative}.imageWidget a{font-style:italic;text-align:center}#dm .postText *,#dm [list-layout=layout4][text-align=left] .postText *{text-align:left}#dm .postArticle .authorBar{font-size:80%;opacity:.8}#dm [list-layout=layout4] .postArticle .authorBar{margin:0 0 15px;padding:0}*{border:0 solid #333;scrollbar-arrow-color:#fff;scrollbar-track-color:#F2F2F2;scrollbar-face-color:silver;scrollbar-highlight-color:silver;scrollbar-3dlight-color:silver;scrollbar-shadow-color:silver;scrollbar-darkshadow-color:silver;scrollbar-width:12px}body{width:100%;overflow:hidden;-webkit-text-size-adjust:100%!important;-ms-text-size-adjust:100%!important}A IMG{border:none}h1,h2,ul{margin-left:0;margin-right:0}.dmInner *{-webkit-font-smoothing:antialiased}span.oneIcon:before{display:inline-block}a,img,li,ul{vertical-align:top}#site_content{position:relative}.dmOuter{word-wrap:break-word}.dmInner{font-size:16px;background:#fff;color:#666}.dmDesktopBody .dmInner{min-width:960px}.dmInner a{color:#463939;outline:0;vertical-align:inherit}.dmInner ul:not(.defaultList){padding:0}.dmHeader{background:#68ccd1;color:#666;text-align:center;position:relative;width:100%}#dm .main-navigation.unifiednav:not([data-nav-structure=VERTICAL])>.unifiednav__container .nav-item-text::before,.dmNewParagraph{text-align:left}DIV.dmBody{padding:0;clear:both}.dmContent{margin:0;padding:0}#site_content ul:not(.defaultList){-webkit-padding-start:0;-moz-padding-start:0;list-style-position:inside}.dmRespRowsWrapper{max-width:960px;margin:0 auto}.dmRespCol>[dmle_extension]:not(:first-child){margin-top:10px}.dmLargeBody .imageWidget:not(.displayNone){display:inline-block;max-width:100%}#dm .dmRespColsWrapper,.dmStandardDesktop{display:block}.imageWidget:not(.displayNone) img{width:100%}.dmNewParagraph{margin:8px 0;padding:2px 0}.dmLargeBody .fHeader .dmRespRow .dmRespCol{padding-left:.75%;padding-right:.75%}.dmLargeBody .fHeader .dmRespRow .dmRespCol:first-child{padding-left:0;padding-right:1.5%}.dmLargeBody .fHeader .dmRespRow .dmRespCol:last-child{padding-right:0;padding-left:1.5%}#dmFirstContainer .dmRespRowsWrapper:after,#dmFirstContainer .dmRespRowsWrapper:before{content:"";display:table}.dmLinksMenu>ul{display:block;margin:0;font-size:inherit}.dmStandardDesktop{margin:0 auto}.dmSocialHub{clear:both}#dm .dmSocialHub a{display:inline-block;text-decoration:none;margin:0;vertical-align:bottom}.dmSocialHub>div{text-align:inherit}a span.socialHubIcon{width:36px;height:36px;font-size:31px;display:inline-block;text-align:center;margin-right:0;margin-bottom:5px;line-height:36px;box-sizing:content-box;background-image:none!important}.socialHubIcon.style5{color:#fff}#dm .dmSocialHub .socialHubWrapper{display:inline-block;max-width:100%}body{background-color:#eee}.main-navigation.unifiednav{-js-display:flex;display:flex;justify-content:flex-start;align-items:stretch;overflow:visible}.main-navigation.unifiednav ul{list-style:none;padding:0;margin:0;font-size:1rem}.main-navigation.unifiednav .unifiednav__container{-js-display:flex;display:flex;justify-content:flex-start;list-style:none}.main-navigation.unifiednav .unifiednav__container>.unifiednav__item-wrap{-js-display:flex;display:flex;justify-content:flex-start;position:relative;font-weight:400}.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap::after,.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap::before{content:'';align-self:center;font-weight:700}.main-navigation.unifiednav .unifiednav__container>.unifiednav__item-wrap>.unifiednav__item{-js-display:flex;display:flex;justify-content:flex-start;align-items:center;flex-direction:row;color:inherit;text-decoration:none;position:relative;padding:12px 15px;margin:0;font-weight:inherit;letter-spacing:.03em}.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item{padding:0 15px}.main-navigation.unifiednav .unifiednav__container>.unifiednav__item-wrap>.unifiednav__item .nav-item-text{white-space:nowrap}.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item .nav-item-text::after,.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item .nav-item-text::before{content:'';width:100%;height:0;border:0 solid transparent;border-top-color:currentColor;display:block;opacity:0}.main-navigation.unifiednav.effect-bottom2{padding:calc(12px - .2em - 2px) 15px}.main-navigation.unifiednav.effect-bottom2 .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item .nav-item-text::after,.main-navigation.unifiednav.effect-bottom2 .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item .nav-item-text::before{transform:scaleX(0);border-top-width:2px;transform-origin:left}.main-navigation.unifiednav.effect-bottom2 .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item .nav-item-text::after{margin-top:.2em}.main-navigation.unifiednav.effect-bottom2 .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item .nav-item-text::before{margin-bottom:.2em;border-top-color:transparent}.main-navigation.unifiednav .unifiednav__container .unifiednav__item:not(.unifiednav__item_has-sub-nav) .icon{display:none}.main-navigation.unifiednav .unifiednav__container[data-depth]{position:absolute;top:0;left:0;flex-direction:column;opacity:0;z-index:100;background-color:#faf9f9}.main-navigation.unifiednav .unifiednav__container[data-depth='0']{top:100%;transform:translateY(-10px)}.main-navigation.unifiednav:not(.unifiednav_vertical) .unifiednav__container[data-depth='0']{left:15px}.main-navigation.unifiednav .unifiednav__container>.unifiednav__item-wrap .unifiednav__container>.unifiednav__item-wrap{flex-direction:column}.main-navigation.unifiednav .unifiednav__container[data-depth]>.unifiednav__item-wrap .unifiednav__item{padding:15px 30px 15px 15px;margin:0}.main-navigation.unifiednav .unifiednav__container[data-depth]>.unifiednav__item-wrap:not(:last-child)::after{content:''!important;width:100%;height:0;color:#ececec;align-self:center;border:0 solid currentColor}.main-navigation.unifiednav[layout-sub=submenu_horizontal_1] .unifiednav__container[data-depth]{color:#999}.main-navigation.unifiednav .unifiednav__container>.unifiednav__item-wrap>.unifiednav__item.unifiednav__item_has-sub-nav .icon{display:initial;padding-left:10px;margin-left:0}.main-navigation.unifiednav:not(.unifiednav_vertical)>.unifiednav__container{justify-content:inherit}#dm .p_hfcontainer nav.main-navigation.unifiednav{min-width:9em!important;text-align:initial!important}#dm .main-navigation.unifiednav .unifiednav__container[data-depth]{background-color:transparent}#dm .main-navigation.unifiednav[layout-sub=submenu_horizontal_1] .unifiednav__container[data-depth]{background-color:#faf9f9}#dm .main-navigation.unifiednav .unifiednav__container[data-depth]>.unifiednav__item-wrap:not(:last-child)::after{color:#d1d1d1}#dm .main-navigation.unifiednav[data-nav-structure=VERTICAL] .unifiednav__container{flex-direction:column;flex:1 1 100%}#dm .main-navigation.unifiednav[data-nav-structure=VERTICAL] .unifiednav__container>.unifiednav__item-wrap>.unifiednav__item{padding:8px 0;margin:0}#dm .main-navigation.unifiednav[data-nav-structure=VERTICAL] .unifiednav__container>.unifiednav__item-wrap>.unifiednav__item.unifiednav__item_has-sub-nav .icon{padding-left:15px}#dm .main-navigation.unifiednav[data-nav-structure=VERTICAL] .unifiednav__container>.unifiednav__item-wrap>.unifiednav__item .nav-item-text{white-space:initial}#dm .main-navigation.unifiednav[data-nav-structure=VERTICAL] .unifiednav__container:not([data-depth])>.unifiednav__item-wrap{flex-direction:column}#dm .main-navigation.unifiednav[data-nav-structure=VERTICAL] .unifiednav__container:not([data-depth])>.unifiednav__item-wrap .unifiednav__container[data-depth]{opacity:1;position:static;transform:translate(0)}#dm .main-navigation.unifiednav[data-nav-structure=VERTICAL] .unifiednav__container:not([data-depth])>.unifiednav__item-wrap .unifiednav__container[data-depth]>.unifiednav__item-wrap .unifiednav__item{justify-content:inherit;padding:8px 1em;margin:0;font-size:.8em}#dm .main-navigation.unifiednav[data-nav-structure=VERTICAL] .unifiednav__container:not([data-depth])>.unifiednav__item-wrap::after{content:''!important;width:100%;height:0;color:#d1d1d1;align-self:flex-start;border:0 solid currentColor}#dm .main-navigation.unifiednav[data-nav-structure=VERTICAL][layout-main=vertical_nav_layout_2] .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item{padding:5px 0}#dm .main-navigation.unifiednav[data-nav-structure=VERTICAL][layout-main=vertical_nav_layout_2] .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__container[data-depth]>.unifiednav__item-wrap .unifiednav__item{padding:8px 12px}#dm .main-navigation.unifiednav[data-nav-structure=VERTICAL][data-show-vertical-sub-items=HIDE] .unifiednav__container[data-depth]{transform-origin:top;height:auto;overflow:hidden}#dm .main-navigation.unifiednav[data-nav-structure=VERTICAL][data-show-vertical-sub-items=HIDE]>.unifiednav__container:not([data-depth])>.unifiednav__item-wrap .unifiednav__container[data-depth]{opacity:0;max-height:0}#dm .main-navigation.unifiednav:not([data-nav-structure=VERTICAL])>.unifiednav__container{flex-wrap:wrap;justify-content:inherit}#dm .main-navigation.unifiednav:not([data-nav-structure=VERTICAL]) .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::after,#dm .main-navigation.unifiednav:not([data-nav-structure=VERTICAL]) .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::before{content:''}#dm .main-navigation.unifiednav[data-nav-structure=VERTICAL] .unifiednav__container>.unifiednav__item-wrap>.unifiednav__item.unifiednav__item_has-sub-nav .icon{display:inline-block;padding-right:0}#dm .dmBody .dmRespRowsWrapper{max-width:none;background-color:transparent}.dmLargeBody .dmRespRow{width:100%;max-width:none;margin-left:0;margin-right:0;padding-left:40px;padding-right:40px}.dm-bfs.dm-layout-home div.dmInner{background-color:#fff}.dmStandardDesktop .dmHeader{background-color:#68ccd1;max-width:100%}.dmRespRow:not(.dmPlaceHolderRespRow) .dmRespColsWrapper .dmRespCol:not(.content-removed).empty-column,.dmRespRow:not(.dmPlaceHolderRespRow) .dmRespColsWrapper .dmRespCol:not(.content-removed):only-child:empty{min-height:100px}.dmRespRow:not(.dmPlaceHolderRespRow) .dmRespCol:not(.content-removed).empty-column,.dmRespRow:not(.dmPlaceHolderRespRow) .dmRespCol:not(.content-removed):empty{min-height:1px}.dmRespRow:not(.dmPlaceHolderRespRow) .dmRespColsWrapper .dmRespCol:not(.content-removed):only-child.empty-column{min-height:100px}#dm div.dmRespCol>*{line-height:1.5}#dm div.dmInner{line-height:initial}#dm div.dmInner h1,#dm div.dmInner h2{font-family:Montserrat,"Montserrat Fallback"}#dm DIV.dmInner{background-repeat:no-repeat;background-image:url(https://irt-cdn.multiscreensite.com/ce0bb35f932b47bb809d0e37905542ba/dms3rep/multi/site_background_education-2087x1173.jpg);background-size:cover;background-position:50% 0}#dm div.dmOuter div.dmInner{background-position:center center;background-repeat:repeat;background-size:auto}.dmLargeBody .dmBody .dmRespRowsWrapper{background-color:transparent}#dm div.dmInner,#dm div.dmInner .dmRespCol{color:rgba(85,85,85,1);font-family:"Open Sans","Open Sans Fallback";font-weight:400}#dm div.dmContent h1,#dm div.dmContent h2{color:#000;color:var(--color_1);direction:ltr;font-family:SupremeLLTT-Black;font-weight:400;font-style:normal}#dm div.dmContent h1{text-decoration:none;font-size:50px;line-height:normal}#dm div.dmContent .dmNewParagraph[data-version] h1{text-decoration:inherit}#dm div.dmContent .dmNewParagraph[data-version] h1 *,#dm div.dmContent h2{text-decoration:none}#dm div.dmContent .dmNewParagraph[data-version] h2{text-decoration:inherit}#dm div.dmContent .dmNewParagraph[data-version] h2 *{text-decoration:none}#dm DIV.dmOuter DIV.dmInner{background-image:none;background-color:rgba(255,255,255,1)}#dm div.dmContent h2{font-size:40px;line-height:1.5}#dm div.dmInner,#dm div.dmInner .dmRespCol{font-size:14px}@media (min-width:0px) and (max-width:767px){:root{--btn-text-font-size:15px}}#dm .dmWidget:not([data-buttonstyle]){border-radius:50px}#dm .dmWidget:not([data-buttonstyle]) .text{padding:10px 0}#dm .dmWidget:not([data-buttonstyle]) .iconBg{display:none}#dm div.dmInner #site_content .dmWidget,#dm div.dmInner .dmHeader .dmWidget{background-color:var(--btn-bg-color);background-image:var(--btn-bg-image);border-color:var(--btn-border-color);border-bottom-color:var(--btn-border-b-color);border-left-color:var(--btn-border-l-color);border-right-color:var(--btn-border-r-color);border-top-color:var(--btn-border-t-color);border-radius:var(--btn-border-radius);border-bottom-left-radius:var(--btn-border-bl-radius);border-bottom-right-radius:var(--btn-border-br-radius);border-top-left-radius:var(--btn-border-tl-radius);border-top-right-radius:var(--btn-border-tr-radius);border-width:var(--btn-border-width);border-bottom-width:var(--btn-border-b-width);border-left-width:var(--btn-border-l-width);border-right-width:var(--btn-border-r-width);border-top-width:var(--btn-border-t-width);direction:var(--btn-text-direction);text-align:var(--btn-text-align)}#dm div.dmInner #site_content .dmWidget span.text{color:var(--btn-text-color);font-size:var(--btn-text-font-size);font-weight:var(--btn-text-font-weight);text-decoration:var(--btn-text-decoration)}#dm div.dmInner #site_content .dmWidget span.icon,#dm div.dmInner .dmHeader .dmWidget span.icon{color:var(--btn-icon-color);fill:var(--btn-icon-fill)}#dm div.dmInner #site_content .dmWidget:not([data-buttonstyle]) .iconBg,#dm div.dmInner .dmHeader .dmWidget:not([data-buttonstyle]) .iconBg{display:var(--btn-icon-wrpr-display)}#dm .p_hfcontainer .main-navigation.unifiednav:not(.unifiednav_vertical) .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::after,#dm .p_hfcontainer .main-navigation.unifiednav:not(.unifiednav_vertical) .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::before{font-size:14px!important}#dm .p_hfcontainer div.u_1366333904 img,#dm .p_hfcontainer div.u_1923160809 img{border-radius:0!important;-moz-border-radius:0!important;-webkit-border-radius:0!important}#dm .p_hfcontainer .u_1347421887.main-navigation.unifiednav .unifiednav__container[data-depth="0"]{top:calc(100% - 0px - 0px)!important}#dm .p_hfcontainer .u_1347421887.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child) .unifiednav__container[data-depth="0"]{left:20px!important}#dm .p_hfcontainer .u_1347421887.main-navigation.unifiednav:not(.unifiednav_vertical) .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::after,#dm .p_hfcontainer .u_1347421887.main-navigation.unifiednav:not(.unifiednav_vertical) .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::before{font-size:15px!important}#dm .p_hfcontainer nav.u_1347421887{color:#000!important}#dm .p_hfcontainer .u_1347421887.main-navigation.unifiednav:not([data-nav-structure=VERTICAL]) .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::after,#dm .p_hfcontainer .u_1347421887.main-navigation.unifiednav:not([data-nav-structure=VERTICAL]) .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::before{font-size:14px!important}div#dm .header-over-content .dmInner .dmHeader:not(.scroll-responder_set){background-color:rgba(65,67,69,0)!important}#dm .p_hfcontainer .u_1347421887.main-navigation.unifiednav:not([image]) .unifiednav__container[data-depth="0"]{top:calc(100% - 0px - 0px)!important}#dm .p_hfcontainer nav.u_1347421887.main-navigation.unifiednav .unifiednav__container[data-depth] .unifiednav__item{color:var(--color_5)!important;font-size:15px!important}#dm .p_hfcontainer a.u_1655660705 span.text,#dm .p_hfcontainer nav.u_1347421887.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item{color:rgba(255,255,255,1)!important;font-size:14px!important}#dm .dmInner div.dmHeader,#dm .dmInner div.dmHeader.u_hcontainer,#dm .dmInner div.u_hcontainer{background-color:var(--color_2)!important;box-shadow:none!important;-moz-box-shadow:none!important;-webkit-box-shadow:none!important;border-bottom-style:solid!important;border-bottom-color:rgba(239,239,239,1)!important;border-bottom-width:0!important}#dm .p_hfcontainer .u_1366333904{width:100%!important}#dm .p_hfcontainer .u_1347421887.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item{padding:0 17px!important;margin:0!important}#dm .p_hfcontainer nav.u_1347421887.main-navigation.unifiednav.effect-bottom2 .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item .nav-item-text::after{border-top-color:var(--color_3)!important}#dm .p_hfcontainer nav.u_1347421887.main-navigation.unifiednav .unifiednav__container[data-depth]{background-color:rgba(255,255,255,1)!important}#dm .p_hfcontainer a.u_1655660705 span.text{font-weight:700!important}#dm .p_hfcontainer a.u_1655660705{background-color:var(--color_3)!important;border-color:var(--color_3)!important}#dm .p_hfcontainer .u_1923160809{width:100%!important}#dm .p_hfcontainer nav.u_1069874846{color:#fff!important}#dm .p_hfcontainer .u_1069874846.main-navigation.unifiednav[data-nav-structure=VERTICAL] .unifiednav__container:not([data-depth])>.unifiednav__item-wrap::after{align-self:center!important}#dm .p_hfcontainer div.u_1373278435 .socialHubIcon{color:rgba(49,49,49,1)!important;border-color:rgba(49,49,49,1)!important}#dm .p_hfcontainer .u_1069874846.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item{text-align:center!important}#dm .p_hfcontainer .u_1069874846.main-navigation.unifiednav:not([image]) .unifiednav__container[data-depth="0"]{top:calc(100% - 22px - 0px)!important}#dm .dmInner div.u_hcontainer,#dm .p_hfcontainer div.u_1705692124{float:none!important;top:0!important;left:0!important;width:100%!important;position:relative!important;height:auto!important;text-align:center!important;min-width:0!important}#dm .p_hfcontainer nav.u_1069874846.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item{color:rgba(255,255,255,1)!important;font-weight:400!important;font-family:SupremeLLTT-Black!important}#dm .p_hfcontainer nav.u_1069874846.main-navigation.unifiednav.effect-bottom2 .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item .nav-item-text::after{border-top-color:var(--color_3)!important}#dm .p_hfcontainer nav.u_1069874846.main-navigation.unifiednav .unifiednav__container[data-depth] .unifiednav__item{font-weight:400!important;color:var(--color_4)!important;font-family:SupremeLLTT-Bold!important;font-size:30px!important}#dm .dmInner div.u_hcontainer{max-width:100%!important;padding:25px 0 20px!important;margin:0 auto!important}#dm .dmInner div.dmHeader.u_hcontainer{padding-bottom:20px!important;padding-top:25px!important}#dm .p_hfcontainer div.u_1705692124{max-width:none!important;margin:0 auto!important;padding:15px 40px!important}#dm .p_hfcontainer div.u_1655486006{margin-left:0!important;margin-right:0!important;padding-left:0!important;padding-right:0!important}[dmtemplateid=Hamburger].runtime-module-container .layout-drawer-hamburger{top:20.5px!important}[dmtemplateid=Hamburger] .site_content{margin-top:93px!important}.stickyHeaderSpacer{height:111.97px!important}@media (min-width:1025px){.responsiveTablet .stickyHeaderSpacer{height:90.83px!important}}#dm .dmInner div.fHeader .dmHeader[freeheader=true]{padding:15px 0!important}.fHeader #hcontainer.dmHeader[freeheader=true]{padding-top:initial!important;padding-bottom:initial!important}#dm .p_hfcontainer nav.u_1347421887.main-navigation.unifiednav:not(.unifiednav_vertical) .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::after,#dm .p_hfcontainer nav.u_1347421887.main-navigation.unifiednav:not(.unifiednav_vertical) .unifiednav__container:not([data-depth])>.unifiednav__item-wrap:not(:last-child)::before{padding-top:0!important;padding-bottom:0!important;margin-top:0!important;margin-bottom:0!important}#dm .dmInner div.fHeader.dmHeaderContainer #hcontainer.dmHeader[freeheader=true]{margin:0!important;padding:0!important}@media (min-width:768px) and (max-width:1024px){.responsiveTablet .stickyHeaderSpacer{height:91px!important}.responsiveTablet [dmtemplateid=Hamburger].runtime-module-container .layout-drawer-hamburger{top:12.34px!important}.responsiveTablet [dmtemplateid=Hamburger] .site_content{margin-top:76.69px!important}}#dm .p_hfcontainer div.u_1366333904,#dm .p_hfcontainer div.u_1923160809,#dm .p_hfcontainer nav.u_1347421887{float:none!important;top:0!important;left:0!important;position:relative!important;max-width:100%!important;text-align:center!important}#dm .p_hfcontainer div.u_1518628978{padding-left:0!important}#dm .p_hfcontainer div.u_1656019285{width:auto!important;padding:15px!important;margin:0!important}#dm .p_hfcontainer a.u_1655660705{width:180px!important}#dm .p_hfcontainer div.u_1112781587{padding:0!important}#dm .p_hfcontainer div.u_1402033884{padding-left:10px!important}#dm .p_hfcontainer nav.u_1347421887{width:889.39px!important;height:auto!important;justify-content:center!important;align-items:stretch!important;min-width:0!important;padding:15px 0 10px!important;margin:0!important}#dm .p_hfcontainer div.u_1366333904{width:170px!important;min-width:0!important;display:block!important;important:true!important;height:50px!important;padding:0!important;margin:5px 10px 0!important}[dmtemplateid=Hamburger] .layout-drawer-hamburger.hamburger-on-header{color:var(--color_3)!important;background-color:rgba(0,0,0,0)!important}#dm .dmBody a.u_1046575972 span.text,#dm .dmBody a.u_1934639753 span.text{color:rgba(255,255,255,1)!important}#dm .p_hfcontainer div#hamburger-drawer.layout-drawer,#dm .p_hfcontainer div#hamburger-header{background-color:var(--color_2)!important}#dm .p_hfcontainer div#hamburger-header{box-shadow:none!important;-moz-box-shadow:none!important;-webkit-box-shadow:none!important;border-style:solid!important;border-width:0!important;border-color:rgba(239,239,239,1)!important}#dm .p_hfcontainer div.u_1923160809{width:160px!important;min-width:25px!important;display:block!important;height:auto!important;padding:0!important;margin:0 722.22px 0 0!important}div[dmtemplateid=Hamburger] .layout-drawer-overlay{background-color:rgba(255,255,255,.4)!important}#dm .p_hfcontainer #hamburger-drawer.layout-drawer[data-origin=top]:not([data-auto-height]){height:100%!important}#dm .p_hfcontainer div.u_1846581102{padding:0!important;margin:0!important}#dm .p_hfcontainer div.u_1985039911{margin-top:0!important;padding:0!important}#dm .p_hfcontainer div.u_1373278435,#dm .p_hfcontainer nav.u_1069874846{float:none!important;top:0!important;left:0!important;position:relative!important;max-width:calc(100% - 0px)!important;min-width:25px!important;padding:0!important;margin:0 auto!important}#dm .p_hfcontainer div.u_1373278435{width:100%!important;height:auto!important;text-align:center!important;display:block!important}#dm .p_hfcontainer .u_1373278435 .socialHubIcon{width:40px!important;height:40px!important;font-size:26.67px!important;line-height:40px!important}#dm .p_hfcontainer .u_1373278435 .socialHubIcon:after{width:48px!important;height:40px!important}#dm .p_hfcontainer nav.u_1069874846{width:100%!important;height:auto!important;justify-content:center!important;align-items:stretch!important;text-align:start!important}#dm .p_hfcontainer .u_1373278435 .socialHubInnerDiv a{margin-right:23px!important}#dm .p_hfcontainer nav.u_1069874846.main-navigation.unifiednav .unifiednav__container:not([data-depth])>.unifiednav__item-wrap>.unifiednav__item{font-size:45px!important}#dm .p_hfcontainer div.u_1890444218{margin-top:0!important;padding:30px 50px 90px!important}#dm .p_hfcontainer div.u_1768941239{padding-top:90px!important;margin-top:0!important;padding-right:50px!important;padding-left:50px!important}@media all{#\32 d35a3db,#cc761b40{position:relative;height:auto;min-width:10px;min-height:10px;max-width:100%;align-self:auto;order:1;grid-area:auto/auto/auto/auto}:root{--btn-text-direction:ltr;--btn-border-r-color:var(--btn-border-color);--btn-border-l-color:var(--btn-border-color);--btn-border-b-width:var(--btn-border-width);--btn-border-width:1px;--btn-border-radius:50px;--btn-border-t-width:var(--btn-border-width);--btn-border-tl-radius:var(--btn-border-radius);--btn-border-br-radius:var(--btn-border-radius);--btn-border-bl-radius:var(--btn-border-radius);--btn-bg-color:rgba(65,67,69,0);--btn-border-color:var(--color_3);--btn-border-tr-radius:var(--btn-border-radius);--btn-border-r-width:var(--btn-border-width);--btn-bg-image:none;--btn-border-b-color:var(--btn-border-color);--btn-border-l-width:var(--btn-border-width);--btn-border-t-color:var(--btn-border-color);--btn-text-align:center;--btn-text-color:var(--color_3);--btn-text-decoration:none;--btn-text-font-weight:bold;--btn-icon-color:rgb(247, 247, 247);--btn-icon-fill:rgb(247, 247, 247);--btn-icon-wrpr-display:none;--btn-hover-border-b-color:var(--btn-hover-border-color);--btn-hover-bg:rgba(65,67,69,0);--btn-hover-border-t-color:var(--btn-hover-border-color);--btn-hover-border-r-color:var(--btn-hover-border-color);--btn-hover-border-l-color:var(--btn-hover-border-color);--btn-hover-border-color:var(--color_1);--btn-hover-text-color:var(--color_1);--btn-hover-text-font-weight:var(--btn-text-font-weight);--btn-hover-text-decoration:var(--btn-text-decoration);--btn-hover-text-font-style:var(--btn-text-font-style)}#\36 2eba75f92417728d16410dc{align-self:start;background-size:cover;min-height:100px;background-repeat:no-repeat;flex-direction:row;order:0;display:flex;padding-bottom:2%;background-position:50% 50%;column-gap:4%;row-gap:24px;max-width:1200px;width:100%;justify-content:flex-start;align-items:center;position:relative;justify-self:center;padding-top:7%;flex-wrap:nowrap;margin:0;grid-area:1/1/span 1/span 1}#cc761b40{width:88.74886363636364%;justify-self:auto}#\32 d35a3db{width:100%;justify-self:auto}#\32 d855ace,#d7b0568c{position:relative;order:0}#\32 d855ace{align-self:start;background-size:cover;min-height:0;background-repeat:no-repeat;flex-direction:row;display:flex;padding-bottom:6%;background-position:50% 50%;column-gap:4%;row-gap:24px;max-width:1200px;width:100%;justify-content:flex-start;align-items:center;justify-self:center;margin:0;grid-area:1/1/span 1/span 1}#d7b0568c{width:57.13%;height:auto;min-width:10px;min-height:10px;max-width:100%;justify-self:auto;align-self:center;margin-top:0;margin-bottom:0;grid-area:auto/auto/auto/auto}}#dm .dmBody .u_1702073123{width:100%!important}#dm .dmBody a.u_1934639753{border-style:solid!important;border-width:0!important}#dm .dmBody a.u_1046575972{border-color:var(--color_3)!important;background-color:var(--color_3)!important}#dm .d-page-1716942098 DIV.dmInner{background-repeat:no-repeat!important;background-size:cover!important;background-attachment:fixed!important;background-position:50% 50%!important}@media all{#\36 98fe84e{align-self:start;background-size:cover;min-height:64.62px;background-repeat:no-repeat;flex-direction:row;order:0;padding-top:6%;display:flex;padding-bottom:6%;background-position:50% 50%;column-gap:4%;row-gap:24px;max-width:1200px;width:100%;justify-content:flex-start;align-items:center;position:relative;justify-self:center;flex-wrap:nowrap;margin:0;grid-area:1/1/span 1/span 1}#\30 a102f6d,#\33 b0af5e7{position:relative;order:0}#\30 a102f6d{align-self:start;background-size:cover;min-height:100%;background-repeat:no-repeat;flex-direction:row;display:flex;background-position:50% 50%;column-gap:4%;row-gap:24px;max-width:1200px;width:100%;justify-content:flex-start;align-items:center;justify-self:center;padding-top:6%;margin:0;grid-area:1/1/span 1/span 1}#\33 b0af5e7{width:93.15%;height:auto;min-width:10px;min-height:10px;max-width:100%;align-self:center;justify-self:auto;margin-top:0;margin-bottom:0;grid-area:auto/auto/auto/auto}#\36 868b44a,#\39 70550d2{order:0;position:relative}#\36 868b44a{width:61.08%;height:auto;min-width:10px;min-height:10px;max-width:100%;justify-self:auto;align-self:center;margin-top:0;margin-bottom:0;grid-area:auto/auto/auto/auto}#\39 70550d2{align-self:start;background-size:cover;min-height:100%;background-repeat:no-repeat;flex-direction:row;padding-top:6%;display:flex;padding-bottom:1%;background-position:50% 50%;column-gap:4%;row-gap:24px;max-width:1200px;width:100%;justify-content:flex-start;align-items:center;justify-self:center;margin:0;grid-area:1/1/span 1/span 1}#\30 35bc756,#\31 60dd389,#\35 900616b,#\37 fedf41e,#b769f300,#ffa396dd{position:relative;order:0;margin:0}#\30 35bc756{align-self:start;background-size:cover;min-height:64.62px;background-repeat:no-repeat;flex-direction:row;padding-top:6%;display:flex;padding-bottom:6%;background-position:50% 50%;column-gap:5%;row-gap:30px;max-width:1200px;width:100%;justify-content:flex-start;align-items:center;justify-self:center;flex-wrap:nowrap;grid-area:1/1/span 1/span 1}#b769f300{width:180px;height:auto;min-width:10px;min-height:10px;max-width:100%;justify-self:auto;align-self:auto;grid-area:auto/auto/auto/auto}#\37 fedf41e{align-self:start;background-size:cover;min-height:100%;background-repeat:no-repeat;flex-direction:row;display:flex;background-position:50% 50%;column-gap:4%;row-gap:24px;max-width:1200px;width:100%;justify-content:flex-start;align-items:center;justify-self:center;padding:6% 2%;grid-area:1/1/span 1/span 1}#\35 900616b{width:63.52%;height:auto;min-width:10px;min-height:10px;max-width:100%;justify-self:auto;align-self:auto;grid-area:auto/auto/auto/auto}#\38 3cd7af5,#a737ed38,#ef3fbe2b{margin-left:6%}#\38 3cd7af5,#a737ed38,#b6cb4404,#ef3fbe2b{position:relative;width:123px;height:auto;min-width:10px;min-height:10px;max-width:100%;order:0;grid-area:auto/auto/auto/auto}#afa8e99d{align-self:start;background-size:cover;min-height:100px;background-repeat:no-repeat;flex-direction:row;order:0;display:flex;background-position:50% 50%;column-gap:4%;row-gap:24px;max-width:1200px;width:100%;justify-content:flex-start;align-items:center;position:relative;justify-self:center;padding-top:1%;padding-right:3%;padding-left:3%;flex-wrap:nowrap;margin:0;grid-area:1/1/span 1/span 1}#b6cb4404{margin:0 0 0 6%}#a737ed38{justify-self:auto;align-self:auto}#d99ef689,#ec47fcde{order:0;position:relative;margin:0}#d99ef689{width:210px;height:auto;min-width:10px;min-height:10px;max-width:100%;justify-self:auto;align-self:auto;grid-area:auto/auto/auto/auto}#ec47fcde{align-self:start;background-size:cover;min-height:100%;background-repeat:no-repeat;flex-direction:row;display:flex;background-position:50% 50%;column-gap:4%;row-gap:24px;max-width:1200px;width:100%;justify-content:flex-start;align-items:center;justify-self:center;padding:1% 2% 6%;grid-area:1/1/span 1/span 1}#\30 5fd2d3d,#\34 fcb4375,#b7b26572,#ce37f3ab{position:relative;width:123px;height:auto;min-width:10px;min-height:10px;max-width:100%;grid-area:auto/auto/auto/auto}#\34 fcb4375,#b7b26572{order:0;justify-self:auto;margin:0 0 0 6%}#\30 5fd2d3d{order:1;justify-self:auto;margin:0 0 0 6%}#\38 bebcf0d{align-self:start;background-size:cover;min-height:100px;background-repeat:no-repeat;flex-direction:row;order:0;display:flex;background-position:50% 50%;column-gap:4%;row-gap:24px;max-width:1200px;width:100%;justify-content:flex-start;align-items:center;position:relative;justify-self:center;flex-wrap:nowrap;padding:1% 3%;margin:0;grid-area:1/1/span 1/span 1}#ce37f3ab{order:0;margin-left:6%}#\31 60dd389{align-self:start;background-size:cover;min-height:100%;background-repeat:no-repeat;flex-direction:row;padding-top:6%;display:flex;padding-bottom:1%;background-position:50% 50%;column-gap:4%;row-gap:24px;max-width:1200px;width:100%;justify-content:flex-start;align-items:center;justify-self:center;grid-area:1/1/span 1/span 1}#ffa396dd{width:76.88%;height:auto;min-width:10px;min-height:10px;max-width:100%;align-self:center;justify-self:auto;grid-area:auto/auto/auto/auto}}@media (max-width:767px){#widget_v6e{justify-self:auto;align-self:flex-start;width:100%;order:1;margin:0;grid-area:auto/auto/auto/auto}#\39 0695a3f,#widget_g3c{align-self:flex-start;width:100%;margin:0;grid-area:auto/auto/auto/auto}#\39 0695a3f{justify-self:auto;order:1}#widget_g3c{justify-self:auto;order:2}}@media all{#\38 de4185c,#fbcb544f{order:0;position:relative}#fbcb544f{width:66.61%;height:auto;min-width:10px;min-height:10px;max-width:100%;align-self:center;justify-self:auto;margin-top:0;margin-bottom:0;grid-area:auto/auto/auto/auto}#\38 de4185c{align-self:start;background-size:cover;min-height:460px;background-repeat:no-repeat;flex-direction:row;display:flex;background-position:50% 50%;column-gap:4%;row-gap:24px;max-width:1200px;width:100%;justify-content:flex-start;align-items:center;justify-self:center;padding-top:5%;padding-bottom:5%;margin:0;grid-area:1/1/span 1/span 1}}@media (max-width:767px){#\37 2e51097{height:390px;width:100%;justify-self:auto;align-self:auto;order:1;margin:0;grid-area:auto/auto/auto/auto}}@media all{#\32 621b505,#\35 196abe9,#b08a0272,#f7de9425{position:relative;width:93.15%;height:auto;min-width:10px;min-height:10px;max-width:100%;align-self:center;margin-top:0;margin-bottom:0;order:0;grid-area:auto/auto/auto/auto}#\34 a933249{align-self:start;background-size:cover;min-height:100px;background-repeat:no-repeat;flex-direction:row;order:0;display:flex;background-position:50% 50%;column-gap:4%;row-gap:24px;max-width:1200px;width:100%;justify-content:flex-start;align-items:center;position:relative;justify-self:center;padding-bottom:6%;flex-wrap:nowrap;margin:0;grid-area:1/1/span 1/span 1}#\33 e116468,#fa184a5f{height:auto;min-width:10px;min-height:10px;max-width:100%}#\33 245598f,#\39 3323199{column-gap:4%;position:relative}#\33 245598f,#\33 e116468,#\36 aea20cc,#\39 3323199,#fa184a5f{position:relative}#\33 245598f,#\39 3323199,#f323a87a{background-size:cover;background-repeat:no-repeat;background-position:50% 50%;display:flex;width:100%}#\39 3323199{align-self:stretch;min-height:8px;row-gap:28px;flex-direction:column;max-width:100%;justify-content:center;align-items:flex-start;min-width:4%;margin-top:-44px;margin-bottom:0;margin-left:0;padding:16px}#fa184a5f{width:87.24%;order:1}#\33 245598f{align-self:start;min-height:600px;flex-direction:row;order:0;padding-top:16%;padding-bottom:22%;row-gap:24px;max-width:1200px;justify-content:flex-start;align-items:center;justify-self:center;margin:0;grid-area:1/1/span 1/span 1}#\39 1cdb6be{margin:0}#\36 aea20cc::before{content:'';display:block;position:absolute;width:100%;height:100%;top:0;left:0;background-color:rgba(0,0,0,1);opacity:.48;border-radius:inherit}#\36 aea20cc{background-repeat:no-repeat;background-size:cover;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(8px,max-content);display:grid;justify-content:start;background-position:50% 50%;align-items:start;background-color:var(--color_4);background-image:url(https://lirp.cdn-website.com/1c245020/dms3rep/multi/opt/ClearCourse+Health+cloud+based+secure+health+software-1920w.jpg);background-attachment:fixed}#\33 e116468.flex-element.widget-wrapper>[data-element-type]{padding-bottom:10px}#\33 e116468{width:54.76%;order:2;justify-self:auto;align-self:auto;grid-area:auto/auto/auto/auto}#\30 0937a50,#\39 e4f450d{justify-self:auto;height:auto;min-width:10px;min-height:10px;order:0;position:relative;max-width:100%;align-self:auto;grid-area:auto/auto/auto/auto}#\30 0937a50{width:320px;margin-top:33px}#\39 e4f450d{width:175px;margin:0}#\39 b956514{position:relative;width:220px;height:auto;min-width:10px;min-height:10px;max-width:100%;justify-self:auto;align-self:auto;order:0;margin:0;grid-area:auto/auto/auto/auto}#f323a87a{flex-direction:row;justify-content:flex-start;align-items:center;position:relative;max-width:100%;min-height:50px;max-height:100%;order:2;flex-wrap:nowrap;justify-self:auto;align-self:auto;margin:0;grid-area:auto/auto/auto/auto}}@media (min-width:767px) and (max-width:1024px){#\39 3323199{margin-top:0;width:100%;margin-right:0}#\33 245598f{padding:120px 20px}#\36 aea20cc::before{content:'';display:block;position:absolute;width:100%;height:100%;top:0;left:0;border-radius:inherit}#\36 aea20cc{background-attachment:fixed}#\30 0937a50{height:auto}}@media (min-width:1400px){#\33 245598f{padding:18% 0 22%}#\36 aea20cc::before{content:'';display:block;position:absolute;width:100%;height:100%;top:0;left:0;border-radius:inherit}#\36 aea20cc{background-attachment:fixed}#\30 0937a50{height:auto}}@media (max-width:767px){#\30 0937a50,#\33 e116468,#fa184a5f{align-self:flex-start;margin-left:0;margin-right:0}#\39 3323199{width:100%;min-height:240px;align-items:center;margin-top:-20px;margin-right:0;padding-top:16px;padding-left:0}#\33 245598f{min-height:unset;flex-direction:column;padding:100px 16px 80px}#\36 aea20cc::before{content:'';display:block;position:absolute;width:100%;height:100%;top:0;left:0;border-radius:inherit}#\36 aea20cc{background-attachment:fixed}#\33 e116468{width:87.94%;order:2}#\30 0937a50{height:auto;width:150px;order:0}#fa184a5f{width:100%;order:1}#f323a87a{justify-self:auto;align-self:auto;width:100%;order:3;margin:0;grid-area:auto/auto/auto/auto}}@media (min-width:468px) and (max-width:767px){#\36 aea20cc::before{content:'';display:block;position:absolute;width:100%;height:100%;top:0;left:0;border-radius:inherit}#\36 aea20cc{background-attachment:fixed}#\30 0937a50{height:auto}}@media all{#\37 e83185e{align-self:start;background-size:cover;min-height:64.62px;background-repeat:no-repeat;flex-direction:row;order:0;padding-top:6%;display:flex;padding-bottom:6%;background-position:50% 50%;column-gap:4%;row-gap:24px;max-width:1200px;width:100%;justify-content:flex-start;align-items:center;position:relative;justify-self:center;flex-wrap:nowrap;margin:0;grid-area:1/1/span 1/span 1}}@media (max-width:766px){#\30 35bc756,#\30 a102f6d,#\31 60dd389,#\32 d855ace,#\33 245598f,#\34 a933249,#\36 2eba75f92417728d16410dc,#\36 98fe84e,#\37 e83185e,#\37 fedf41e,#\38 bebcf0d,#\38 de4185c,#\39 70550d2,#afa8e99d,#ec47fcde{grid-area:1/1/span 1/span 1}#\36 aea20cc{grid-template-rows:minmax(8px,max-content)}}.font-size-58,.size-58{font-size:58px!important}.font-size-24,.size-24{font-size:24px!important}#\30 35bc756,#\30 b983274,#\30 e24a4aa,#\31 301621919,#\31 380924350,#\31 513045300,#\31 608632605,#\31 60dd389,#\31 655486006,#\31 705840970,#\33 f9a8be5,#\34 87e56fa,#\34 a933249,#\36 2eba75f92417728d16410dd,#\36 be199b8,#\37 25467b4,#\37 adafaf5,#\38 de4185c,#\39 3323199,#a1311d4b,#ad14ec03,#afa8e99d,#b96f653b,#c4c3d516,#cd4192ab,#d13e0979,#dcfca256,#e07a2d1e,#e1e2d788,#e5946d7a,#f23424b4,#f4e46787,#group_hm4,#hamburger-drawer{order:0}#\30 35bc756,#\30 b983274,#\31 301621919,#\31 513045300,#\31 608632605,#\31 60dd389,#\31 705840970,#\34 a933249,#\36 be199b8,#\38 de4185c,#afa8e99d,#f323a87a{flex-direction:row}#\30 a102f6d,#\31 069874846,#\31 265246737,#\31 347421887,#\31 358856411,#\31 399060395,#\31 469942216,#\32 d855ace,#\33 245598f,#\36 2eba75f92417728d16410dc,#\36 98fe84e,#\37 e83185e,#\37 fedf41e,#\38 bebcf0d,#\39 70550d2,#c6701d14,#ec47fcde{order:0;flex-direction:row}#\30 5fd2d3d,#\31 a752b9e,#\32 2de61ee,#\32 d35a3db,#\33 071209a,#\33 5112095,#\34 15f3695,#\34 f032057,#\37 2e51097,#\37 69f5bcc,#\37 84105b9,#\39 bc4dd9e,#\39 c8912c4,#cc761b40,#ec811014,#f1e21af3,#f4c4a50f,#fa184a5f,#fc46428e{order:1}#\33 8ef29f8,#\33 b295b0c,#\33 e116468,#\36 fea08b9,#\37 9f86b75,#f323a87a{order:2}#de742ff5,#ef3536e2,#f2023bba,#f5891225{order:3}#\31 49acc6b{order:4}#e3bcc53e{order:3;flex-direction:row}#group_vgl{order:2;flex-direction:row} #dm .dmPhotoGallery.newPhotoGallery .dmPhotoGalleryHolder {display: none;} @media (max-width:767px){ [data-hidden-on-mobile] {display:none!important}}
+    .dmDesktopBody [data-anim-desktop]:not([data-anim-desktop='none']) {
+      visibility: hidden;
+    }
+
+    
+</style>
+
+
+
+<style id="fontFallbacks">
+    @font-face {
+  font-family: "Roboto Fallback";
+  src: local('Arial');
+  ascent-override: 92.6709%;
+  descent-override: 24.3871%;
+  size-adjust: 100.1106%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Montserrat Fallback";
+  src: local('Arial');
+  ascent-override: 84.9466%;
+  descent-override: 22.0264%;
+  size-adjust: 113.954%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Poppins Fallback";
+  src: local('Arial');
+  ascent-override: 92.326%;
+  descent-override: 30.7753%;
+  line-gap-override: 8.793%;
+  size-adjust: 113.7274%;
+}@font-face {
+  font-family: "Lato Fallback";
+  src: local('Arial');
+  ascent-override: 101.3181%;
+  descent-override: 21.865%;
+  size-adjust: 97.4159%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Epilogue Fallback";
+  src: local('Arial');
+  ascent-override: 70.2338%;
+  descent-override: 20.8923%;
+  size-adjust: 112.4814%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Courier Prime Fallback";
+  src: local('Arial');
+  ascent-override: 57.5122%;
+  descent-override: 25.1616%;
+  size-adjust: 135.8407%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Open Sans Fallback";
+  src: local('Arial');
+  ascent-override: 101.1768%;
+  descent-override: 27.7323%;
+  size-adjust: 105.6416%;
+  line-gap-override: 0%;
+ }
+</style>
+
+
+<!-- End render the required css and JS in the head section -->
+
+
+
+
+
+
+
+  <link type="application/rss+xml" rel="alternate" href="https://www.clearcoursehealth.com/feed/rss2"/>
+  <link type="application/atom+xml" rel="alternate" href="https://www.clearcoursehealth.com/feed/atom"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://www.clearcoursehealth.com/"/>
+  <script type="application/ld+json">
+
+
+    {
+        "@context" : "https://schema.org",
+        "@type" : "WebSite",
+        "name" : "ClearCourse Health",
+        "url" : "https://www.clearcoursehealth.com/"
+    }
+
+
+  </script>
+  <title>
+    
+    Cloud-based Healthcare Practice Management Software
+  
+  </title>
+  <meta name="keywords" content="Health industry software, healthcare software, healthcare practice management software"/>
+  <meta name="description" content="ClearCourse Health’s healthcare practice management software helps clinics and practices run more efficiently, delivering exceptional patient outcomes. "/>
+  <!-- Force24 Tracking -->  <script>
+
+
+
+
+
+
+
+
+
+    (function (f, o, r, c, e, _2, _4) {
+        f.Force24Object = e, f[e] = f[e] || function () {
+            f[e].q = f[e].q || [], f[e].q.push(arguments)
+        }, f[e].l = 1 * new Date, _2 = o.createElement(r),
+        _4 = o.getElementsByTagName(r)[0], _2.async = !0, _2.src = c, _4.parentNode.insertBefore(_2, _4)
+    })(window, document, "script", "https://static.websites.data-crypt.com/scripts/activity/v3/inject-v3.min.js", "f24");
+    f24('config', 'set_tracking_id', '2fa10991-bec8-4a04-b942-640c8233a251');
+    f24('config', 'set_client_id', '79a2e948-c67f-4bfd-b3c2-af28f3706a37');
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  </script>
+  <!-- End Force24 Tracking -->  <!-- Google Tag Manager -->  <script>
+
+
+
+
+
+
+
+
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5D4FG5PW');
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  </script>
+  <!-- End Google Tag Manager -->  <script type="text/javascript">
+
+
+
+
+
+
+
+
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+function setCookie(name, value, days) {
+  var expires = "";
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+function getCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+var source = getParameterByName('source');
+var utm_source = getParameterByName('utm_source');
+var utm_campaign = getParameterByName('utm_campaign');
+var cchealth_source = getCookie('cchealth_source'); 
+if ( (utm_source != '') && (utm_source != null) ){
+if ( (utm_campaign != '') && (utm_campaign != null) ){
+source = utm_source + " - " + utm_campaign;
+} else {
+source = utm_source;
+}
+}
+if(source == '' || source == null){
+source = 'organic';
+}
+if(source != '' && source != null && (cchealth_source == '' || cchealth_source == null)){
+setCookie('cchealth_source', source, 7); //set for 7 days
+}
+var cc_firstname = getParameterByName('first_name');
+var cc_lastname = getParameterByName('last_name');
+var cc_email = getParameterByName('email');
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  </script>
+
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Cloud-based Healthcare Practice Management Software"/>
+  <meta name="twitter:description" content="ClearCourse Health’s healthcare practice management software helps clinics and practices run more efficiently, delivering exceptional patient outcomes. "/>
+  <meta name="twitter:image" content="https://lirp.cdn-website.com/1c245020/dms3rep/multi/opt/ClearCourse+Health+Software+OG+image-1920w.jpg"/>
+  <meta property="og:description" content="ClearCourse Health’s healthcare practice management software helps clinics and practices run more efficiently, delivering exceptional patient outcomes. "/>
+  <meta property="og:title" content="Cloud-based Healthcare Practice Management Software"/>
+  <meta property="og:image" content="https://lirp.cdn-website.com/1c245020/dms3rep/multi/opt/ClearCourse+Health+Software+OG+image-1920w.jpg"/>
+
+
+
+
+<!-- SYS- VVNfRElSRUNUX1BST0RVQ1RJT04= -->
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body id="dmRoot" data-page-alias="home"  class="dmRoot dmDesktopBody fix-mobile-scrolling addCanvasBorder dmResellerSite dmLargeBody responsiveTablet "
+      style="padding:0;margin:0;"
+      
+    >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========= Site Content ========= -->
+<div id="dm" class='dmwr'>
+    
+    <div class="dm_wrapper standard-var5 widgetStyle-3 standard">
+         <div dmwrapped="true" id="1901957768" class="dm-home-page" themewaschanged="true" desktop-global-classes="header-over-content" tablet-global-classes="header-over-content"> <div dmtemplateid="Hamburger" data-responsive-name="ResponsiveDesktopTopTabletHamburger" class="runtime-module-container dm-bfs dm-layout-home hasAnimations hasStickyHeader inMiniHeaderMode rows-1200 hamburger-reverse header-over-content dmPageBody d-page-1716942098 inputs-css-clean dmFreeHeader" id="dm-outer-wrapper" data-page-class="1716942098" data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <div id="site_content"> <div class="p_hfcontainer showOnMedium"> <div id="hamburger-drawer" class="hamburger-drawer layout-drawer" layout="SHARD25ff40d2f36ae4e5ea1bc96b2e2fcf67e===header" data-origin="top"> <div class="u_1985039911 dmRespRow" style="text-align: center;" id="1985039911"> <div class="dmRespColsWrapper" id="1301621919"> <div class="u_1846581102 dmRespCol small-12 medium-12 large-12 empty-column" id="1846581102"></div> 
+</div> 
+</div> 
+ <div class="u_1768941239 dmRespRow middleDrawerRow" style="text-align: center;" id="1768941239"> <div class="dmRespColsWrapper" id="1399060395"> <div class="dmRespCol small-12 u_1353245817 medium-12 large-12" id="1353245817"> <nav class="u_1069874846 effect-bottom2 main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="vertical_nav_layout_2" layout-sub="" data-show-vertical-sub-items="HIDE" id="1069874846" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" aria-haspopup="true" data-sub-nav-menu="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/sectors" class="unifiednav__item  dmUDNavigationItem_010101934870  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Sectors" data-auto="page-text-style">Sectors<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/aesthetics" class="unifiednav__item  dmUDNavigationItem_010101154390  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Aesthetics" data-auto="page-text-style">Aesthetics<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/msk" class="unifiednav__item  dmUDNavigationItem_010101242505  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="MSK" data-auto="page-text-style">MSK<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/occupational-health" class="unifiednav__item  dmUDNavigationItem_010101291766  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Occupational Health" data-auto="page-text-style">Occupational Health<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/primary-care" class="unifiednav__item  dmUDNavigationItem_010101475048  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Primary Care" data-auto="page-text-style">Primary Care<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/secondary-care" class="unifiednav__item  dmUDNavigationItem_010101204913  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Secondary Care" data-auto="page-text-style">Secondary Care<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/features" class="unifiednav__item  dmUDNavigationItem_010101740249  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Features" data-auto="page-text-style">Features<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/why-clearcourse-health" class="unifiednav__item  dmUDNavigationItem_010101537773  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Why ClearCourse Health" data-auto="page-text-style">Why ClearCourse Health<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/insights" class="unifiednav__item  dmUDNavigationItem_010101416420  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Insights" data-auto="page-text-style">Insights<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/contact" class="unifiednav__item  dmUDNavigationItem_010101411310  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Contact" data-auto="page-text-style">Contact<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1890444218" style="text-align: center;" id="1890444218"> <div class="dmRespColsWrapper" id="1265246737"> <div class="u_1295569305 dmRespCol small-12 medium-12 large-12" id="1295569305"> <div class="u_1373278435 align-center text-align-center dmSocialHub gapSpacing" id="1373278435" dmle_extension="social_hub" data-element-type="social_hub" wr="true" networks="" icon="true" surround="true" adwords=""> <div class="socialHubWrapper"> <div class="socialHubInnerDiv "> <a href="mailto:enquiries@clearcoursehealth.co.uk" dm_dont_rewrite_url="true" aria-label="email" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Email&apos;)"> <span class="dmSocialEmail dm-social-icons-email oneIcon socialHubIcon style5" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="layout-drawer-overlay" id="layout-drawer-overlay"></div> 
+</div> 
+ <div class="site_content"> <div id="hamburger-header-container" class="showOnMedium hamburger-header-container p_hfcontainer"> <div id="hamburger-header" class="hamburger-header p_hfcontainer" layout="44dc38f951e9489490b055748e10ba9f===header"> <div class="u_1705692124 dmRespRow" style="text-align: center;" id="1705692124"> <div class="dmRespColsWrapper" id="1469942216"> <div class="dmRespCol small-12 u_1655486006 medium-12 large-12" id="1655486006"> <div class="u_1923160809 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1923160809"> <a href="/" id="1573522578" file="false"><img src="https://irp.cdn-website.com/1c245020/dms3rep/multi/ClearCourse+Health+Light.svg" id="1761992403" class="" data-dm-image-path="https://irp.cdn-website.com/1c245020/dms3rep/multi/ClearCourse+Health+Light.svg" width="300" height="88" alt="The word health is written in blue on a white background." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <button class="showOnMedium layout-drawer-hamburger hamburger-on-header" id="layout-drawer-hamburger" aria-label="menu" aria-controls="hamburger-drawer" aria-expanded="false"> <span class="hamburger__slice"></span> 
+ <span class="hamburger__slice"></span> 
+ <span class="hamburger__slice"></span> 
+</button> 
+ <div class="dmHeaderContainer fHeader d-header-wrapper showOnLarge"> <div id="hcontainer" class="u_hcontainer dmHeader p_hfcontainer" freeheader="true" headerlayout="b58ba5b5703b4cd7b5f5f7951565dc87===horizontal-layout-5" data-scrollable-target="body" data-scrollable-target-threshold="1" data-scroll-responder-id="1" preserve-sticky-header="true" logo-size-target="80%" layout="7f3c1de367df47d5b45ab63d33101c7b===header"> <div dm:templateorder="85" class="dmHeaderResp dmHeaderStack noSwitch" id="1709005236"> <div class="dmRespRow dmDefaultListContentRow u_1656019285" style="text-align:center" id="1656019285"> <div class="dmRespColsWrapper" id="1513045300"> <div class="u_1112781587 small-12 dmRespCol large-2 medium-2" id="1112781587"> <div class="u_1366333904 imageWidget align-center" data-widget-type="image" id="1366333904" data-element-type="image"> <a href="/" id="1374202786" file="false"><img src="https://irp.cdn-website.com/1c245020/dms3rep/multi/ClearCourse+Health+Light.svg" id="1270798339" class="" data-dm-image-path="https://irp.cdn-website.com/1c245020/dms3rep/multi/ClearCourse+Health+Light.svg" width="300" height="88" alt="The word health is written in blue on a white background." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+</div> 
+ <div class="u_1402033884 dmRespCol small-12 large-8 medium-8" id="1402033884"> <span id="1174099661"></span> 
+ <nav class="u_1347421887 effect-bottom2 main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="horizontal_nav_layout_2" layout-sub="submenu_horizontal_1" data-show-vertical-sub-items="HOVER" id="1347421887" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" aria-haspopup="true" data-sub-nav-menu="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/sectors" class="unifiednav__item  dmUDNavigationItem_010101934870  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Sectors" data-auto="page-text-style">Sectors<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/aesthetics" class="unifiednav__item  dmUDNavigationItem_010101154390  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Aesthetics" data-auto="page-text-style">Aesthetics<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/msk" class="unifiednav__item  dmUDNavigationItem_010101242505  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="MSK" data-auto="page-text-style">MSK<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/occupational-health" class="unifiednav__item  dmUDNavigationItem_010101291766  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Occupational Health" data-auto="page-text-style">Occupational Health<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/primary-care" class="unifiednav__item  dmUDNavigationItem_010101475048  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Primary Care" data-auto="page-text-style">Primary Care<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/secondary-care" class="unifiednav__item  dmUDNavigationItem_010101204913  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Secondary Care" data-auto="page-text-style">Secondary Care<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/features" class="unifiednav__item  dmUDNavigationItem_010101740249  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Features" data-auto="page-text-style">Features<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/why-clearcourse-health" class="unifiednav__item  dmUDNavigationItem_010101537773  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Why ClearCourse Health" data-auto="page-text-style">Why ClearCourse Health<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/insights" class="unifiednav__item  dmUDNavigationItem_010101416420  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Insights" data-auto="page-text-style">Insights<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/contact" class="unifiednav__item  dmUDNavigationItem_010101411310  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Contact" data-auto="page-text-style">Contact<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+ <div class="u_1518628978 dmRespCol small-12 large-2 medium-2" id="1518628978"> <span id="1834939818"></span> 
+ <a data-display-type="block" class="align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient u_1655660705" file="false" href="/contact" data-element-type="dButtonLinkId" id="1655660705"> <span class="iconBg" aria-hidden="true" id="1554110397"> <span class="icon hasFontIcon icon-star" id="1252235938"></span> 
+</span> 
+ <span class="text" id="1806343066">Book a demo</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="stickyHeaderSpacer" id="stickyHeaderSpacer" data-new="true"></div> 
+ <div dmwrapped="true" id="dmFirstContainer" class="dmBody u_dmStyle_template_home dm-home-page" themewaschanged="true" desktop-global-classes="header-over-content" tablet-global-classes="header-over-content"> <div id="allWrapper" class="allWrapper"><!-- navigation placeholders --> <div id="dm_content" class="dmContent" role="main"> <div dm:templateorder="170" class="dmHomeRespTmpl mainBorder dmRespRowsWrapper dmFullRowRespTmpl" id="1716942098"> <div data-auto="flex-section" id="1433599900" data-flex-id="ece96930" data-layout-section=""> <div class="flex-widgets-container" id="1549344235"></div> 
+ <section id="91cdb6be" class="flex-element section" data-auto="flex-element-section"> <div id="6aea20cc" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="3245598f" class="flex-element group" data-auto="flex-element-group"> <div id="93323199" class="flex-element group" data-auto="flex-element-group"> <div id="fa184a5f" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1580491594"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1580491594" style=""> <h2 class="m-size-46 size-58" style="letter-spacing: -0.01em;"><span class="m-font-size-46 font-size-58" style="display: initial; color: var(--color_3);">One platform:</span><span class="m-font-size-46 font-size-58" style="display: initial;"> <span class="m-font-size-46 font-size-58" style="display: initial;">healthcare covered</span></span></h2> 
+</div> 
+</div> 
+ <div id="3e116468" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1333538267"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1333538267" style=""> <h1 class="m-size-19 size-24"><span class="m-font-size-19 font-size-24" style="color: var(--color_4); display: unset;">Helping you deliver more efficient and effective patient care through our secure cloud-based healthcare practice management software.</span></h1> 
+</div> 
+</div> 
+ <div id="00937a50" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="image" data-keep-proportion="true" data-hidden-on-mobile_portrait="" data-external-id="1702073123"> <div class="imageWidget align-center u_1702073123" data-element-type="image" data-widget-type="image" id="1702073123"><img src="https://irp.cdn-website.com/1c245020/dms3rep/multi/ClearCourse+Health+Plus+Pattern+v1.svg" alt="A row of blue and green crosses on a white background." id="1677200195" class="" data-dm-image-path="https://irp.cdn-website.com/1c245020/dms3rep/multi/ClearCourse+Health+Plus+Pattern+v1.svg" width="300" height="80" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+ <div id="f323a87a" class="flex-element group" data-auto="flex-element-group"> <div id="9b956514" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="link" data-external-id="1046575972"> <a data-display-type="block" class="align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient u_1046575972" file="false" href="/contact" data-element-type="dButtonLinkId" id="1046575972"> <span class="iconBg" aria-hidden="true" id="1056482515"> <span class="icon hasFontIcon icon-star" id="1477851445"></span> 
+</span> 
+ <span class="text" id="1953641383">Book a demo today</span> 
+</a> 
+</div> 
+ <div id="9e4f450d" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="link" data-external-id="1934639753"> <a data-display-type="block" class="align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient u_1934639753" file="false" href="/#Learnmore" data-element-type="dButtonLinkId" id="1934639753"> <span class="iconBg" aria-hidden="true" id="1355318092"> <span class="icon hasFontIcon icon-star" id="1245629166"></span> 
+</span> 
+ <span class="text" id="1184430932">Learn more &rarr;</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="Learnmore" data-flex-id="86f1d2f0" data-layout-section="" class="" data-anchor="Learn more"> <div class="flex-widgets-container" id="1102770238"></div> 
+ <section id="b971483a" class="flex-element section" data-auto="flex-element-section"> <div id="aecab6af" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="698fe84e" class="flex-element group" data-auto="flex-element-group"> <div id="769f5bcc" class="flex-element group" data-auto="flex-element-group"> <div id="aeb51bda" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="image" data-keep-proportion="true" data-external-id="1199194280"> <div class="imageWidget align-center u_1199194280" data-element-type="image" data-widget-type="image" id="1199194280"><img src="https://lirp.cdn-website.com/1c245020/dms3rep/multi/opt/Why+ClearCourse+Health-811h.png" id="1066218711" class="" data-dm-image-path="https://irp.cdn-website.com/1c245020/dms3rep/multi/Why+ClearCourse+Health.png" width="999" height="1466" alt="A collage of images of a surgeon , a woman , a man and a woman." onerror="handleImageLoadError(this)"/></div> 
+</div> 
+</div> 
+ <div id="c4c3d516" class="flex-element group" data-auto="flex-element-group"> <div id="ad4fbcda" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1350982781"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1350982781"> <h2 class="m-size-24 m-text-align-left" style="line-height: 1.2; letter-spacing: -0.01em;"><span class="m-font-size-24" m-font-size-set="true" style="display: unset;">Why ClearCourse Health?</span></h2> 
+</div> 
+</div> 
+ <div id="b267b587" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1291996814"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1291996814" style=""><p class="m-text-align-left m-size-14" style="line-height: 1.38;"><span class="m-font-size-14" m-font-size-set="true" style="display: initial; font-weight: bold;">ClearCourse Health is the technology partner your healthcare business needs, with a suite of purpose-built solutions that have evolved over two decades in collaboration with healthcare providers.</span></p><p class="m-text-align-left" style="line-height: 1.38;"><span class="m-font-size-14" m-font-size-set="true" style="display: initial;"><br/></span></p><p class="m-text-align-left m-size-14" style="line-height: 1.38;"><span class="m-font-size-14" m-font-size-set="true" style="display: initial;">The ClearCourse Health platform helps you manage your patient journey and your healthcare organisation, helping deliver exceptional patient experiences, reducing time spent on admin and creating more time to care.&nbsp;</span></p><p class="m-text-align-left m-size-14" style="line-height: 1.38;"><span class="m-font-size-14" m-font-size-set="true" style="display: initial;"><br/>After all, healthcare businesses are busy places, and they rely on fast, accurate information that staff and patients can trust.&nbsp;</span></p><p class="m-text-align-left m-size-14" style="line-height: 1.38;"><span class="m-font-size-14" m-font-size-set="true" style="display: initial;"><br/>From making appointments to invoicing and taking payment, keeping clinical records to charting and sharing patient progress, having a system you can rely on is essential.&nbsp;</span></p><p class="m-text-align-left m-size-14" style="line-height: 1.38;"><span class="m-font-size-14" m-font-size-set="true" style="display: initial;"><br/>Often, healthcare businesses have multiple software systems taking care of various tasks. However, multiple software solutions bring a number of headaches, including multiple subscription fees and integration challenges &ndash; as well as more security risks.&nbsp;</span></p><p class="m-text-align-left m-size-14" style="line-height: 1.38;"><span class="m-font-size-14" m-font-size-set="true" style="display: initial;"><br/>Bringing together established best-in class software solutions from</span><span single-space="true" class="m-font-size-14" style="display: initial;"> <span class="m-font-size-14" style="display: initial;"></span> 
+</span><span class="m-font-size-14" style="display: initial; font-weight: bold;" m-font-size-set="true">Blue Zinc</span><span class="m-font-size-14" style="display: initial;" m-font-size-set="true">,</span><span single-space="true" class="m-font-size-14" style="display: initial;"> <span class="m-font-size-14" style="display: initial;"></span> 
+</span><span class="m-font-size-14" style="display: initial; font-weight: bold;" m-font-size-set="true">TM3</span><span class="m-font-size-14" style="display: initial;" m-font-size-set="true">,</span><span single-space="true" class="m-font-size-14" style="display: initial;"> <span class="m-font-size-14" style="display: initial;"></span> 
+</span><span class="m-font-size-14" style="display: initial; font-weight: bold;" m-font-size-set="true">Caseflow</span><span class="m-font-size-14" style="display: initial;" m-font-size-set="true">,</span><span single-space="true" class="m-font-size-14" style="display: initial;"> <span class="m-font-size-14" style="display: initial;"></span> 
+</span><span class="m-font-size-14" style="display: initial; font-weight: bold;" m-font-size-set="true">e-clinic</span><span class="m-font-size-14" style="display: initial;" m-font-size-set="true">,</span><span single-space="true" class="m-font-size-14" style="display: initial;"> <span class="m-font-size-14" style="display: initial;"></span> 
+</span><span class="m-font-size-14" style="display: initial; font-weight: bold;" m-font-size-set="true">Pronto</span><span class="m-font-size-14" style="display: initial;" m-font-size-set="true">,</span><span single-space="true" class="m-font-size-14" style="display: initial;"> <span class="m-font-size-14" style="display: initial;"></span> 
+</span><span class="m-font-size-14" style="display: initial; font-weight: bold;" m-font-size-set="true">Click</span><span single-space="true" class="m-font-size-14" style="display: initial;"> <span class="m-font-size-14" style="display: initial;"></span> 
+</span><span class="m-font-size-14" style="display: initial;" m-font-size-set="true">and</span><span single-space="true" class="m-font-size-14" style="display: initial;"> <span class="m-font-size-14" style="display: initial;"></span> 
+</span><span class="m-font-size-14" style="display: initial; font-weight: bold;" m-font-size-set="true">PPM</span><span single-space="true" class="m-font-size-14" style="display: initial;"> <span class="m-font-size-14" style="display: initial;"></span> 
+</span><span class="m-font-size-14" style="display: initial;" m-font-size-set="true">&ndash; ClearCourse Health provides everything you need in one platform.</span></p><p class="m-text-align-left m-size-14" style="line-height: 1.38;"><span class="m-font-size-14" m-font-size-set="true" style="font-weight: normal; display: initial;"><br/>You can choose the features you need, and leave the features you don&rsquo;t &ndash; safe in the knowledge they are there when you need them.&nbsp;</span><span style="display: initial;"><br/></span></p></div> 
+</div> 
+ <div id="0b983274" class="flex-element group" data-auto="flex-element-group"> <div id="7e6b418c" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="link" data-external-id="1829482652"> <a data-display-type="block" class="align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient u_1829482652" file="false" href="/why-clearcourse-health" data-element-type="dButtonLinkId" id="1829482652"> <span class="iconBg" aria-hidden="true" id="1541937751"> <span class="icon hasFontIcon icon-star" id="1415030806"></span> 
+</span> 
+ <span class="text" id="1685009082">Learn more</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1796252046" data-flex-id="17421536" data-layout-section="" class="u_1796252046"> <div class="flex-widgets-container" id="1544138795"></div> 
+ <section id="91287df1" class="flex-element section" data-auto="flex-element-section"> <div id="67a50dce" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="160dd389" class="flex-element group" data-auto="flex-element-group"> <div id="3f9a8be5" class="flex-element group" data-auto="flex-element-group"> <div id="ffa396dd" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1948689380"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1948689380" style=""> <h2 class="m-size-24 text-align-center m-text-align-left" style="line-height: initial; letter-spacing: -0.01em;"><span class="m-font-size-24" m-font-size-set="true" style="display: unset;">Sectors ClearCourse Health specialise in</span></h2> 
+</div> 
+</div> 
+ <div id="widget_v6e" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1003106789"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1003106789" style=""><p class="m-size-14 text-align-center m-text-align-left"><span class="m-font-size-14" m-font-size-set="true" style="display: unset;">As the trusted technology partner to the world&rsquo;s largest healthcare providers across primary care, secondary care, MSK, aesthetics and occupational health, we create the right solution for you today and tomorrow, ensuring your business is running as smoothly and efficiently as possible.</span><span single-space="true" class="m-font-size-14" style="display: unset;"> <span class="m-font-size-14" style="display: unset;"></span> 
+</span></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-layout-section="" data-auto="flex-section" id="1840146688" data-flex-id="2ae1a308"> <div class="flex-widgets-container" id="1004250631"></div> 
+ <section id="c92c3732" class="flex-element section" data-auto="flex-element-section"> <div id="3435bd2a" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="6be199b8" class="flex-element group" data-auto="flex-element-group"> <div id="f2023bba" class="flex-element group" data-auto="flex-element-group"> <div id="widget_jrf" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="image" data-keep-proportion="true" data-external-id="1222671989"> <div class="imageWidget align-center u_1222671989" data-element-type="image" data-widget-type="image" id="1222671989"><img src="https://lirp.cdn-website.com/1c245020/dms3rep/multi/opt/Primary+Care+software+ClearCourse+Health-238w.png" alt="A doctor with a stethoscope around his neck is holding a tablet." id="1122748991" class="" data-dm-image-path="https://irp.cdn-website.com/1c245020/dms3rep/multi/Primary+Care+software+ClearCourse+Health.png" width="555" height="361" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+ <div id="widget_dkq" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1065637371"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1065637371" style=""> <h2 class="m-size-19 size-24" style="line-height: 1.2;"><span class="m-font-size-19 font-size-24" style="display: unset; color: var(--color_2);">Primary Care</span></h2> 
+</div> 
+</div> 
+ <div id="widget_g3c" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1567186344"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1567186344" style=""><p class="m-size-14 text-align-left m-text-align-left"><a href="/primary-care" runtime_url="/primary-care" type="page" class="m-font-size-14" m-font-size-set="true" style="display: unset;">Learn more &rarr;</a></p></div> 
+</div> 
+</div> 
+ <div id="b96f653b" class="flex-element group" data-auto="flex-element-group"> <div id="18859bce" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-keep-proportion="true" data-widget-type="image" data-external-id="1174945459"> <div class="imageWidget align-center u_1174945459" data-element-type="image" data-widget-type="image" id="1174945459"><img src="https://lirp.cdn-website.com/1c245020/dms3rep/multi/opt/Aesthetics+software+ClearCourse+Health-238w.png" alt="A woman is getting a plastic surgery on her face." id="1736089523" class="" data-dm-image-path="https://irp.cdn-website.com/1c245020/dms3rep/multi/Aesthetics+software+ClearCourse+Health.png" width="555" height="361" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+ <div id="90695a3f" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1709362199"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1709362199" style=""> <h2 class="m-text-align-left size-24 m-size-19" style="line-height: 1.2;"><span class="font-size-24 m-font-size-19" m-font-size-set="true" style="display: unset; color: var(--color_2);">Aesthetics</span></h2> 
+</div> 
+</div> 
+ <div id="c3f7b913" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1037313046"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1037313046" style=""><p class="m-size-14 m-text-align-left text-align-left"><a href="/aesthetics" runtime_url="/aesthetics" type="page" class="m-font-size-14" m-font-size-set="true" style="display: unset;">Learn more &rarr;</a></p></div> 
+</div> 
+</div> 
+ <div id="38ef29f8" class="flex-element group" data-auto="flex-element-group"> <div id="f01dae42" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-keep-proportion="true" data-widget-type="image" data-external-id="1289910007"> <div class="imageWidget align-center u_1289910007" data-element-type="image" data-widget-type="image" id="1289910007"><img src="https://lirp.cdn-website.com/1c245020/dms3rep/multi/opt/Occ+Health+software+ClearCourse+Health-238w.png" alt="A woman in a hard hat and safety vest is holding a tablet in a factory." id="1256286019" class="" data-dm-image-path="https://irp.cdn-website.com/1c245020/dms3rep/multi/Occ+Health+software+ClearCourse+Health.png" width="555" height="361" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+ <div id="9309df25" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1380627978"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1380627978" style=""> <h2 class="m-size-19 size-24" style="line-height: 1.2;"><span class="m-font-size-19 font-size-24" style="color: var(--color_2); display: unset;">Occupational Health</span></h2> 
+</div> 
+</div> 
+ <div id="8eed96e2" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1482593315"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1482593315" style=""><p class="m-size-14 text-align-left m-text-align-left"><a href="/occupational-health" runtime_url="/occupational-health" type="page" class="m-font-size-14" m-font-size-set="true" style="display: unset;">Learn more &rarr;</a></p></div> 
+</div> 
+</div> 
+ <div id="4f032057" class="flex-element group" data-auto="flex-element-group"> <div id="c54a483b" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-keep-proportion="true" data-widget-type="image" data-external-id="1762179782"> <div class="imageWidget align-center u_1762179782" data-element-type="image" data-widget-type="image" id="1762179782"><img src="https://lirp.cdn-website.com/1c245020/dms3rep/multi/opt/Secure+cloud+based+MSK+software+from+ClearCourse+Health-238w.png" alt="A doctor is showing a patient an x-ray on a tablet." id="1632546272" class="" data-dm-image-path="https://irp.cdn-website.com/1c245020/dms3rep/multi/Secure+cloud+based+MSK+software+from+ClearCourse+Health.png" width="555" height="361" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+ <div id="e2be1348" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1646777401"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1646777401" style=""> <h2 class="m-text-align-left size-24 m-size-19" style="line-height: 1.2;"><span class="font-size-24 m-font-size-19" m-font-size-set="true" style="color: var(--color_2); display: unset;">MSK</span></h2> 
+</div> 
+</div> 
+ <div id="2c96ad36" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1696747261"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1696747261" style=""><p class="m-size-14 m-text-align-left text-align-left"><a href="/msk" runtime_url="/msk" type="page" class="m-font-size-14" m-font-size-set="true" style="display: unset;">Learn more &rarr;</a></p></div> 
+</div> 
+</div> 
+ <div id="149acc6b" class="flex-element group" data-auto="flex-element-group"> <div id="3bbb75ed" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-keep-proportion="true" data-widget-type="image" data-external-id="1979256489"> <div class="imageWidget align-center u_1979256489" data-element-type="image" data-widget-type="image" id="1979256489"><img src="https://lirp.cdn-website.com/1c245020/dms3rep/multi/opt/Secondary+Care+software+ClearCourse+Health-238w.png" alt="A female doctor is looking at an x-ray of a brain on a large screen." id="1196122115" class="" data-dm-image-path="https://irp.cdn-website.com/1c245020/dms3rep/multi/Secondary+Care+software+ClearCourse+Health.png" width="555" height="361" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+ <div id="f0f655d9" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1201085422"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1201085422" style=""> <h2 class="m-text-align-left m-size-19 size-24" style="line-height: 1.2;"><span class="m-font-size-19 font-size-24" style="display: unset; color: var(--color_2);">Secondary Care</span></h2> 
+</div> 
+</div> 
+ <div id="66181009" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1642641849"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1642641849" style=""><p class="m-size-14 text-align-left m-text-align-left"><a href="/secondary-care" runtime_url="/secondary-care" type="page" class="m-font-size-14" m-font-size-set="true" style="display: unset;">Learn more &rarr;</a></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1932743172" data-flex-id="783c7d4d" data-layout-section=""> <div class="flex-widgets-container" id="1915312967"></div> 
+ <section id="a90fadfd" class="flex-element section" data-auto="flex-element-section"> <div id="4b283b3a" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="970550d2" class="flex-element group" data-auto="flex-element-group"> <div id="725467b4" class="flex-element group" data-auto="flex-element-group"> <div id="846f1990" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1135581773"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1135581773" style=""> <h2 class="m-size-24 text-align-center m-text-align-left" style="line-height: initial; letter-spacing: -0.01em;"><span class="m-font-size-24" m-font-size-set="true" style="display: unset;">What ClearCourse Health can do for you</span></h2> 
+</div> 
+</div> 
+ <div id="6868b44a" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1470759042"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1470759042" style=""><p class="m-text-align-left text-align-center m-size-14"><span class="m-font-size-14" m-font-size-set="true" style="display: initial;">ClearCourse Health provides everything you need in one platform. You can choose the features you need, and leave the features you don&rsquo;t &ndash; safe in the knowledge they are there when you need them.</span></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-flex-id="9d5fc33c" data-auto="flex-section" id="1103207590" data-layout-section=""> <div class="flex-widgets-container" id="1076544133"></div> 
+ <section id="fce07f11" class="flex-element section" data-auto="flex-element-section"> <div id="ce2216fa" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="afa8e99d" class="flex-element group" data-auto="flex-element-group"> <div id="9c8912c4" class="flex-element group" data-auto="flex-element-group"> <div id="f4c4a50f" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1368479030"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1368479030" style=""> <h3 class="text-align-center m-size-16"><span m-font-size-set="true" style="display: unset; color: var(--color_2);" class="m-font-size-16">Administration</span></h3> 
+</div> 
+</div> 
+ <div id="b6cb4404" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="image" data-keep-proportion="true" data-external-id="1193078988"> <div class="imageWidget align-center u_1193078988" data-element-type="image" data-widget-type="image" id="1193078988"><img src="https://irp.cdn-website.com/1c245020/dms3rep/multi/Administration+icon.svg" alt="A gear with a person in the middle of it." id="1565346454" class="" data-dm-image-path="https://irp.cdn-website.com/1c245020/dms3rep/multi/Administration+icon.svg" width="144" height="150" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+</div> 
+ <div id="3b295b0c" class="flex-element group" data-auto="flex-element-group"> <div id="fc46428e" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1203386700"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1203386700" style=""> <h3 class="text-align-center m-size-16"><span m-font-size-set="true" style="display: unset; color: var(--color_2);" class="m-font-size-16">Classes</span></h3> 
+</div> 
+</div> 
+ <div id="a737ed38" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-keep-proportion="true" data-widget-type="image" data-external-id="1463796148"> <div class="imageWidget align-center u_1463796148" data-element-type="image" data-widget-type="image" id="1463796148"><img src="https://irp.cdn-website.com/1c245020/dms3rep/multi/Classes+icon.svg" alt="A man is jumping a jump rope in a green circle." id="1733632470" class="" data-dm-image-path="https://irp.cdn-website.com/1c245020/dms3rep/multi/Classes+icon.svg" width="144" height="150" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+</div> 
+ <div id="de742ff5" class="flex-element group" data-auto="flex-element-group"> <div id="1a752b9e" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1253232796"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1253232796" style=""> <h3 class="text-align-center m-size-16"><span m-font-size-set="true" style="display: unset; color: var(--color_2);" class="m-font-size-16">Clinical records</span></h3> 
+</div> 
+</div> 
+ <div id="83cd7af5" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-keep-proportion="true" data-widget-type="image" data-external-id="1866310851"> <div class="imageWidget align-center u_1866310851" data-element-type="image" data-widget-type="image" id="1866310851"><img src="https://irp.cdn-website.com/1c245020/dms3rep/multi/Clinical+records+icon.svg" alt="A checklist icon in a blue circle on a white background." id="1964964541" class="" data-dm-image-path="https://irp.cdn-website.com/1c245020/dms3rep/multi/Clinical+records+icon.svg" width="144" height="150" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+</div> 
+ <div id="ef3536e2" class="flex-element group" data-auto="flex-element-group"> <div id="415f3695" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1444538248"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1444538248" style=""> <h3 class="text-align-center m-size-16"><span m-font-size-set="true" style="color: var(--color_2); display: unset;" class="m-font-size-16">CRM</span></h3> 
+</div> 
+</div> 
+ <div id="ef3fbe2b" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-keep-proportion="true" data-widget-type="image" data-external-id="1756486983"> <div class="imageWidget align-center u_1756486983" data-element-type="image" data-widget-type="image" id="1756486983"><img src="https://irp.cdn-website.com/1c245020/dms3rep/multi/CRM+icon.svg" alt="An icon of a person in a window with a green circle around it." id="1321057119" class="" data-dm-image-path="https://irp.cdn-website.com/1c245020/dms3rep/multi/CRM+icon.svg" width="144" height="150" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-flex-id="60e52cc9" data-auto="flex-section" id="1435015798" data-layout-section=""> <div class="flex-widgets-container" id="1534588332"></div> 
+ <section id="b41061e0" class="flex-element section" data-auto="flex-element-section"> <div id="662a01c0" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="8bebcf0d" class="flex-element group" data-auto="flex-element-group"> <div id="e1e2d788" class="flex-element group" data-auto="flex-element-group"> <div id="22de61ee" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1215416840"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1215416840" style=""> <h3 class="text-align-center m-size-16"><span m-font-size-set="true" style="display: unset; color: var(--color_2);" class="m-font-size-16">Payments</span></h3> 
+</div> 
+</div> 
+ <div id="4fcb4375" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-keep-proportion="true" data-widget-type="image" data-external-id="1272647966"> <div class="imageWidget align-center u_1272647966" data-element-type="image" data-widget-type="image" id="1272647966"><img src="https://irp.cdn-website.com/1c245020/dms3rep/multi/Payments+icon.svg" alt="A hand is holding a credit card in a blue circle." id="1608978358" class="" data-dm-image-path="https://irp.cdn-website.com/1c245020/dms3rep/multi/Payments+icon.svg" width="144" height="150" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+</div> 
+ <div id="3071209a" class="flex-element group" data-auto="flex-element-group"> <div id="79f86b75" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1413061270"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1413061270" style=""> <h3 class="text-align-center m-size-16"><span m-font-size-set="true" style="display: unset; color: var(--color_2);" class="m-font-size-16">Integrations</span></h3> 
+</div> 
+</div> 
+ <div id="05fd2d3d" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-keep-proportion="true" data-widget-type="image" data-external-id="1763594796"> <div class="imageWidget align-center u_1763594796" data-element-type="image" data-widget-type="image" id="1763594796"><img src="https://irp.cdn-website.com/1c245020/dms3rep/multi/Integrations+icon.svg" alt="A gear with an arrow pointing to the right in a green circle." id="1620455462" class="" data-dm-image-path="https://irp.cdn-website.com/1c245020/dms3rep/multi/Integrations+icon.svg" width="144" height="150" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+</div> 
+ <div id="6fea08b9" class="flex-element group" data-auto="flex-element-group"> <div id="9bc4dd9e" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1797172504"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1797172504" style=""> <h3 class="text-align-center m-size-16"><span m-font-size-set="true" style="display: unset; color: var(--color_2);" class="m-font-size-16">Reporting</span></h3> 
+</div> 
+</div> 
+ <div id="ce37f3ab" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-keep-proportion="true" data-widget-type="image" data-external-id="1789942056"> <div class="imageWidget align-center u_1789942056" data-element-type="image" data-widget-type="image" id="1789942056"><img src="https://irp.cdn-website.com/1c245020/dms3rep/multi/Reporting+icon.svg" alt="A line graph in a blue circle on a white background." id="1529823970" class="" data-dm-image-path="https://irp.cdn-website.com/1c245020/dms3rep/multi/Reporting+icon.svg" width="144" height="150" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+</div> 
+ <div id="f5891225" class="flex-element group" data-auto="flex-element-group"> <div id="784105b9" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1597246947"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1597246947" style=""> <h3 class="text-align-center m-size-16"><span m-font-size-set="true" style="display: unset; color: var(--color_2);" class="m-font-size-16">Security</span></h3> 
+</div> 
+</div> 
+ <div id="b7b26572" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-keep-proportion="true" data-widget-type="image" data-external-id="1821898269"> <div class="imageWidget align-center u_1821898269" data-element-type="image" data-widget-type="image" id="1821898269"><img src="https://irp.cdn-website.com/1c245020/dms3rep/multi/Security+icon.svg" alt="An icon of a padlock in a green circle." id="1239813162" class="" data-dm-image-path="https://irp.cdn-website.com/1c245020/dms3rep/multi/Security+icon.svg" width="144" height="150" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-flex-id="b79175cf" data-auto="flex-section" id="1402751473" data-layout-section=""> <div class="flex-widgets-container" id="1234469945"></div> 
+ <section id="a0c71f2e" class="flex-element section" data-auto="flex-element-section"> <div id="1b5b44dc" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="ec47fcde" class="flex-element group" data-auto="flex-element-group"> <div id="e07a2d1e" class="flex-element group" data-auto="flex-element-group"> <div id="d99ef689" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="link" data-external-id="1058373149"> <a data-display-type="block" class="align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient u_1058373149" file="false" href="/features" data-element-type="dButtonLinkId" id="1058373149"> <span class="iconBg" aria-hidden="true" id="1812547566"> <span class="icon hasFontIcon icon-star" id="1175466501"></span> 
+</span> 
+ <span class="text" id="1244693865">See all features</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1308078119" data-flex-id="8edf6b15" data-layout-section=""> <div class="flex-widgets-container" id="1274853903"></div> 
+ <section id="02e989bb" class="flex-element section" data-auto="flex-element-section"> <div id="03e827bd" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="035bc756" class="flex-element group" data-auto="flex-element-group"> <div id="dcfca256" class="flex-element group" data-auto="flex-element-group"> <div id="574aa9ac" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="image" data-keep-proportion="true" data-external-id="1818071550"> <div class="imageWidget align-center u_1818071550" data-element-type="image" data-widget-type="image" id="1818071550"><img src="https://lirp.cdn-website.com/1c245020/dms3rep/multi/opt/The+ClearCourse+Health+difference-684w.png" id="1645393732" class="" data-dm-image-path="https://irp.cdn-website.com/1c245020/dms3rep/multi/The+ClearCourse+Health+difference.png" width="1234" height="960" alt="A woman in a lab coat is sitting in front of a computer." onerror="handleImageLoadError(this)"/></div> 
+</div> 
+</div> 
+ <div id="f1e21af3" class="flex-element group" data-auto="flex-element-group"> <div id="d11cc8a8" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1353073389"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1353073389" style=""> <h2 class="m-size-24" style="letter-spacing: -0.01em; line-height: 1.3;"><span class="m-font-size-24" m-font-size-set="true" style="display: unset;">Experience the ClearCourse Health difference</span></h2> 
+</div> 
+</div> 
+ <div id="35112095" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1783179438"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1783179438" style=""><p class="m-size-14"><span class="m-font-size-14" style="font-weight: bold; display: initial;"><span style="font-weight: bold; display: initial;" m-font-size-set="true" class="m-font-size-14">Say hello to one single, secure and always-evolving platform that can manage your entire business.</span> 
+</span></p></div> 
+</div> 
+ <div id="e3bcc53e" class="flex-element group" data-auto="flex-element-group"> <div id="b769f300" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="link" data-external-id="1642318021"> <a data-display-type="block" class="align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient u_1642318021" file="false" href="/why-clearcourse-health" data-element-type="dButtonLinkId" id="1642318021"> <span class="iconBg" aria-hidden="true" id="1229183016"> <span class="icon hasFontIcon icon-star" id="1250395464"></span> 
+</span> 
+ <span class="text" id="1922588638">Learn more</span> 
+</a> 
+</div> 
+</div> 
+ <div id="group_vgl" class="flex-element group" data-auto="flex-element-group"> <div id="widget_kf1" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1689636722"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1689636722" style=""> <ul class="defaultList custom-list-4"><li class="m-size-14"><span class="m-font-size-14" m-font-size-set="true" style="display: initial;">One subscription fee</span></li><li class="m-size-14"><span class="m-font-size-14" m-font-size-set="true" style="display: initial;">Cloud based</span><span single-space="true" class="m-font-size-14" style="display: initial;"> <span class="m-font-size-14" style="display: initial;"></span> 
+</span></li><li class="m-size-14"><span class="m-font-size-14" m-font-size-set="true" style="display: initial;">ISO Accredited</span></li><li class="m-size-14"><span class="m-font-size-14" m-font-size-set="true" style="display: initial;">Improve operational efficiency</span></li><li class="m-size-14"><span class="m-font-size-14" m-font-size-set="true" style="display: initial;">Reduce costs</span></li></ul> 
+</div> 
+</div> 
+ <div id="27cb7515" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1256698054"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1256698054" style=""> <ul class="defaultList custom-list-4"><li class="m-size-14"><span class="m-font-size-14" m-font-size-set="true" style="display: unset;">Ensure accuracy</span></li><li class="m-size-14"><span class="m-font-size-14" m-font-size-set="true" style="display: unset;">Remove information duplication</span></li><li class="m-size-14"><span class="m-font-size-14" m-font-size-set="true" style="display: unset;">One source of truth</span></li><li class="m-size-14"><span class="m-font-size-14" m-font-size-set="true" style="display: unset;">One site or multiple sites</span></li><li class="m-size-14"><span class="m-font-size-14" m-font-size-set="true" style="display: unset;">Tailored to your business needs</span></li></ul> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1323678542" data-flex-id="886aec5e" data-layout-section=""> <div class="flex-widgets-container" id="1568200233"></div> 
+ <section id="fe8077da" class="flex-element section" data-auto="flex-element-section"> <div id="f8bc5a7c" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="0a102f6d" class="flex-element group" data-auto="flex-element-group"> <div id="f4e46787" class="flex-element group" data-auto="flex-element-group"> <div id="3b0af5e7" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1759809785"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1759809785" style=""> <h2 class="m-size-24 text-align-center m-text-align-center" style="letter-spacing: -0.01em; line-height: initial;"><span class="m-font-size-24" m-font-size-set="true" style="display: unset;">The healthcare practice management software partner of choice for more than 20 years</span></h2> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1653954406" data-flex-id="b264a2c1" data-layout-section=""> <div class="flex-widgets-container" id="1170966301"></div> 
+ <section id="3a0da755" class="flex-element section" data-auto="flex-element-section"> <div id="ac22fbf1" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="4a933249" class="flex-element group" data-auto="flex-element-group"> <div id="cd4192ab" class="flex-element group" data-auto="flex-element-group"> <div id="5196abe9" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1939879120"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1939879120" style=""><p class="text-align-center m-size-53 size-66"><span class="m-font-size-53 font-size-66" style="color:var(--color_3);display:unset;font-family:SupremeLLTT-Black;">30%</span></p></div> 
+</div> 
+ <div id="widget_mck" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1830774703"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1830774703" style=""><p class="m-size-14 m-text-align-center text-align-center"><span class="m-font-size-14" m-font-size-set="true" style="display: unset;">Reduction in client no-shows</span></p></div> 
+</div> 
+</div> 
+ <div id="487e56fa" class="flex-element group" data-auto="flex-element-group"> <div id="2621b505" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1956617880"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1956617880" style=""><p class="m-size-53 text-align-center size-66"><span class="m-font-size-53 font-size-66" style="color:var(--color_3);display:unset;font-family:SupremeLLTT-Black;">&pound;2bn+</span></p></div> 
+</div> 
+ <div id="49e27562" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1840230787"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1840230787" style=""><p class="m-size-14 m-text-align-center text-align-center"><span class="m-font-size-14" m-font-size-set="true" style="display: unset;">Payments processed across insurance, self pay and corporate management</span></p></div> 
+</div> 
+</div> 
+ <div id="e5946d7a" class="flex-element group" data-auto="flex-element-group"> <div id="f7de9425" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1482721417"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1482721417" style=""><p class="text-align-center m-size-53 size-66"><span class="font-size-66 m-font-size-53" style="color:var(--color_3);display:unset;font-family:SupremeLLTT-Black;">100%</span></p></div> 
+</div> 
+ <div id="a84ae336" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1407591683"> <div class="dmNewParagraph ql-disabled" data-element-type="paragraph" data-version="5" id="1407591683" style=""><p class="m-size-14 text-align-center"><span class="m-font-size-14" m-font-size-set="true" style="display: unset;">Increase in patient experience</span></p></div> 
+</div> 
+</div> 
+ <div id="f23424b4" class="flex-element group" data-auto="flex-element-group"> <div id="b08a0272" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1845772176"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1845772176" style=""><p class="m-size-53 text-align-center size-66"><span class="m-font-size-53 font-size-66" style="color:var(--color_3);display:unset;font-family:SupremeLLTT-Black;">&pound;1bn+</span></p></div> 
+</div> 
+ <div id="14abc856" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1780589377"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1780589377" style=""><p class="m-size-14 text-align-center"><span class="m-font-size-14" m-font-size-set="true" style="display: unset;">Payment transactions&nbsp;</span></p><p class="m-size-14 text-align-center"><span class="m-font-size-14" m-font-size-set="true" style="display: unset;">processed through our embedded payment platform ClearAccept every year</span></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div class="dmRespRow u_1906718319" id="1906718319"> <div class="dmRespColsWrapper" id="1705840970"> <div class="dmRespCol large-12 medium-12 small-12 u_1883371028" id="1883371028"> <div class="u_1410634809 dmNewParagraph" id="1410634809" style="text-align: left;" data-element-type="paragraph" data-version="5"> <h2 class="text-align-center m-size-24"><span class="m-font-size-24" m-font-size-set="true" style="display: initial;">Latest news and insights</span></h2> 
+</div> <div class="u_1380924350 default mainBlog layout4" id="1380924350" dmle_extension="internal_blog_list" data-element-type="internal_blog_list" show-images="true" wr="true" trim-title="false" show-blog-title="false" show-action-text="true" text-align="left" icon="true" surround="true" adwords="" list-layout="layout4" visible-items="3" visible-post-lines="3" search-tags="" search-term="" more-posts-text="Show More" header-type="H2" posts-padding="20" posts-per-row="3" show-author="false" text-box-padding="true" action-text="Read More →" skip-post-index="-1" blog-posts-feature-flag="true" data-image-hover-effect="zoomout" show-more-posts-text="true" data-paginate-total-elements="7"> <div class="inner "> <div style="-ms-grid-column:1; -ms-grid-row:1" class="postArticle "> <div class="inner clearfix wow" style="animation-delay: 200.0ms;"> <a class="blogImgLink" dont-color-link="true" href="/why-do-digital-transformation-projects-fail" data-blog-post-alias="why-do-digital-transformation-projects-fail"> <div class="blogImg" style="background-image: url('https://lirp.cdn-website.com/1c245020/dms3rep/multi/opt/Why+do+digital+transformation+projects+fail1-1920w.jpg');"><img src="https://lirp.cdn-website.com/1c245020/dms3rep/multi/opt/Why+do+digital+transformation+projects+fail1-1920w.jpg" alt="A doctor is using a tablet computer in a hospital." onerror="handleImageLoadError(this)"/></div> 
+</a> 
+ <div class="postTextContainer"> <div class="postText clearfix"> <div class="postTitle"> <h3> <a dont-color-link="true" href="/why-do-digital-transformation-projects-fail" data-blog-post-alias="why-do-digital-transformation-projects-fail">Why do digital transformation projects fail?</a> 
+</h3> 
+</div> 
+ <div class="authorBar"> <span>November 20, 2024</span> 
+</div> 
+ <div class="postDescription">At ClearCourse Health, we&rsquo;ve committed ourselves to ensuring the success of our digital transformation projects and as a result we&rsquo;ve compiled a list of the top three reasons why projects fail, and how to avoid them!</div> 
+</div> 
+ <div class="readMore"> <a dont-color-link="true" href="/why-do-digital-transformation-projects-fail"></a> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div style="-ms-grid-column:2; -ms-grid-row:1" class="postArticle "> <div class="inner clearfix wow" style="animation-delay: 400.0ms;"> <a class="blogImgLink" dont-color-link="true" href="/introducing-clearcourse-health-to-the-digital-healthcare-show-2024" data-blog-post-alias="introducing-clearcourse-health-to-the-digital-healthcare-show-2024"> <div class="blogImg" style="background-image: url('https://lirp.cdn-website.com/1c245020/dms3rep/multi/opt/Introducing+ClearCourse+Health+to+the+Digital+Healthcare+Show+2024-1920w.jpg');"><img src="https://lirp.cdn-website.com/1c245020/dms3rep/multi/opt/Introducing+ClearCourse+Health+to+the+Digital+Healthcare+Show+2024-1920w.jpg" alt="A blurry picture of people walking in a room at a convention." onerror="handleImageLoadError(this)"/></div> 
+</a> 
+ <div class="postTextContainer"> <div class="postText clearfix"> <div class="postTitle"> <h3> <a dont-color-link="true" href="/introducing-clearcourse-health-to-the-digital-healthcare-show-2024" data-blog-post-alias="introducing-clearcourse-health-to-the-digital-healthcare-show-2024">Introducing ClearCourse Health to the Digital Healthcare Show 2024</a> 
+</h3> 
+</div> 
+ <div class="authorBar"> <span>May 20, 2024</span> 
+</div> 
+ <div class="postDescription">As part of the official launch of the ClearCourse Health platform, the team attended the Digital Healthcare Show, showcasing the suite of purpose-built solutions we provide to UK healthcare organisations.</div> 
+</div> 
+ <div class="readMore"> <a dont-color-link="true" href="/introducing-clearcourse-health-to-the-digital-healthcare-show-2024"></a> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div style="-ms-grid-column:3; -ms-grid-row:1" class="postArticle lastArticle"> <div class="inner clearfix wow" style="animation-delay: 600.0ms;"> <a class="blogImgLink" dont-color-link="true" href="/company-culture-is-the-main-factor-behind-our-iso-27001-accreditation" data-blog-post-alias="company-culture-is-the-main-factor-behind-our-iso-27001-accreditation"> <div class="blogImg" style="background-image: url('https://lirp.cdn-website.com/1c245020/dms3rep/multi/opt/Company+Culture+is+the+main+factor+behind+our+ISO+27001+Accreditation-1920w.jpg');"><img src="https://lirp.cdn-website.com/1c245020/dms3rep/multi/opt/Company+Culture+is+the+main+factor+behind+our+ISO+27001+Accreditation-1920w.jpg" alt="A nurse is holding a tablet with a padlock on it." onerror="handleImageLoadError(this)"/></div> 
+</a> 
+ <div class="postTextContainer"> <div class="postText clearfix"> <div class="postTitle"> <h3> <a dont-color-link="true" href="/company-culture-is-the-main-factor-behind-our-iso-27001-accreditation" data-blog-post-alias="company-culture-is-the-main-factor-behind-our-iso-27001-accreditation">Company Culture is the main factor behind our ISO 27001 Accreditation</a> 
+</h3> 
+</div> 
+ <div class="authorBar"> <span>March 5, 2024</span> 
+</div> 
+ <div class="postDescription">Our desire for excellence is reflected in our holding the coveted ISO 27001 rating. This means that those we serve can be assured that our company, people and systems have reached the highest levels of information security standards.</div> 
+</div> 
+ <div class="readMore"> <a dont-color-link="true" href="/company-culture-is-the-main-factor-behind-our-iso-27001-accreditation"></a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <a dont-color-link="true" class="more-posts-text-container dmWidget"> <span class="morePosts text">Show More</span> 
+</a> 
+ <div></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div data-flex-id="537eec89" data-auto="flex-section" id="1120989099" data-layout-section=""> <div class="flex-widgets-container" id="1632468095"></div> 
+ <section id="0deb2a54" class="flex-element section" data-auto="flex-element-section"> <div id="fef3f87a" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="7fedf41e" class="flex-element group" data-auto="flex-element-group"> <div id="c6701d14" class="flex-element group" data-auto="flex-element-group"> <div id="5900616b" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1106523778"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1106523778" style=""><p class="m-text-align-left m-size-24 text-align-center size-30" style="line-height: 1.5;"><span class="m-font-size-24 font-size-30" m-font-size-set="true" style="color:rgb(255, 255, 255);display:unset;font-family:SupremeLLTT-Black;">Discover the power of ClearCourse Health today</span></p></div> 
+</div> 
+ <div id="widget_gqc" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="link" data-external-id="1197951015"> <a data-display-type="block" class="align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient u_1197951015" file="false" href="/contact" data-element-type="dButtonLinkId" id="1197951015"> <span class="iconBg" aria-hidden="true" id="1527968380"> <span class="icon hasFontIcon icon-star" id="1802792901"></span> 
+</span> 
+ <span class="text" id="1670122801">Contact us</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmFooterContainer"> <div id="fcontainer" class="u_fcontainer f_hcontainer dmFooter p_hfcontainer"> <div dm:templateorder="250" class="dmFooterResp generalFooter" id="1943048428"> <div data-auto="flex-section" id="1011759009" data-flex-id="62eba75f92417728d16410d9" data-layout-section=""> <div class="flex-widgets-container" id="1122740244"></div> 
+ <section id="62eba75f92417728d16410da" class="flex-element section" data-auto="flex-element-section"> <div id="62eba75f92417728d16410db" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="62eba75f92417728d16410dc" class="flex-element group" data-auto="flex-element-group"> <div id="group_hm4" class="flex-element group" data-auto="flex-element-group"> <div id="widget_87h" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="image" data-keep-proportion="true" data-external-id="1225678279"> <div class="imageWidget align-center u_1225678279" data-element-type="image" data-widget-type="image" id="1225678279"> <a href="https://www.clearcourse.co.uk" id="1661978952" class="" target="_blank" file="false"><img src="https://irp.cdn-website.com/1c245020/dms3rep/multi/CC+S-P+-+WBT+Logo+White.svg" alt="A white background with a few lines on it" id="1726330883" class="" data-dm-image-path="https://irp.cdn-website.com/1c245020/dms3rep/multi/CC+S-P+-+WBT+Logo+White.svg" width="300" height="65" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+</div> 
+</div> 
+ <div id="62eba75f92417728d16410dd" class="flex-element group" data-auto="flex-element-group"> <div id="widget_vf9" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1922648710"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1922648710" style=""> <h4><span style="display: unset; color: var(--color_1);">Sectors</span></h4> 
+</div> 
+</div> 
+ <div id="widget_qjj" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ONELinksMenu" data-external-id="1608632605"> <nav class="u_1608632605 unifiednav_vertical effect-bottom2 main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="vertical_nav_layout_1" layout-sub="" data-show-vertical-sub-items="HOVER" id="1608632605" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="https://irp.cdn-website.com/1c245020/dms3rep/multi/ClearCourse+Health+Light.svg" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/aesthetics" class="unifiednav__item    " target="" data-target-page-alias="aesthetics"> <span class="nav-item-text " data-link-text="Aesthetics" data-auto="page-text-style">Aesthetics<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/msk" class="unifiednav__item    " target="" data-target-page-alias="msk"> <span class="nav-item-text " data-link-text="MSK" data-auto="page-text-style">MSK<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/occupational-health" class="unifiednav__item    " target="" data-target-page-alias="occupational-health"> <span class="nav-item-text " data-link-text="Occupational Health" data-auto="page-text-style">Occupational Health<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/primary-care" class="unifiednav__item    " target="" data-target-page-alias="primary-care"> <span class="nav-item-text " data-link-text="Primary Care" data-auto="page-text-style">Primary Care<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/secondary-care" class="unifiednav__item    " target="" data-target-page-alias="secondary-care"> <span class="nav-item-text " data-link-text="Secondary Care" data-auto="page-text-style">Secondary Care<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+</div> 
+ <div id="d13e0979" class="flex-element group" data-auto="flex-element-group"> <div id="f41cee21" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1850304772"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1850304772" style=""> <h4 class="m-text-align-left"><span style="display: unset; color: var(--color_1);">Quick links</span></h4> 
+</div> 
+</div> 
+ <div id="2d35a3db" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ONELinksMenu" data-external-id="1358856411"> <nav class="u_1358856411 unifiednav_vertical effect-bottom2 main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="vertical_nav_layout_1" layout-sub="" data-show-vertical-sub-items="HOVER" id="1358856411" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="https://irp.cdn-website.com/1c245020/dms3rep/multi/ClearCourse+Health+Light.svg" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/features" class="unifiednav__item    " target="" data-target-page-alias="features"> <span class="nav-item-text " data-link-text="Features" data-auto="page-text-style">Features<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/why-clearcourse-health" class="unifiednav__item    " target="" data-target-page-alias="why-clearcourse-health"> <span class="nav-item-text " data-link-text="Why ClearCourse Health" data-auto="page-text-style">Why ClearCourse Health<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/insights" class="unifiednav__item    " target="" data-target-page-alias="insights"> <span class="nav-item-text " data-link-text="Insights" data-auto="page-text-style">Insights<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+</div> 
+ <div id="ad14ec03" class="flex-element group" data-auto="flex-element-group"> <div id="a3d54cc0" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1214667875"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1214667875" style=""> <h4 class="m-text-align-left"><span style="display: unset; color: var(--color_1);">Stay connected</span></h4> 
+</div> 
+</div> 
+ <div id="cc761b40" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1936940063"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1936940063" style=""><p><span style="display: initial;">Email:</span></p><p><a href="mailto:enquiries@clearcoursehealth.com" target="_blank" type="email" style="display: initial;">enquiries@clearcoursehealth.com</a></p><p><span class="m-font-size-14" m-font-size-set="true" style="display: initial;">&nbsp;</span></p><p class="m-size-14"><span class="m-font-size-14" m-font-size-set="true" style="display: initial;">Keep up to date with what&rsquo;s going on with ClearCourse Health by following us on</span><span single-space="true" class="m-font-size-14" style="display: initial;"> <span class="m-font-size-14" style="display: initial;"></span> 
+</span><a href="https://www.linkedin.com/company/clearcoursehealth/" target="_blank" runtime_url="https://www.linkedin.com/company/clearcoursehealth/" type="url" class="m-font-size-14" m-font-size-set="true" style="display: initial;">LinkedIn</a><span m-font-size-set="true" class="m-font-size-14" style="display: initial;">.</span></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1476560034" data-flex-id="3d8dcfde" data-layout-section=""> <div class="flex-widgets-container" id="1758324760"></div> 
+ <section id="439bf470" class="flex-element section" data-auto="flex-element-section"> <div id="8329b759" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="2d855ace" class="flex-element group" data-auto="flex-element-group"> <div id="0e24a4aa" class="flex-element group" data-auto="flex-element-group"> <div id="widget_d7b" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="divider" data-external-id="1032789739"> <div class="dmDividerWrapper clearfix u_1032789739" data-element-type="dDividerId" data-layout="divider-style-1" data-widget-version="2" id="1032789739"><hr class="dmDivider" style="border-width:2px; border-top-style:solid; color:grey;" id="1254898884"/></div> 
+</div> 
+ <div id="d7b0568c" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1440073030"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1440073030" style=""><p class="m-text-align-left text-align-center m-size-14"><span class="m-font-size-14" m-font-size-set="true" style="display: initial;">Registered Office: 107 Cheapside, London, EC2V 6DN. &copy; All Rights Reserved ClearCourse Health.</span></p><p class="m-text-align-left text-align-center m-size-14"><a href="/privacy-policy" runtime_url="/privacy-policy" type="page" class="m-font-size-14" m-font-size-set="true" style="color: rgb(255, 255, 255); display: initial;">Privacy Policy</a><span single-space="true" class="m-font-size-14" style="display: initial;"> <span class="m-font-size-14" style="display: initial;"></span> 
+</span><span class="m-font-size-14" style="display: initial;" m-font-size-set="true">|</span><span single-space="true" class="m-font-size-14" style="display: initial;"> <span class="m-font-size-14" style="display: initial;"></span> 
+</span><a href="/cookie-policy" runtime_url="/cookie-policy" type="page" class="m-font-size-14" m-font-size-set="true" style="display: initial; color: rgb(255, 255, 255);">Cookie Policy</a></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+</div> 
+ <div id="1236746004" dmle_extension="powered_by" data-element-type="powered_by" icon="true" surround="false"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+
+    </div>
+</div>
+<!--  Add full CSS and Javascript before the close tag of the body if needed -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Google Fonts Include -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- loadCSS function fonts.jsp-->
+
+
+
+<link rel="preload" href="https://irp.cdn-website.com/fonts/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;subset=latin-ext&amp;display=swap"  as="style" fetchpriority="low" onload="loadCSS(this)" />
+
+<style>
+@font-face {
+  font-family: "SupremeLL-Black";
+  src: url("https://irp.cdn-website.com/1c245020/fonts/SupremeLL-Black-8974_400.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+</style>
+
+
+<style>
+@font-face {
+  font-family: "SupremeLLTT-Bold";
+  src: url("https://irp.cdn-website.com/1c245020/fonts/SupremeLLTT-Bold-a6c8_400.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+</style>
+
+
+<style>
+@font-face {
+  font-family: "SupremeLLTT-Black";
+  src: url("https://irp.cdn-website.com/1c245020/fonts/SupremeLLTT-Black-f0f3_400.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+</style>
+
+
+
+
+
+
+<!-- RT CSS Include d-css-runtime-desktop-one-package-structured-global-->
+<link rel="preload" as="style" fetchpriority="low" onload="loadCSS(this)" href="https://static.cdn-website.com/mnlt/production/6010/_dm/s/rt/dist/css/d-css-runtime-desktop-one-package-structured-global.min.css" />
+
+<!-- End of RT CSS Include -->
+
+<link rel="preload" href="https://irp.cdn-website.com/WIDGET_CSS/ea972da0002a76213ce8076cee8340a6.css" id="widgetCSS" as="style" fetchpriority="low" onload="loadCSS(this)" />
+
+<!-- Support `img` size attributes -->
+<style>img[width][height] {
+  height: auto;
+}</style>
+
+<!-- Support showing sticky element on page only -->
+<style>
+  body[data-page-alias="home"] #dm [data-show-on-page-only="home"] {
+    display: block !important;
+  }
+</style>
+
+<!-- This is populated in Ajax navigation -->
+<style id="pageAdditionalWidgetsCss" type="text/css">
+</style>
+
+
+
+
+<!-- Site CSS -->
+<link rel="preload" href="https://irp.cdn-website.com/1c245020/files/1c245020_withFlex_1.min.css?v=475" id="siteGlobalCss" as="style" fetchpriority="low" onload="loadCSS(this)" />
+
+
+
+<style id="customWidgetStyle" type="text/css">
+    
+</style>
+<style id="innerPagesStyle" type="text/css">
+    
+</style>
+
+
+<style
+        id="additionalGlobalCss" type="text/css"
+>
+</style>
+
+<!-- Page CSS -->
+<link rel="preload" href="https://irp.cdn-website.com/1c245020/files/1c245020_home_withFlex_1.min.css?v=475" id="homeCssLink" as="style" fetchpriority="low" onload="loadCSS(this)" />
+
+<style id="pagestyle" type="text/css">
+    
+</style>
+
+<style id="pagestyleDevice" type="text/css">
+    
+</style>
+
+<!-- Flex Sections CSS -->
+
+
+
+
+
+<style id="globalFontSizeStyle" type="text/css">
+    .font-size-58, .size-58, .size-58 > font { font-size: 58px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-66, .size-66, .size-66 > font { font-size: 66px !important; }.font-size-30, .size-30, .size-30 > font { font-size: 30px !important; }
+</style>
+<style id="pageFontSizeStyle" type="text/css">
+</style>
+
+<script type="text/javascript" id="d_track_campaign">
+(function() {
+    if (!window.location.search) {
+        return;
+    }
+	const cleanParams = window.location.search.substring(1); // Strip ?
+	const queryParams = cleanParams.split('&');
+
+	const expires = 'expires=' + new Date().getTime() + 24 * 60 * 60 * 1000;
+	const domain = 'domain=' + window.location.hostname;
+	const path = "path=/";
+
+	queryParams.forEach((param) => {
+		const [key, value = ''] = param.split('=');
+		if (key.startsWith('utm_')) {
+			const cookieName = "_dm_rt_" + key.substring(4);
+			const cookie = cookieName + "=" + value;
+			const joined = [cookie, expires, domain, path].join(";");
+			document.cookie = joined;
+		}
+	});
+}());
+</script>
+<script type="text/javascript" >
+  var _dm_gaq = {};
+  var _gaq = _gaq || [];
+  var _dm_insite = [];
+</script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+</script>
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5D4FG5PW" id="d-js-gtm" onload="window.dispatchEvent(new CustomEvent('gtmLoaded', { bubbles: true }))"></script>
+<script type="text/javascript" id="d_track_sp">
+;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","//d32hwlnfiv2gyn.cloudfront.net/sp-2.0.0-dm-0.1.min.js","snowplow"));
+window.dmsnowplow  = window.snowplow;
+
+dmsnowplow('newTracker', 'cf', 'd32hwlnfiv2gyn.cloudfront.net', { // Initialise a tracker
+  appId: '1c245020'
+});
+
+// snowplow queries element styles so we wait until CSS calculations are done.
+requestAnimationFrame(() => {
+	dmsnowplow('trackPageView');
+	_dm_insite.forEach((rule) => {
+		// Specifically in popup only the client knows if it is shown or not so we don't always want to track its impression here
+		// the tracking is in popup.js
+		if (rule.actionName !== "popup") {
+			dmsnowplow('trackStructEvent', 'insite', 'impression', rule.ruleType, rule.ruleId);
+		}
+		window?.waitForDeferred?.('dmAjax', () => {
+			$.DM.events.trigger('event-ruleTriggered', {value: rule});
+		});
+	});
+});
+</script>
+   <div style="display:none;" id="P6iryBW0Wu"></div>
+
+<!-- photoswipe markup -->
+
+
+
+
+
+
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div id="fb-root"
+        data-locale="en"></div>
+<!-- Alias: 1c245020 -->
+<div class="dmPopupMask" id="dmPopupMask"></div>
+<div id="dmPopup" class="dmPopup">
+	<div class="dmPopupCloseWrapper"> <div class="dmPopupClose dm-common-icons-close oneIcon" onclick="dmHidePopup(event);"></div> </div>
+ 	<div class="dmPopupTitle"> <span></span> Share by:</div> 
+	<div class="data"></div>
+</div><script id="d_track_personalization">
+	window?.waitForDeferred?.('dmAjax', () => {
+		// Collects client data and updates cookies used by smart sites
+		window.expireDays = 365;
+		window.visitLength = 30 * 60000;
+		$.setCookie("dm_timezone_offset", (new Date()).getTimezoneOffset(), window.expireDays);
+			setSmartSiteCookiesInternal("dm_this_page_view","dm_last_page_view","dm_total_visits","dm_last_visit");
+	});
+</script>
+<script type="text/javascript">
+    
+    Parameters.NavigationAreaParams.MoreButtonText = 'MORE';
+    
+    Parameters.NavigationAreaParams.LessButtonText = 'LESS';
+    Parameters.HomeLinkText = 'Home';
+    </script>
+<div><script type="text/javascript">
+             try{
+            if (globalThis.parent){
+                 var parentFlags =  globalThis.parent._flags;
+                 var parentStrings =  globalThis.parent.dmStr;
+
+             }
+            } catch(e) {}
+            _flags = window._flags || {};_flags = {...parentFlags,..._flags,...{"runtime.ssr.accordion.scroll.height.fix":true,"runtime.ssr.add.render":true,"runtime.ssr.booking.dryrun.for.default.staffmember":false,"runtime.ssr.checkbox.customizations":true,"runtime.ssr.ecom.productStore.connectedWidgets.init.listener.from.rt.mobx.store":false,"runtime.ssr.enabled":true,"runtime.ssr.initial-props-in-data-attribute":true,"runtime.ssr.lazyHydrate":true,"runtime.ssr.log.showHydrationDiff":false,"runtime.ssr.log.showHydrationErrors":true,"runtime.ssr.non-view-media-server-placeholder":true,"runtime.ssr.productCustomizations":true,"runtime.ssr.productStore.internal.observer":true,"runtime.ssr.render.overrideMarkup":true,"runtime.ssr.script-fetch-priority-low":false,"runtime.ssr.slider-dev-logging":false,"runtime.ssr.slider-reOrderSelectedToBeFirst":true,"runtime.ssr.slider.alternative.animation.to.reduce.cls.enabled":true,"runtime.ssr.slider.image.fillAvailableSpace.enabled":true,"runtime.ssr.ssrAddToCart.snipcart.new.api.addProduct.enabled":true,"runtime.ssr.ssrSlider.multiplePaginationPerLayout.enabled":true,"runtime.ssr.ssrSlider.slideCleanWrap.enabled":true,"runtime.ssr.widget.migration.addtocart":false,"runtime.ssr.widget.migration.options.variations":false}}
+           
+        
+          var dmStr = {...parentStrings,...dmStr,...{"ui.ed.breadcrumbs.empty.message":"There aren't any visible pages to show in the breadcrumbs. This message won't appear on your live published site.","ui.runtimessr.addtocart.subscribe.title":"Subscribe Now","ui.runtimessr.addtocart.subscribe.tooltip.text":"Test your subscription’s checkout by publishing your site and using its live version. ","ui.runtimessr.calbooking.back.button":"Back","ui.runtimessr.calbooking.booking.title":"{eventTitle} between {staffMemberName} and {attendeeNames}","ui.runtimessr.calbooking.cancelBooking.cancelButton":"Cancel appointment","ui.runtimessr.calbooking.cancelBooking.cancelling":"Cancelling...","ui.runtimessr.calbooking.cancelBooking.cancelling.placeholder":"Why are you cancelling?","ui.runtimessr.calbooking.cancelBooking.reason":"Reason for cancellation (optional)","ui.runtimessr.calbooking.cancelBooking.title":"Cancel this appointment?","ui.runtimessr.calbooking.canceledBooking.title":"This appointment is canceled","ui.runtimessr.calbooking.confirmation.dryRun.note":"Check back later or contact us for more info","ui.runtimessr.calbooking.confirmation.dryRun.title":"This site isn’t accepting bookings yet","ui.runtimessr.calbooking.confirmation.pending.subtitle":"It’s now awaiting confirmation from our team","ui.runtimessr.calbooking.confirmation.pending.title":"Your booking request was sent","ui.runtimessr.calbooking.confirmation.preview.note":"Go to the live site at its actual domain to make a booking","ui.runtimessr.calbooking.confirmation.preview.title":"You can't create appointments in preview mode","ui.runtimessr.calbooking.confirmation.success.back":"Back","ui.runtimessr.calbooking.confirmation.success.cancel":"Cancel","ui.runtimessr.calbooking.confirmation.success.change":"Need to make a change?","ui.runtimessr.calbooking.confirmation.success.description":"We sent an email with the details to everyone.","ui.runtimessr.calbooking.confirmation.success.host":"Host","ui.runtimessr.calbooking.confirmation.success.or":"or","ui.runtimessr.calbooking.confirmation.success.reschedule":"Reschedule","ui.runtimessr.calbooking.confirmation.success.title":"This meeting is scheduled","ui.runtimessr.calbooking.confirmation.success.videoCallLink":"Video Call","ui.runtimessr.calbooking.confirmation.success.what":"What","ui.runtimessr.calbooking.confirmation.success.when":"When","ui.runtimessr.calbooking.confirmation.success.where":"Where","ui.runtimessr.calbooking.confirmation.success.who":"Who","ui.runtimessr.calbooking.duration.minutes":"{duration} min","ui.runtimessr.calbooking.markup.eventType":"Appointment type name","ui.runtimessr.calbooking.markup.userName":"Staff Member Name","ui.runtimessr.calbooking.meta.price.free":"Free","ui.runtimessr.calbooking.meta.price.includes.tax":"Includes {taxPercentage} tax","ui.runtimessr.calbooking.meta.price.might.change":"Total price might change depending on your location","ui.runtimessr.calbooking.paid.booking.next.step.button":"Next","ui.runtimessr.calbooking.reschedule.booking":"Reschedule Booking","ui.runtimessr.collectionSearch.noResults":"No results.","ui.runtimessr.priceOptions.option.oneTimeOnly":"One-time purchase","ui.runtimessr.productCustomizations.errors.checkbox.exactlyChoices":"Choose exactly {exact} choices","ui.runtimessr.productCustomizations.errors.checkbox.maxChoices":"Choose up to {max} choices","ui.runtimessr.productCustomizations.errors.checkbox.minChoices":"Choose at least {min} choices","ui.runtimessr.productCustomizations.errors.checkbox.required":"Choose at least one choice","ui.runtimessr.productCustomizations.errors.required":"This field is required","ui.runtimessr.productCustomizations.noCustomizations":"This product has no product customizations. This widget will not show up on the live site.","ui.runtimessr.productPrice.omnibus.last.price":"Lowest price in the last {period} days - {displayedPrice}","ui.runtimessr.productPrice.omnibus.total.price.might.change":"Total price might change depending on your location","ui.runtimessr.productPrice.omnibus.vat":"Includes {vatPercentage}% tax","ui.runtimessr.productPriceOptions.autoRenew":"Will auto-renew until canceled","ui.runtimessr.productPriceOptions.expiresAfter":"Expires after","ui.runtimessr.productPriceOptions.frequency.monthly":"month","ui.runtimessr.productPriceOptions.frequency.weekly":"week","ui.runtimessr.productPriceOptions.frequency.yearly":"year","ui.runtimessr.productPriceOptions.frequencyPlural.monthly":"months","ui.runtimessr.productPriceOptions.frequencyPlural.weekly":"weeks","ui.runtimessr.productPriceOptions.frequencyPlural.yearly":"years","ui.runtimessr.productPriceOptions.title":"Price options","widget.addtocart.disabledText.placeHolder":"OUT OF STOCK","widget.filtersort.clear-all":"clear all","widget.filtersort.filter-by.title":"Filter by","widget.filtersort.sort-by.title":"Sort by","widget.filtersort.title":"Sort & Filter","key.runtime":"some value","placeholder.add-content":"Add Content","second.key":"value2","widget.addtocart.title":"Add to cart"}}
+
+</script>
+        <script id="ssr-static" type="module"  src="https://ms-cdn.multiscreensite.com/runtime-react/4051/res/js/runtime-react.js"></script></div><!--  End Script tags -->
+<!--  Begin Body End Markup -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D4FG5PW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script type="text/javascript" src="https://secure.imaginative-24.com/js/794248.js" ></script>
+<noscript><img src="https://secure.imaginative-24.com/794248.png" style="display:none;" /></noscript><!--  End Body End Markup -->
+<!--  Site Wide Html Markup -->
+<!--  Site Wide Html Markup -->
+</body>
+</html>

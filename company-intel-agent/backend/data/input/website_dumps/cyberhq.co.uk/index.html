@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en" class="">
+<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+	<meta name="HandheldFriendly" content="true" >
+	<meta name="MobileOptimized" content="width">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>Cyber HQ - Information Security</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content="Security assessment, Asset Management, cyber security, Business Continuity, Chief information security officer, information assurance, cyber awareness training. cyber essentials, cyber expert, Cyber HQ," />
+<meta name="description" content="Cost effective cyber security solutions, from identifying your security posture, CISM training to fully managed 24/7 security." />
+<script data-skip-moving="true">(function() {const canvas = document.createElement('canvas');let gl;try{gl = canvas.getContext('webgl2') || canvas.getContext('webgl') || canvas.getContext('experimental-webgl');}catch (e){return;}if (!gl){return;}const result = {vendor: gl.getParameter(gl.VENDOR),renderer: gl.getParameter(gl.RENDERER),};const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');if (debugInfo){result.unmaskedVendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);result.unmaskedRenderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);}function isLikelyIntegratedGPU(gpuInfo){const renderer = (gpuInfo.unmaskedRenderer || gpuInfo.renderer || '').toLowerCase();const vendor = (gpuInfo.unmaskedVendor || gpuInfo.vendor || '').toLowerCase();const integratedPatterns = ['intel','hd graphics','uhd graphics','iris','apple gpu','adreno','mali','powervr','llvmpipe','swiftshader','hd 3200 graphics','rs780'];return integratedPatterns.some(pattern => renderer.includes(pattern) || vendor.includes(pattern));}const isLikelyIntegrated = isLikelyIntegratedGPU(result);if (isLikelyIntegrated){const html = document.documentElement;html.classList.add('bx-integrated-gpu', '--ui-reset-bg-blur');}})();</script>
+<style type="text/css">
+							:root {
+								--theme-color-b24button: var(--primary);
+							}
+						</style>
+<style type="text/css">
+				:root {
+					--primary: #6b7de0 !important;
+					--primary-darken-1: hsl(230.77, 65%, 63%);
+					--primary-darken-2: hsl(230.77, 65%, 60%);
+					--primary-darken-3: hsl(230.77, 65%, 55%);
+					--primary-lighten-1: hsl(230.77, 65%, 75%);
+					--primary-opacity-0: rgba(107, 125, 224, 0);
+					--primary-opacity-0_05: rgba(107, 125, 224, 0.05);
+					--primary-opacity-0_1: rgba(107, 125, 224, 0.1);
+					--primary-opacity-0_15: rgba(107, 125, 224, 0.15);
+					--primary-opacity-0_2: rgba(107, 125, 224, 0.2);
+					--primary-opacity-0_25: rgba(107, 125, 224, 0.25);
+					--primary-opacity-0_3: rgba(107, 125, 224, 0.3);
+					--primary-opacity-0_35: rgba(107, 125, 224, 0.35);
+					--primary-opacity-0_4: rgba(107, 125, 224, 0.4);
+					--primary-opacity-0_45: rgba(107, 125, 224, 0.45);
+					--primary-opacity-0_5: rgba(107, 125, 224, 0.5);
+					--primary-opacity-0_55: rgba(107, 125, 224, 0.55);
+					--primary-opacity-0_6: rgba(107, 125, 224, 0.6);
+					--primary-opacity-0_65: rgba(107, 125, 224, 0.65);
+					--primary-opacity-0_7: rgba(107, 125, 224, 0.7);
+					--primary-opacity-0_75: rgba(107, 125, 224, 0.75);
+					--primary-opacity-0_8: rgba(107, 125, 224, 0.8);
+					--primary-opacity-0_85: rgba(107, 125, 224, 0.85);
+					--primary-opacity-0_9: rgba(107, 125, 224, 0.9);
+					--primary-opacity-0_95: rgba(107, 125, 224, 0.95);
+					--theme-color-main: #444444;
+					--theme-color-secondary: hsl(230.77, 20%, 80%);
+					--theme-color-title: #444444;
+					--theme-color-strict-inverse: #000000;
+				}
+			</style>
+<script data-skip-moving="true">(function(w, d, n) {var cl = "bx-core";var ht = d.documentElement;var htc = ht ? ht.className : undefined;if (htc === undefined || htc.indexOf(cl) !== -1){return;}var ua = n.userAgent;if (/(iPad;)|(iPhone;)/i.test(ua)){cl += " bx-ios";}else if (/Windows/i.test(ua)){cl += ' bx-win';}else if (/Macintosh/i.test(ua)){cl += " bx-mac";}else if (/Linux/i.test(ua) && !/Android/i.test(ua)){cl += " bx-linux";}else if (/Android/i.test(ua)){cl += " bx-android";}cl += (/(ipad|iphone|android|mobile|touch)/i.test(ua) ? " bx-touch" : " bx-no-touch");cl += w.devicePixelRatio && w.devicePixelRatio >= 2? " bx-retina": " bx-no-retina";if (/AppleWebKit/.test(ua)){cl += " bx-chrome";}else if (/Opera/.test(ua)){cl += " bx-opera";}else if (/Firefox/.test(ua)){cl += " bx-firefox";}ht.className = htc ? htc + " " + cl : cl;})(window, document, navigator);</script>
+
+
+<link href="/bitrix/js/intranet/intranet-common.min.css?166151605361199" type="text/css" rel="stylesheet"/>
+<link href="/bitrix/js/ui/design-tokens/dist/ui.design-tokens.min.css?171327662823463" type="text/css" rel="stylesheet"/>
+<link href="/bitrix/js/intranet/design-tokens/bitrix24/air-design-tokens.min.css?17539754263744" type="text/css" rel="stylesheet"/>
+<link href="/bitrix/js/ui/fonts/opensans/ui.font.opensans.min.css?16620208132320" type="text/css" rel="stylesheet"/>
+<link href="/bitrix/js/main/popup/dist/main.popup.bundle.min.css?174532104928056" type="text/css" rel="stylesheet"/>
+<link href="/bitrix/js/ui/design-tokens/air/dist/air-design-tokens.min.css?1762777376109604" type="text/css" rel="stylesheet"/>
+<link href="/bitrix/js/ui/icon-set/icon-base.min.css?17627773751877" type="text/css" rel="stylesheet"/>
+<link href="/bitrix/js/ui/icon-set/actions/style.min.css?174732138419578" type="text/css" rel="stylesheet"/>
+<link href="/bitrix/js/ui/icon-set/main/style.min.css?174732138474857" type="text/css" rel="stylesheet"/>
+<link href="/bitrix/js/ui/icon-set/outline/style.min.css?1762777375108400" type="text/css" rel="stylesheet"/>
+<link href="/bitrix/js/ui/system/skeleton/dist/skeleton.bundle.min.css?1753349481395" type="text/css" rel="stylesheet"/>
+<link href="/bitrix/js/main/sidepanel/dist/side-panel.bundle.min.css?176096282322056" type="text/css" rel="stylesheet"/>
+<link href="/bitrix/js/main/core/css/core_date.min.css?16607515339928" type="text/css" rel="stylesheet"/>
+<link href="/bitrix/js/ui/switcher/dist/ui.switcher.bundle.min.css?17640822106763" type="text/css" rel="stylesheet"/>
+<link href="/bitrix/js/ui/cnt/ui.cnt.min.css?17473213844259" type="text/css" rel="stylesheet"/>
+<link href="/bitrix/js/ui/cnt/dist/cnt.bundle.min.css?17495470375784" type="text/css" rel="stylesheet"/>
+<link href="/bitrix/js/ui/buttons/dist/ui.buttons.bundle.min.css?176408221072758" type="text/css" rel="stylesheet"/>
+<link href="/bitrix/js/ui/hint/ui.hint.min.css?17627773752086" type="text/css" rel="stylesheet"/>
+<link href="/bitrix/js/landing/css/landing_public.min.css?1567508327250" type="text/css" rel="stylesheet"/>
+<link href="/bitrix/components/bitrix/landing.pub/templates/.default/style.min.css?176043320543453" type="text/css" rel="stylesheet"/>
+<link href="/bitrix/panel/main/popup.min.css?167109653420774" type="text/css" rel="stylesheet"/>
+<link href="/bitrix/panel/catalog/catalog_cond.min.css?15549945847248" type="text/css" rel="stylesheet"/>
+<link href="/bitrix/components/bitrix/landing.cookies/templates/.default/style.min.css?17249436707126" type="text/css" rel="stylesheet"/>
+<link href="/bitrix/templates/landing24/assets/vendor/bootstrap/bootstrap.min.css?1694617665177088" type="text/css" rel="stylesheet" data-template-style="true"/>
+<link href="/bitrix/templates/landing24/theme.min.css?1762762420537048" type="text/css" rel="stylesheet" data-template-style="true"/>
+<link href="/bitrix/templates/landing24/template_styles.min.css?16843044572401" type="text/css" rel="stylesheet" data-template-style="true"/>
+
+
+
+
+<script type="extension/settings" data-extension="main.date">{"formats":{"FORMAT_DATE":"DD.MM.YYYY","FORMAT_DATETIME":"DD.MM.YYYY HH:MI:SS","SHORT_DATE_FORMAT":"n\/j\/Y","MEDIUM_DATE_FORMAT":"M j, Y","LONG_DATE_FORMAT":"F j, Y","DAY_MONTH_FORMAT":"F j","DAY_SHORT_MONTH_FORMAT":"M j","SHORT_DAY_OF_WEEK_MONTH_FORMAT":"D, F j","SHORT_DAY_OF_WEEK_SHORT_MONTH_FORMAT":"D, M j","DAY_OF_WEEK_MONTH_FORMAT":"l, F j","FULL_DATE_FORMAT":"l, F j, Y","SHORT_TIME_FORMAT":"g:i a","LONG_TIME_FORMAT":"g:i:s a"}}</script>
+
+
+
+<noscript><link rel="stylesheet" href="https://fonts.bitrix24.com/css?family=Source+Sans+Pro" data-font="g-font-source-sans-pro"></noscript>
+<link rel="preload" href="https://fonts.bitrix24.com/css?family=Source+Sans+Pro" data-font="g-font-source-sans-pro" onload="this.removeAttribute('onload');this.rel='stylesheet'" as="style">
+<style data-id="g-font-source-sans-pro">.g-font-source-sans-pro { font-family: "Source Sans Pro", sans-serif; }</style><link 
+						rel="preload" 
+						as="style" 
+						onload="this.removeAttribute('onload');this.rel='stylesheet'" 
+						data-font="g-font-roboto-slab" 
+						data-protected="true" 
+						href="https://fonts.bitrix24.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&subset=cyrillic,cyrillic-ext,latin-ext">
+					<noscript>
+						<link
+							rel="stylesheet" 
+							data-font="g-font-roboto-slab" 
+							data-protected="true" 
+							href="https://fonts.bitrix24.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&subset=cyrillic,cyrillic-ext,latin-ext">
+					</noscript>
+<meta name="robots" content="all" />
+<style>
+					@keyframes page-transition {
+						0% {
+							opacity: 1;
+						}
+						100% {
+							opacity: 0;
+						}
+					}
+					body.landing-page-transition::after {
+						opacity: 1;
+						background: #fff;
+						animation: page-transition 2s 1s forwards;
+					}
+				</style>
+<link rel="preload" href="/bitrix/templates/landing24/assets/vendor/icon/icon-education/font.woff" as="font" crossorigin="anonymous" type="font/woff" crossorigin>
+<link rel="preload" href="/bitrix/templates/landing24/assets/vendor/icon/icon-communication/font.woff" as="font" crossorigin="anonymous" type="font/woff" crossorigin>
+<style>.icon-education-024:before{content:"F";}.icon-education-073:before{content:"\e000";}.icon-communication-180:before{content:"\e04d";}</style>
+<link rel="preload" href="/bitrix/templates/landing24/assets/vendor/icon/far/font.woff" as="font" crossorigin="anonymous" type="font/woff" crossorigin>
+<link rel="preload" href="/bitrix/templates/landing24/assets/vendor/icon/far/font.woff2" as="font" crossorigin="anonymous" type="font/woff2" crossorigin>
+<style>.fa-chevron-left:before{content:"\f053";}.fa-chevron-right:before{content:"\f054";}</style>
+<link rel="preload" href="/bitrix/templates/landing24/assets/vendor/icon/icon-hotel-restaurant/font.woff" as="font" crossorigin="anonymous" type="font/woff" crossorigin>
+<style>.icon-hotel-restaurant-235:before{content:"\e098";}</style>
+<style>.fa-angle-left:before{content:"\f104";}.fa-angle-right:before{content:"\f105";}</style>
+<style>
+					body {
+						--landing-font-family: Open Sans
+					}
+				</style>
+<link rel="stylesheet" href="https://fonts.bitrix24.com/css2?family=Open+Sans:wght@100;200;300;400;500;600;700;800;900">
+<style>
+				body {
+					font-weight: 400;
+					font-family: Open Sans;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+					-moz-font-feature-settings: "liga", "kern";
+					text-rendering: optimizelegibility;
+				}
+			</style>
+<style>
+				h1, h2, h3, h4, h5, h6 {
+					font-family: Open Sans;
+				}
+			</style>
+<style>
+				html {font-size: 14px;}
+				body {font-size: 1rem;}
+				.g-font-size-default {font-size: 1rem;}
+			</style>
+<style>
+				main.landing-public-mode {
+					line-height: 1.6;
+					font-weight: 400;
+				}
+				
+				.landing-public-mode .h1, .landing-public-mode .h2, .landing-public-mode .h3, .landing-public-mode .h4, 
+				.landing-public-mode .h5, .landing-public-mode .h6, .landing-public-mode .h7,
+				.landing-public-mode h1, .landing-public-mode h2, .landing-public-mode h3, .landing-public-mode h4, 
+				.landing-public-mode h5, .landing-public-mode h6 {
+					font-weight: 400;
+				}
+			</style>
+<meta property="og:title" content="Cyber HQ" /><meta property="og:description" content="Cyber HQ delivers cost effective cyber security solutions to UK organisations. From identifying your security posture, CISM training to fully managed 24/7 security, Cyber HQ has a solution to fit." /><meta property="og:image" content="https://cdn.bitrix24.eu/b9975165/landing/c80/c8063ae187a8ae3f12a255b432a44a1b/CYBER_HQ_Logo_cropped.png" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="499" /><meta property="og:type" content="website" /><meta property="twitter:title" content="Cyber HQ" /><meta property="twitter:description" content="Cyber HQ delivers cost effective cyber security solutions to UK organisations. From identifying your security posture, CISM training to fully managed 24/7 security, Cyber HQ has a solution to fit." /><meta property="twitter:image" content="https://cdn.bitrix24.eu/b9975165/landing/c80/c8063ae187a8ae3f12a255b432a44a1b/CYBER_HQ_Logo_cropped.png" /><meta name="twitter:card" content="summary_large_image" /><meta property="twitter:type" content="website" /> <meta property="Bitrix24SiteType" content="page" /> <meta property="og:url" content="https://cyberhq.co.uk/" />
+<link rel="canonical" href="https://cyberhq.co.uk/"/>
+<link rel="icon" type="image/png" href="https://b24-vasbka.bitrix24.eu/b9975165/resize_cache/761/047e4a127947eff3c7d861cc2f113186/landing/b27/b27f5f94e1b17b25f1b5dc82801ebf22/CYBER_HQ_Logo_cropped.png" sizes="16x16">
+<link rel="icon" type="image/png" href="https://b24-vasbka.bitrix24.eu/b9975165/resize_cache/761/45fd33a620da2e44653e6a92c96d9446/landing/b27/b27f5f94e1b17b25f1b5dc82801ebf22/CYBER_HQ_Logo_cropped.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://b24-vasbka.bitrix24.eu/b9975165/resize_cache/761/c8042d925d6656dd077f15192d13bb8f/landing/b27/b27f5f94e1b17b25f1b5dc82801ebf22/CYBER_HQ_Logo_cropped.png" sizes="96x96">
+<link rel="apple-touch-icon" href="https://b24-vasbka.bitrix24.eu/b9975165/resize_cache/761/eb45a9f96698d396483d7a1236fe0380/landing/b27/b27f5f94e1b17b25f1b5dc82801ebf22/CYBER_HQ_Logo_cropped.png" sizes="120x120">
+<link rel="apple-touch-icon" href="https://b24-vasbka.bitrix24.eu/b9975165/resize_cache/761/a03d95df41ccb7c2ab8a9e9ebcd4cf8a/landing/b27/b27f5f94e1b17b25f1b5dc82801ebf22/CYBER_HQ_Logo_cropped.png" sizes="180x180">
+<link rel="apple-touch-icon" href="https://b24-vasbka.bitrix24.eu/b9975165/resize_cache/761/8245e211b4cc1aeef31861f9c55143e5/landing/b27/b27f5f94e1b17b25f1b5dc82801ebf22/CYBER_HQ_Logo_cropped.png" sizes="152x152">
+<link rel="apple-touch-icon" href="https://b24-vasbka.bitrix24.eu/b9975165/resize_cache/761/26c9f99963f016735739c7de412de1e1/landing/b27/b27f5f94e1b17b25f1b5dc82801ebf22/CYBER_HQ_Logo_cropped.png" sizes="167x167">
+ <link rel="icon" type="image/x-icon" href="/favicon.ico"></head>
+<body class="landing-b24button-use-style landing-page-transition" >
+<main class="w-100 landing-public-mode" >
+<div id="b2581" class="block-wrapper block-0-menu-02"><header class="landing-block landing-block-menu u-header u-header--sticky u-header--relative">
+	<div class="landing-semantic-background-color u-header__section u-header__section--light g-bg-white g-transition-0_3 g-py-16 g-py-10--md" data-header-fix-moment-exclude="g-bg-white" data-header-fix-moment-classes="u-shadow-v27 g-bg-white-opacity-0_9">
+		<nav class="navbar navbar-expand-lg p-0 g-px-15">
+			<div class="container">
+				<!-- Logo -->
+				<a href="https://cyberhq.co.uk/" class="landing-block-node-menu-logo-link navbar-brand u-header__logo p-0" target="_self">
+					<img class="landing-block-node-menu-logo u-header__logo-img u-header__logo-img--main g-max-width-180" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDQiIGhlaWdodD0iNjAiPjxyZWN0IGlkPSJiYWNrZ3JvdW5kcmVjdCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgeD0iMCIgeT0iMCIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIuNyIgc3Ryb2tlPSJub25lIi8+PC9zdmc+" alt="" data-fileid="575" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/410/410e01b0a5ae11ee956d9ff9e672f925/CYBER_HQ_Logo_cropped.png" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/533/5333dbae6d177ce9e3bd93d206ddb6aa/CYBER_HQ_Logo_cropped_2x.png 2x" />
+				</a>
+				<!-- End Logo -->
+
+				<!-- Navigation -->
+				<div class="collapse navbar-collapse align-items-center flex-sm-row" id="navBar2483">
+					<ul class="landing-block-node-menu-list js-scroll-nav navbar-nav text-uppercase g-font-weight-700 g-font-size-11 ml-auto g-pt-20 g-pt-0--lg"><li class="landing-block-node-menu-list-item nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+							<a href="https://cyberhq.co.uk/#1609" class="landing-block-node-menu-list-item-link nav-link p-0" target="_self">HOME</a>
+						</li><li class="landing-block-node-menu-list-item nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+							<a href="https://cyberhq.co.uk/#block1613" class="landing-block-node-menu-list-item-link nav-link p-0" target="_self">CYBER HQ</a>
+						</li><li class="landing-block-node-menu-list-item nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+							<a href="https://cyberhq.co.uk/#block1907" class="landing-block-node-menu-list-item-link nav-link p-0" target="_self">Pricing</a>
+						</li><li class="landing-block-node-menu-list-item nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+							<a href="https://cyberhq.co.uk/consulting3232234/" class="landing-block-node-menu-list-item-link nav-link p-0" target="_self">Security Review</a>
+						</li><li class="landing-block-node-menu-list-item nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+							<a href="https://cyberhq.co.uk/consulting3232232_xczp/" class="landing-block-node-menu-list-item-link nav-link p-0" target="_self">CISM Training</a>
+						</li><li class="landing-block-node-menu-list-item nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+							<a href="https://cyberhq.co.uk/consulting3232232_xczp/#b2487" class="landing-block-node-menu-list-item-link nav-link p-0" target="_self">Services</a>
+						</li><li class="landing-block-node-menu-list-item nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+							<a href="https://cyberhq.co.uk/#block1629" class="landing-block-node-menu-list-item-link nav-link p-0" target="_self">Contact</a>
+						</li></ul>
+				</div>
+				<!-- End Navigation -->
+
+				<!-- Responsive Toggle Button -->
+				<button class="navbar-toggler btn g-line-height-1 g-brd-none g-pa-0 ml-auto" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navBar2483" data-toggle="collapse" data-target="#navBar2483">
+                <span class="hamburger hamburger--slider">
+                  <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
+                </span>
+				</button>
+				<!-- End Responsive Toggle Button -->
+			</div>
+		</nav>
+	</div>
+</header></div><div id="block1611" class="block-wrapper block-01-big-with-text-blocks"><section class="landing-block g-pt-0 g-mt-0 g-pl-0 g-pb-0">
+	<div class="js-carousel g-overflow-hidden" data-pagi-classes="u-carousel-indicators-v1--white g-absolute-centered--x g-bottom-20" data-autoplay="true" data-infinite="true" data-speed="10000"><div class="landing-block-node-card js-slide">
+			<!-- Promo Block -->
+			<div class="landing-block-node-card-img g-flex-centered g-bg-cover g-bg-pos-center g-bg-img-hero g-bg-black-opacity-0_5--after g-min-height-100vh h-100" style="background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIwIiBoZWlnaHQ9IjEwODAiPjxyZWN0IGlkPSJiYWNrZ3JvdW5kcmVjdCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgeD0iMCIgeT0iMCIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIuNyIgc3Ryb2tlPSJub25lIi8+PC9zdmc+);" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;https://cyberhq.co.uk/consulting323223/&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:true}" data-lazy-bg="Y" data-bg="url('https://cdn.bitrix24.site/bitrix/images/landing/business/1920x1080/img3.jpg')" data-src="https://cdn.bitrix24.site/bitrix/images/landing/business/1920x1080/img3.jpg">
+				<div class="container text-center g-max-width-800 g-z-index-1 js-animation landing-block-node-container fadeInLeftBig g-mx-0 g-mb-40">
+					<h2 class="landing-block-node-card-title text-uppercase g-font-weight-700 g-color-white g-mb-20 g-font-size-42"><span style="color: rgb(245, 245, 245);">CISM TRAINING</span></h2>
+					<div class="landing-block-node-card-text g-max-width-645 mx-auto g-mb-35 g-font-size-24 g-color-white g-line-height-1_2" data-auto-font-scale=""><p><span style="color: rgb(245, 245, 245);">4 DAY ONLINE INSTRUCTOR LED CISM TRAINING - £1495</span></p></div>
+					<div class="landing-block-node-card-button-container">
+						<a class="landing-block-node-card-button btn btn-lg g-btn-primary g-btn-type-solid g-font-weight-700 g-font-size-12 text-uppercase g-rounded-50" href="https://cyberhq.co.uk/consulting3232232_xczp/" tabindex="-1" target="_self">LEARN MORE</a>
+					</div>
+				</div>
+			</div>
+			<!-- End Promo Block -->
+		</div><div class="landing-block-node-card js-slide">
+			<!-- Promo Block -->
+			<div class="landing-block-node-card-img g-flex-centered g-bg-cover g-bg-pos-center g-bg-img-hero g-bg-black-opacity-0_5--after g-min-height-100vh h-100" style="background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIwIiBoZWlnaHQ9IjEwODAiPjxyZWN0IGlkPSJiYWNrZ3JvdW5kcmVjdCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgeD0iMCIgeT0iMCIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIuNyIgc3Ryb2tlPSJub25lIi8+PC9zdmc+);" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;https://cyberhq.co.uk/consulting3232234/&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:true}" data-lazy-bg="Y" data-bg="url('https://cdn.bitrix24.site/bitrix/images/landing/business/1920x1080/img1.jpg')" data-src="https://cdn.bitrix24.site/bitrix/images/landing/business/1920x1080/img1.jpg">
+				<div class="container text-center g-max-width-800 g-z-index-1 js-animation landing-block-node-container fadeInLeftBig g-mx-0 g-mb-40">
+					<h2 class="landing-block-node-card-title text-uppercase g-font-weight-700 g-color-white g-mb-20 g-font-size-42">- Information Security Assessment  -  £POA</h2>
+					<div class="landing-block-node-card-text g-max-width-645 mx-auto g-mb-35 g-font-size-24 g-color-white g-line-height-1_2" data-auto-font-scale=""><p><span style="background-color: initial;">Independent on-site assessment to aid the <br />design of your security strategy.</span></p></div>
+					<div class="landing-block-node-card-button-container">
+						<a class="landing-block-node-card-button btn btn-lg g-btn-primary g-btn-type-solid g-font-weight-700 g-font-size-12 text-uppercase g-rounded-50" href="https://cyberhq.co.uk/consulting3232234/" tabindex="-1" target="_self">LEARN MORE</a>
+					</div>
+				</div>
+			</div>
+			<!-- End Promo Block -->
+		</div><div class="landing-block-node-card js-slide">
+			<!-- Promo Block -->
+			<div class="landing-block-node-card-img g-flex-centered g-bg-cover g-bg-pos-center g-bg-img-hero g-bg-black-opacity-0_5--after g-min-height-100vh h-100" style="background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIwIiBoZWlnaHQ9IjEwODAiPjxyZWN0IGlkPSJiYWNrZ3JvdW5kcmVjdCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgeD0iMCIgeT0iMCIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIuNyIgc3Ryb2tlPSJub25lIi8+PC9zdmc+);" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;https://cyberhq.co.uk/consulting323/&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:true}" data-lazy-bg="Y" data-bg="url('https://cdn.bitrix24.site/bitrix/images/landing/business/1920x1080/img2.jpg')" data-src="https://cdn.bitrix24.site/bitrix/images/landing/business/1920x1080/img2.jpg">
+				<div class="container text-center g-max-width-800 g-z-index-1 js-animation landing-block-node-container fadeInLeftBig g-mx-0 g-mb-40">
+					<h2 class="landing-block-node-card-title text-uppercase g-font-weight-700 g-color-white g-mb-20 g-font-size-42">Technical Assurance</h2>
+					<div class="landing-block-node-card-text g-max-width-645 mx-auto g-mb-35 g-font-size-24 g-color-white g-line-height-1_2" data-auto-font-scale="">Penetration Testing, Threat &amp; Vulnerability Management, Security Operations</div>
+					<div class="landing-block-node-card-button-container">
+						<a class="landing-block-node-card-button btn btn-lg g-btn-primary g-btn-type-solid g-font-weight-700 g-font-size-12 text-uppercase g-rounded-50" href="https://cyberhq.co.uk/consulting323/" tabindex="-1" target="_self">LEARN MORE</a>
+					</div>
+				</div>
+			</div>
+			<!-- End Promo Block -->
+		</div><div class="landing-block-node-card js-slide">
+			<!-- Promo Block -->
+			<div class="landing-block-node-card-img g-flex-centered g-bg-cover g-bg-pos-center g-bg-img-hero g-bg-black-opacity-0_5--after g-min-height-100vh h-100" style="background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIwIiBoZWlnaHQ9IjEwODAiPjxyZWN0IGlkPSJiYWNrZ3JvdW5kcmVjdCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgeD0iMCIgeT0iMCIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIuNyIgc3Ryb2tlPSJub25lIi8+PC9zdmc+);" data-fileid="485" data-fileid2x="487" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}" data-lazy-bg="Y" data-bg="url('https://cdn.bitrix24.eu/b9975165/landing/87b/87bdee91d90138077b08c292ce0e8802/Security_Assessment6.jpg')" data-src="https://cdn.bitrix24.eu/b9975165/landing/87b/87bdee91d90138077b08c292ce0e8802/Security_Assessment6.jpg">
+				<div class="container text-center g-max-width-800 g-z-index-1 js-animation landing-block-node-container fadeInLeftBig g-mx-0 g-mb-40">
+					<h2 class="landing-block-node-card-title text-uppercase g-font-weight-700 g-color-white g-mb-20 g-font-size-42"><p style="text-align: center;">Business Resilience<br /></p></h2>
+					<div class="landing-block-node-card-text g-max-width-645 mx-auto g-mb-35 g-font-size-24 g-color-white g-line-height-1_2" data-auto-font-scale=""><p style="text-align: center;">Virtual CISO, Information Security Training or Incident Response.<br /></p></div>
+					<div class="landing-block-node-card-button-container">
+						<a class="landing-block-node-card-button btn btn-lg g-btn-primary g-btn-type-solid g-font-weight-700 g-font-size-12 text-uppercase g-rounded-50" href="https://cyberhq.co.uk/consulting3232/" tabindex="-1" target="_self">LEARN MORE</a>
+					</div>
+				</div>
+			</div>
+			<!-- End Promo Block -->
+		</div></div>
+</section></div><div id="block1613" class="block-wrapper block-04-7-one-col-fix-with-title-and-text-2"><section class="landing-block g-py-20 js-animation fadeInUp g-bg-white g-pb-10 g-pt-25">
+
+        <div class="container landing-block-node-subcontainer text-center g-max-width-800">
+
+            <div class="landing-block-node-inner text-uppercase u-heading-v2-4--bottom g-brd-primary">
+                <h1 class="landing-block-node-subtitle g-font-weight-700 g-mb-15 g-letter-spacing-3 g-color-gray-dark-v5 g-font-size-24 g-text-shadow-none"><span style="font-weight: normal;">CYBER HQ</span></h1>
+                <h2 class="landing-block-node-title u-heading-v2__title g-line-height-1_1 g-font-weight-700 g-font-size-40 g-color-black g-mb-minus-10"></h2>
+            </div>
+
+			<div class="landing-block-node-text g-color-gray-dark-v4 g-line-height-1_4 g-font-size-18"><p><span style="">Cyber HQ delivers cost effective cyber security solutions to UK organisations. From identifying your security posture, CISM &amp; CISO training to fully managed 24/7 security, Cyber HQ has a solution to fit. <br /></span></p></div>
+        </div>
+
+    </section></div><div id="block1615" class="block-wrapper block-08-2-two-cols-fix-title-and-text"><section class="landing-block g-bg-gray-light-v5 g-pt-20 g-pb-20">
+	<div class="container">
+		<div class="row landing-block-inner"><div class="landing-block-card js-animation fadeIn col-lg-6 g-mb-40 g-mb-0--lg landing-card">
+				<div class="landing-block-card-header text-uppercase u-heading-v2-4--bottom g-brd-primary g-mb-40">
+					<h4 class="landing-block-node-subtitle h6 g-font-weight-800 g-font-size-12 g-letter-spacing-1 g-color-primary g-mb-20">Independent Security Review</h4>
+					<h2 class="landing-block-node-title h1 u-heading-v2__title g-line-height-1_3 g-font-weight-600 g-font-size-40 g-mb-minus-10 g-text-break-word">Security Review</h2>
+				</div>
+
+				<div class="landing-block-node-text"><p>Don&#039;t know what you need or working towards ISO 27001. Let Cyber HQ perform an independent on-site review of your security posture.<br /><br />Our comprehensive review covers over 120 points in areas such as:<br /><br /><span style="font-weight: bold;">•  </span>  Security Policies
+<br /><span style="font-weight: bold;">    • </span>   Organisation of Information Security
+<br /><span style="font-weight: bold;">    • </span>   Human Resource Security
+<br /><span style="font-weight: bold;">    •</span>    Asset Management
+<br /><span style="font-weight: bold;">    • </span>   Access Control
+<br /><span style="font-weight: bold;">    •</span>    Cryptography
+<br /><span style="font-weight: bold;">    • </span>   Physical &amp; Environmental Security
+<br /><span style="font-weight: bold;">    • </span>   Operations Security
+<br /><span style="font-weight: bold;">    • </span>   Communications Security
+<br /><span style="font-weight: bold;">    • </span>   System acquisition, development and maintenance
+<br /><span style="font-weight: bold;">    • </span>   Supplier relationships
+<br /><span style="font-weight: bold;">    • </span>   Information security incident management
+<br /><span style="font-weight: bold;">    • </span>   Business continuity
+<br /><span style="font-weight: bold;">    • </span>   Compliance <br /></p></div>
+			</div><div class="landing-block-card js-animation fadeIn col-lg-6 g-mb-40 g-mb-0--lg landing-card">
+				<div class="landing-block-card-header text-uppercase u-heading-v2-4--bottom g-brd-primary g-mb-40">
+					<h4 class="landing-block-node-subtitle h6 g-font-weight-800 g-font-size-12 g-letter-spacing-1 g-color-primary g-mb-20">Independent Security Review - ISO 27001 standard</h4>
+					<h2 class="landing-block-node-title h1 u-heading-v2__title g-line-height-1_3 g-font-weight-600 g-font-size-40 g-mb-minus-10 g-text-break-word">Validate existing or strategy creation</h2>
+				</div>
+
+				<div class="landing-block-node-text"><p><span style="font-weight: bold;">Benefits:<br /></span>• Independent, unbiased, expert advice. 
+<br />    • An objective look at security holistically without constraints. 
+<br />    • Maturity scoring of your cyber security controls. 
+<br />    • Board, management and staff level strategy.<br /></p></div>
+			</div></div>
+	</div>
+</section></div><div id="block1619" class="block-wrapper block-04-7-one-col-fix-with-title-and-text-2"><section class="landing-block g-py-20 js-animation g-bg-gray-light-v5 animation-none animated g-pt-20 g-pb-20">
+
+        <div class="container landing-block-node-subcontainer text-center g-max-width-800">
+
+            <div class="landing-block-node-inner text-uppercase u-heading-v2-4--bottom g-brd-primary">
+                <h4 class="landing-block-node-subtitle g-font-weight-700 g-font-size-12 g-color-primary g-mb-15"></h4>
+                <h2 class="landing-block-node-title u-heading-v2__title g-line-height-1_1 g-font-weight-700 g-color-black g-mb-minus-10 g-font-size-24">Let us take care of security and allow you to focus on your business.</h2>
+            </div>
+
+			<div class="landing-block-node-text g-font-size-24 text-center g-color-gray-dark-v3"><p><span style="color: rgb(33, 33, 33);">We work closely to achieve your goals</span><br /><span style=""><span style="color: rgb(33, 33, 33);">by acting as an extension to your existing team. </span></span><span style=""><br /></span></p></div>
+        </div>
+
+    </section></div><div id="block1907" class="block-wrapper block-11-three-cols-fix-tariffs"><section class="landing-block g-pb-20 g-pt-30 g-pr-0 g-pl-0">
+        <div class="container">
+
+            <div class="row no-gutters"><div class="landing-block-card js-animation fadeInUp col-md-4 g-mb-30 g-mb-0--md landing-card col-lg-4">
+                    <article class="text-center g-brd-around g-color-gray g-brd-gray-light-v5 g-pa-10">
+                        <div class="landing-block-card-container g-bg-gray-light-v5 g-pr-30 g-pt-30 g-pb-30 u-shadow-v26 opacity-1 g-pl-30">
+                            <h4 class="landing-block-node-title text-uppercase h5 g-color-gray-dark-v3 g-font-weight-500 g-mb-10">Security review</h4>
+                            <div class="landing-block-node-subtitle g-font-style-normal">Comprehensive insight into your security posture with recommendations</div>
+
+                            <hr class="g-brd-gray-light-v3 g-my-10" />
+
+                            <div class="g-color-primary g-my-20">
+								<div class="landing-block-node-price g-line-height-1_2 g-text-shadow-none g-font-size-30"><span style="font-weight: 700;">£POA</span><span style="font-weight: 700;"><br /></span></div>
+                                <div class="landing-block-node-price-text"> </div>
+                            </div>
+
+                            <hr class="g-brd-gray-light-v3 g-mt-10 mb-0" />
+
+                            <ul class="landing-block-node-price-list list-unstyled g-mb-25"><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12">Security Policies<br /></li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12">Organisation of Information Security</li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12">Human Resource Security</li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12">Asset Management</li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12">Access Control</li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12">Cryptography</li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12">Physical &amp; Environmental Security</li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12">Operations Security</li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12">Communications Security</li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12">System acquisition, development and maintenance</li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12">Supplier relationships</li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12">Information security incident management</li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12">Business continuity</li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12">Compliance</li></ul>
+							<div class="landing-block-node-price-container">
+								<a class="landing-block-node-price-button btn btn-md text-uppercase g-btn-primary g-btn-type-solid rounded-0 " href="https://cyberhq.co.uk/#block1629" target="_self">Order Now</a>
+							</div>
+                        </div>
+                    </article>
+                </div><div class="landing-block-card js-animation fadeInUp col-md-4 g-mb-30 g-mb-0--md landing-card col-lg-4" style="animation-duration: 1000ms;animation-play-state: running;animation-name: none;">
+                    <article class="text-center g-brd-around g-color-gray g-brd-gray-light-v5 g-pa-10">
+                        <div class="landing-block-card-container g-bg-gray-light-v5 g-pr-30 g-pt-30 g-pb-30 u-shadow-v26 opacity-1 g-pl-30" style="">
+                            <h4 class="landing-block-node-title text-uppercase h5 g-color-gray-dark-v3 g-font-weight-500 g-mb-10" data-selector=".landing-block-node-title@2" title="Click to edit text" style="">Security tRAINING</h4>
+                            <div class="landing-block-node-subtitle g-font-style-normal" data-selector=".landing-block-node-subtitle@2" title="Click to edit text" style=""><em>ISACA Certified Information Security Manager (CISM)<br /><br /></em></div>
+
+                            <hr class="g-brd-gray-light-v3 g-my-10" />
+
+                            <div class="g-color-primary g-my-20">
+								<div class="landing-block-node-price g-line-height-1_2 g-text-shadow-none g-font-size-30" data-selector=".landing-block-node-price@2" title="Click to edit text" style=""><span style="font-weight: bold;">£1495</span></div>
+                                <div class="landing-block-node-price-text" data-selector=".landing-block-node-price-text@2" title="Click to edit text"> </div>
+                            </div>
+
+                            <hr class="g-brd-gray-light-v3 g-mt-10 mb-0" />
+
+                            <ul class="landing-block-node-price-list list-unstyled g-mb-25" data-selector=".landing-block-node-price-list@2" title="Click to edit text"><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12" style="">Globally recognized</li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12" style="">Small groups for personalized learning</li>
+                                <li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12" style="">Industry professional trainers</li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12" style="">Learn from anywhere in the world</li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12" style="">Multiple time zones</li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12" style="">Exam Pass Guarantee<br /></li></ul>
+							<div class="landing-block-node-price-container">
+								<a class="landing-block-node-price-button btn btn-md text-uppercase g-btn-primary g-btn-type-solid rounded-0 " href="https://cyberhq.co.uk/#block1629" data-selector=".landing-block-node-price-button@2" title="Click to edit button" target="_self">Order Now</a>
+							</div>
+                        </div>
+                    </article>
+                </div><div class="landing-block-card js-animation fadeInUp col-md-4 g-mb-30 g-mb-0--md landing-card col-lg-4" style="animation-duration: 1000ms;animation-play-state: running;animation-name: none;">
+                    <article class="text-center g-brd-around g-color-gray g-brd-gray-light-v5 g-pa-10">
+                        <div class="landing-block-card-container g-bg-gray-light-v5 g-pr-30 g-pt-30 g-pb-30 u-shadow-v26 opacity-1 g-pl-30" style="">
+                            <h4 class="landing-block-node-title text-uppercase h5 g-color-gray-dark-v3 g-font-weight-500 g-mb-10" data-selector=".landing-block-node-title@2" title="Click to edit text" style="">Fully Managed Security</h4>
+                            <div class="landing-block-node-subtitle g-font-style-normal" data-selector=".landing-block-node-subtitle@2" title="Click to edit text" style=""><em>A full team for less than the price of employing one member of staff</em></div>
+
+                            <hr class="g-brd-gray-light-v3 g-my-10" />
+
+                            <div class="g-color-primary g-my-20">
+								<div class="landing-block-node-price g-line-height-1_2 g-text-shadow-none g-font-size-30" data-selector=".landing-block-node-price@2" title="Click to edit text" style=""><span style="font-weight: bold;">£POA</span></div>
+                                <div class="landing-block-node-price-text" data-selector=".landing-block-node-price-text@2" title="Click to edit text"> </div>
+                            </div>
+
+                            <hr class="g-brd-gray-light-v3 g-mt-10 mb-0" />
+
+                            <ul class="landing-block-node-price-list list-unstyled g-mb-25" data-selector=".landing-block-node-price-list@2" title="Click to edit text"><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12"><a href="https://cyberhq.co.uk/consulting324/" target="_self">Business Continuity / Disaster Recovery</a></li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12"><a href="https://cyberhq.co.uk/consulting323/" target="_self">Social Engineering</a> <br /></li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12"><a href="https://cyberhq.co.uk/consulting323/" target="_self">Network Penetration Testing</a>
+<br /></li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12"><a href="https://cyberhq.co.uk/consulting323/" target="_self">Web Application Testing</a> <br /></li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12"><a href="https://cyberhq.co.uk/consulting3232/" target="_self">vCISO</a> <br /></li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12"><a href="https://cyberhq.co.uk/consulting3/" target="_self">Incident Response</a><br /></li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12"><a href="https://cyberhq.co.uk/consulting323222/" target="_self">Vulnerability Scanning</a> <br /></li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12"><a href="https://cyberhq.co.uk/consulting32322/" target="_self">Cyber Essentials Certification</a> <br /></li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12"><a href="https://cyberhq.co.uk/consulting3232232/" target="_self">GCHQ Certified Training</a> <br /></li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12"><a href="https://cyberhq.co.uk/consulting323223/" target="_self">Policy Review</a>
+<br /></li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12"><a href="https://cyberhq.co.uk/consulting323222/" target="_self">Third Party Supplier Audits</a></li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12"><a href="https://cyberhq.co.uk/consulting323222/" target="_self">Managed SOC Services</a></li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12"><br /></li><li class="landing-block-node-price-list-item g-brd-bottom g-brd-gray-light-v3 g-py-12"><br /></li></ul>
+							<div class="landing-block-node-price-container">
+								<a class="landing-block-node-price-button btn btn-md text-uppercase g-btn-primary g-btn-type-solid rounded-0 " href="https://cyberhq.co.uk/#block1629" data-selector=".landing-block-node-price-button@2" title="Click to edit button" target="_self">Order Now</a>
+							</div>
+                        </div>
+                    </article>
+                </div></div>
+        </div>
+    </section></div><div id="block1621" class="block-wrapper block-34-3-four-cols-countdown"><section class="landing-block g-pt-0 g-bg-gray-light-v5 g-pb-20">
+	<div class="container">
+		<div class="row landing-block-inner"><div class="landing-block-node-card js-animation col-md-6 text-center g-mb-40 g-mb-0--lg landing-card col-lg-4 animation-none animated">
+					<span class="landing-block-node-card-icon-container u-icon-v1 u-icon-size--lg g-color-white-opacity-0_6 g-mb-15 m-auto">
+						<i class="landing-block-node-card-icon icon-education-024 u-line-icon-pro"></i>
+					</span>
+				<h3 class="landing-block-node-card-number mb-0 g-font-size-20 g-color-black-opacity-0_9"><span style="font-weight: bold;">01</span></h3>
+				<div class="landing-block-node-card-number-title text-uppercase g-font-weight-700 g-mb-20 g-color-pink g-font-size-27 g-font-source-sans-pro">Business Resilience</div>
+				<div class="landing-block-node-card-text g-font-size-default mb-0 g-color-gray-dark-v4"><p>Virtual CISO, Information Security Training or Incident Response.<br /></p></div>
+			</div><div class="landing-block-node-card js-animation col-md-6 text-center g-mb-40 g-mb-0--lg landing-card col-lg-4 animation-none animated">
+					<span class="landing-block-node-card-icon-container u-icon-v1 u-icon-size--lg g-color-white-opacity-0_6 g-mb-15 m-auto">
+						<i class="landing-block-node-card-icon icon-education-073 u-line-icon-pro"></i>
+					</span>
+				<h3 class="landing-block-node-card-number mb-0 g-font-size-20 g-color-black-opacity-0_9"><span style="font-weight: bold;">02</span></h3>
+				<div class="landing-block-node-card-number-title text-uppercase g-font-weight-700 g-mb-20 g-color-pink g-font-size-27 g-font-source-sans-pro">Technical Assurance</div>
+				<div class="landing-block-node-card-text g-font-size-default mb-0 g-color-gray-dark-v4"><p>Penetration Testing, Threat &amp; Vulnerability Management, Security Operations
+					</p></div>
+			</div><div class="landing-block-node-card js-animation col-md-6 text-center g-mb-40 g-mb-0--lg landing-card col-lg-4 animation-none animated">
+					<span class="landing-block-node-card-icon-container u-icon-v1 u-icon-size--lg g-color-white-opacity-0_6 g-mb-15 m-auto">
+						<i class="landing-block-node-card-icon icon-communication-180 u-line-icon-pro"></i>
+					</span>
+				<h3 class="landing-block-node-card-number mb-0 g-font-size-20 g-color-black-opacity-0_9"><span style="font-weight: bold;">03</span></h3>
+				<div class="landing-block-node-card-number-title text-uppercase g-font-weight-700 g-mb-20 g-color-pink g-font-size-27 g-font-source-sans-pro">Security Training</div>
+				<div class="landing-block-node-card-text g-font-size-default mb-0 g-color-gray-dark-v4"><p>Certified Information Security Manager (CISM)</p></div>
+			</div></div>
+	</div>
+</section></div><div id="block1627" class="block-wrapper block-44-4-slider-5-cols-with-prices"><section class="landing-block g-pt-20 g-pb-20 g-bg-secondary">
+	<!-- Product Blocks -->
+	<div class="js-carousel g-px-25 row" data-infinite="true" data-slides-show="5" data-arrows-classes="u-arrow-v1 g-absolute-centered--y g-width-45 g-height-45 g-color-white g-bg-primary g-color-primary--hover g-bg-white--hover" data-arrow-left-classes="fa fa-chevron-left g-left-0" data-arrow-right-classes="fa fa-chevron-right g-right-0" data-responsive="[{
+               &quot;breakpoint&quot;: 1200,
+               &quot;settings&quot;: {
+                 &quot;slidesToShow&quot;: 5
+               }
+             }, {
+               &quot;breakpoint&quot;: 992,
+               &quot;settings&quot;: {
+                 &quot;slidesToShow&quot;: 3
+               }
+             }, {
+               &quot;breakpoint&quot;: 768,
+               &quot;settings&quot;: {
+                 &quot;slidesToShow&quot;: 2
+               }
+             }, {
+               &quot;breakpoint&quot;: 576,
+               &quot;settings&quot;: {
+                 &quot;slidesToShow&quot;: 1
+               }
+             }]" data-init-classes-exclude="[{
+				 &quot;selector&quot;: &quot;.landing-block-node-card&quot;,
+				 &quot;class&quot;: &quot;col-12 col-sm-4 col-lg-3&quot;
+			   }, {
+				 &quot;selector&quot;: &quot;.js-carousel&quot;,
+				 &quot;class&quot;: &quot;row&quot;
+			   }]"><div class="landing-block-node-card js-slide g-px-7 col-12 col-sm-4 col-lg-3">
+			<div class="landing-block-node-card-container g-pos-rel g-text-underline--none--hover g-parent g-theme-travel-bg-black-v1 g-bg-primary--hover g-color-white g-transition-0_3 h-100" href="#">
+				<img class="landing-block-node-card-img img-fluid w-100" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="197" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;https://cyberhq.co.uk/consulting3232/&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:true}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/ade/ade1af5ef78d7bda463ca57555a5315c/Virtual_CISO_2x.jpg" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/7b7/7b755ca307f10aab2050b37c79858325/Virtual_CISO_2x_2x.jpg 2x" />
+				<div class="g-pa-20">
+					<div class="g-mb-20">
+						<h3 class="landing-block-node-card-title js-animation fadeInRight text-uppercase g-font-weight-700 g-font-roboto-slab g-font-size-default g-color-white g-mb-5"><p style="text-align: center;"><span style="font-size: 1rem;">Virtual CISO</span></p></h3>
+						<div class="landing-block-node-card-text js-animation fadeInLeft g-color-white-opacity-0_8"><p style="text-align: center;">When you need considerable business and technical experience to balance business risk with financial objectives successfully.</p></div>
+					</div>
+					<div class="landing-block-node-card-price js-animation fadeInRight d-inline-block g-line-height-1 g-font-weight-700 g-font-size-11 g-bg-primary g-color-primary--parent-hover g-bg-white--parent-hover g-pa-10" href="#"><a href="https://cyberhq.co.uk/consulting3232/" target="_self">More Info</a></div>
+				</div>
+			</div>
+		</div><div class="landing-block-node-card js-slide g-px-7 col-12 col-sm-4 col-lg-3">
+			<div class="landing-block-node-card-container g-pos-rel g-text-underline--none--hover g-parent g-theme-travel-bg-black-v1 g-bg-primary--hover g-color-white g-transition-0_3 h-100" href="#">
+				<img class="landing-block-node-card-img img-fluid w-100" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="169" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;https://cyberhq.co.uk/consulting323/&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:true}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/1e9/1e9ffea820a6567a3a48c2c568092e97/Penetration_Testing_2x.jpg" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/129/1296065f8a114bab515d80d298b35e5e/Penetration_Testing_2x_2x.jpg 2x" />
+				<div class="g-pa-20">
+					<div class="g-mb-20">
+						<h3 class="landing-block-node-card-title js-animation fadeInRight text-uppercase g-font-weight-700 g-font-roboto-slab g-font-size-default g-color-white g-mb-5"><p style="text-align: center;"><span style="font-size: 1rem;">Penetration Testing</span></p></h3>
+						<div class="landing-block-node-card-text js-animation fadeInLeft g-color-white-opacity-0_8"><p style="text-align: center;">Identify potential vulnerabilities using Ethical Hacking.<br /><br /></p></div>
+					</div>
+					<div class="landing-block-node-card-price js-animation fadeInRight d-inline-block g-line-height-1 g-font-weight-700 g-font-size-11 g-bg-primary g-color-primary--parent-hover g-bg-white--parent-hover g-pa-10" href="#"><a href="https://cyberhq.co.uk/consulting323/" target="_self">More Info</a></div>
+				</div>
+			</div>
+		</div><div class="landing-block-node-card js-slide g-px-7 col-12 col-sm-4 col-lg-3">
+			<div class="landing-block-node-card-container g-pos-rel g-text-underline--none--hover g-parent g-theme-travel-bg-black-v1 g-bg-primary--hover g-color-white g-transition-0_3 h-100" href="#">
+				<img class="landing-block-node-card-img img-fluid w-100" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="581" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;https://cyberhq.co.uk/consulting3232232/&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:true}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/3ba/3bae3b338d7556380aab3f63096fd8c3/GCHQ_Cyber_HQ_logo2.png" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/730/73025705fb1c114d62a65ea85eee189d/GCHQ_Cyber_HQ_logo2_2x.png 2x" />
+				<div class="g-pa-20">
+					<div class="g-mb-20">
+						<h3 class="landing-block-node-card-title js-animation fadeInRight text-uppercase g-font-weight-700 g-font-roboto-slab g-font-size-default g-color-white g-mb-5"><p style="text-align: center;"><span style="font-size: 1rem;">GCHQ Certified Training</span></p></h3>
+						<div class="landing-block-node-card-text js-animation fadeInLeft g-color-white-opacity-0_8"><p style="text-align: center;"><br />Ensuring your human resource is well prepared aiding compliance.<br /></p></div>
+					</div>
+					<div class="landing-block-node-card-price js-animation fadeInRight d-inline-block g-line-height-1 g-font-weight-700 g-font-size-11 g-bg-primary g-color-primary--parent-hover g-bg-white--parent-hover g-pa-10" href="#"><a href="https://cyberhq.co.uk/consulting3232232/" target="_self">More Info</a></div>
+				</div>
+			</div>
+		</div><div class="landing-block-node-card js-slide g-px-7 col-12 col-sm-4 col-lg-3">
+			<div class="landing-block-node-card-container g-pos-rel g-text-underline--none--hover g-parent g-theme-travel-bg-black-v1 g-bg-primary--hover g-color-white g-transition-0_3 h-100" href="#">
+				<img class="landing-block-node-card-img img-fluid w-100" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="229" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;https://cyberhq.co.uk/consulting3/&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:true}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/de3/de3b0ccd45d6a1baa6a99d5a4be7a9f6/Cyber_Incident_response_Lancashire_2x.jpg" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/dd3/dd37f921eddbacb12e1bea9eff97eb75/Cyber_Incident_response_Lancashire_2x_2x.jpg 2x" />
+				<div class="g-pa-20">
+					<div class="g-mb-20">
+						<h3 class="landing-block-node-card-title js-animation fadeInRight text-uppercase g-font-weight-700 g-font-roboto-slab g-font-size-default g-color-white g-mb-5"><p style="text-align: center;"><span style="font-size: 1rem;">Cyber Incident Response</span></p></h3>
+						<div class="landing-block-node-card-text js-animation fadeInLeft g-color-white-opacity-0_8"><p>Support to get your business fully operational again.<br /><br /></p></div>
+					</div>
+					<div class="landing-block-node-card-price js-animation fadeInRight d-inline-block g-line-height-1 g-font-weight-700 g-font-size-11 g-bg-primary g-color-primary--parent-hover g-bg-white--parent-hover g-pa-10" href="#"><a href="https://cyberhq.co.uk/consulting3/" target="_self">More Info</a></div>
+				</div>
+			</div>
+		</div><div class="landing-block-node-card js-slide g-px-7 col-12 col-sm-4 col-lg-3">
+			<div class="landing-block-node-card-container g-pos-rel g-text-underline--none--hover g-parent g-theme-travel-bg-black-v1 g-bg-primary--hover g-color-white g-transition-0_3 h-100" href="#">
+				<img class="landing-block-node-card-img img-fluid w-100" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="265" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;https://cyberhq.co.uk/consulting3232233/&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:true}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/f30/f30e824d4192bb77c23be6fafda306b5/Information_Risk_Management_Lancashire_2x.jpg" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/ade/ade547ddc26209ca9c7bae9f26b9e036/Information_Risk_Management_Lancashire_2x_2x.jpg 2x" />
+				<div class="g-pa-20">
+					<div class="g-mb-20">
+						<h3 class="landing-block-node-card-title js-animation fadeInRight text-uppercase g-font-weight-700 g-font-roboto-slab g-font-size-default g-color-white g-mb-5"><p style="text-align: center;"><span style="font-size: 1rem;">Information Security Risk Management</span></p></h3>
+						<div class="landing-block-node-card-text js-animation fadeInLeft g-color-white-opacity-0_8"><p style="text-align: center;">Identify, evaluate, and treat the risks specific to your organisation.</p></div>
+					</div>
+					<div class="landing-block-node-card-price js-animation fadeInRight d-inline-block g-line-height-1 g-font-weight-700 g-font-size-11 g-bg-primary g-color-primary--parent-hover g-bg-white--parent-hover g-pa-10" href="#"><a href="https://cyberhq.co.uk/consulting3232233/" target="_self">More Info</a></div>
+				</div>
+			</div>
+		</div><div class="landing-block-node-card js-slide g-px-7 col-12 col-sm-4 col-lg-3">
+			<div class="landing-block-node-card-container g-pos-rel g-text-underline--none--hover g-parent g-theme-travel-bg-black-v1 g-bg-primary--hover g-color-white g-transition-0_3 h-100" href="#">
+				<img class="landing-block-node-card-img img-fluid w-100" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="161" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;https://cyberhq.co.uk/consulting324/&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:true}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/ac3/ac3f418844468259a4c37f1e1622e9c1/Business_Continuity_2x.jpg" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/899/899333f49a4d1381d8a9bdcbd38e89e8/Business_Continuity_2x_2x.jpg 2x" />
+				<div class="g-pa-20">
+					<div class="g-mb-20">
+						<h3 class="landing-block-node-card-title js-animation fadeInRight text-uppercase g-font-weight-700 g-font-roboto-slab g-font-size-default g-color-white g-mb-5"><p style="text-align: center;"><span style="font-size: 1rem;">Business Continuity</span></p></h3>
+						<div class="landing-block-node-card-text js-animation fadeInLeft g-color-white-opacity-0_8"><p style="text-align: center;">Enabling you to maintain essential functions during and after a disaster has presented itself.<br /><br /></p></div>
+					</div>
+					<div class="landing-block-node-card-price js-animation fadeInRight d-inline-block g-line-height-1 g-font-weight-700 g-font-size-11 g-bg-primary g-color-primary--parent-hover g-bg-white--parent-hover g-pa-10" href="#"><a href="https://cyberhq.co.uk/consulting324/" target="_self">More Info</a></div>
+				</div>
+			</div>
+		</div><div class="landing-block-node-card js-slide g-px-7 col-12 col-sm-4 col-lg-3">
+			<div class="landing-block-node-card-container g-pos-rel g-text-underline--none--hover g-parent g-theme-travel-bg-black-v1 g-bg-primary--hover g-color-white g-transition-0_3 h-100" href="#">
+				<img class="landing-block-node-card-img img-fluid w-100" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="253" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;https://cyberhq.co.uk/consulting32322/&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:true}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/0bd/0bd5daedbf94b3834ac9b0677cedd0e5/cyber-essentials_Lancashire_2x.png" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/33f/33f195637b23753be51fcab71c13082a/cyber-essentials_Lancashire_2x_2x.png 2x" />
+				<div class="g-pa-20">
+					<div class="g-mb-20">
+						<h3 class="landing-block-node-card-title js-animation fadeInRight text-uppercase g-font-weight-700 g-font-roboto-slab g-font-size-default g-color-white g-mb-5"><p style="text-align: center;"><span style="font-size: 1rem;">Certifications</span></p></h3>
+						<div class="landing-block-node-card-text js-animation fadeInLeft g-color-white-opacity-0_8"><p style="text-align: center;">Demonstrate your commitment to protecting key business data by achieving Cyber Essentials or ISO certification.</p></div>
+					</div>
+					<div class="landing-block-node-card-price js-animation fadeInRight d-inline-block g-line-height-1 g-font-weight-700 g-font-size-11 g-bg-primary g-color-primary--parent-hover g-bg-white--parent-hover g-pa-10" href="#"><a href="https://cyberhq.co.uk/consulting32322/" target="_self">More Info</a></div>
+				</div>
+			</div>
+		</div><div class="landing-block-node-card js-slide g-px-7 col-12 col-sm-4 col-lg-3">
+			<div class="landing-block-node-card-container g-pos-rel g-text-underline--none--hover g-parent g-theme-travel-bg-black-v1 g-bg-primary--hover g-color-white g-transition-0_3 h-100" href="#">
+				<img class="landing-block-node-card-img img-fluid w-100" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="219" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/655/655cbfd691a7985c5360912b69647288/Cyber_HQ_Policy-600x600.jpg" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/a5e/a5ea6ee57ae347585c21940274e6adab/Cyber_HQ_Policy-600x600_2x.jpg 2x" />
+				<div class="g-pa-20">
+					<div class="g-mb-20">
+						<h3 class="landing-block-node-card-title js-animation fadeInRight text-uppercase g-font-weight-700 g-font-roboto-slab g-font-size-default g-color-white g-mb-5"><p style="text-align: center;"><span style="font-size: 1rem;">Information Security Policy Management</span></p></h3>
+						<div class="landing-block-node-card-text js-animation fadeInLeft g-color-white-opacity-0_8"><p style="text-align: center;">Set out the aims and objectives for the management of information security.</p></div>
+					</div>
+					<div class="landing-block-node-card-price js-animation fadeInRight d-inline-block g-line-height-1 g-font-weight-700 g-font-size-11 g-bg-primary g-color-primary--parent-hover g-bg-white--parent-hover g-pa-10" href="#"><a href="https://cyberhq.co.uk/consulting323223/" target="_self">More Info</a></div>
+				</div>
+			</div>
+		</div><div class="landing-block-node-card js-slide g-px-7 col-12 col-sm-4 col-lg-3">
+			<div class="landing-block-node-card-container g-pos-rel g-text-underline--none--hover g-parent g-theme-travel-bg-black-v1 g-bg-primary--hover g-color-white g-transition-0_3 h-100" href="#">
+				<img class="landing-block-node-card-img img-fluid w-100" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="177" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/eb7/eb787755316fd99d28c1e143dbc5ec49/Social_Engineering_2x.jpg" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/643/643933f31c2ce18a7f47710fbda0c854/Social_Engineering_2x_2x.jpg 2x" />
+				<div class="g-pa-20">
+					<div class="g-mb-20">
+						<h3 class="landing-block-node-card-title js-animation fadeInRight text-uppercase g-font-weight-700 g-font-roboto-slab g-font-size-default g-color-white g-mb-5"><p style="text-align: center;"><span style="font-size: 1rem;">Social Engineering</span></p></h3>
+						<div class="landing-block-node-card-text js-animation fadeInLeft g-color-white-opacity-0_8"><p style="text-align: center;">Maximise your employees’ security vigilance.<br /><br /><br /></p></div>
+					</div>
+					<div class="landing-block-node-card-price js-animation fadeInRight d-inline-block g-line-height-1 g-font-weight-700 g-font-size-11 g-bg-primary g-color-primary--parent-hover g-bg-white--parent-hover g-pa-10" href="#"><a href="https://cyberhq.co.uk/#block1629" target="_self">More Info</a></div>
+				</div>
+			</div>
+		</div><div class="landing-block-node-card js-slide g-px-7 col-12 col-sm-4 col-lg-3">
+			<div class="landing-block-node-card-container g-pos-rel g-text-underline--none--hover g-parent g-theme-travel-bg-black-v1 g-bg-primary--hover g-color-white g-transition-0_3 h-100" href="#">
+				<img class="landing-block-node-card-img img-fluid w-100" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="237" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;https://cyberhq.co.uk/consulting323222/&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:true}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/e06/e06b81a9bbfd30d54fb33b865f55a9e7/Mansoc--260x160_1_2x.jpg" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/7c9/7c93cb29d5962dd19fede3aeb456f696/Mansoc--260x160_1_2x_2x.jpg 2x" />
+				<div class="g-pa-20">
+					<div class="g-mb-20">
+						<h3 class="landing-block-node-card-title js-animation fadeInRight text-uppercase g-font-weight-700 g-font-roboto-slab g-font-size-default g-color-white g-mb-5"><p style="text-align: center;"><span style="font-size: 1rem;">Managed Security Services</span></p></h3>
+						<div class="landing-block-node-card-text js-animation fadeInLeft g-color-white-opacity-0_8"><p style="text-align: center;">Gain full situational awareness with continuous security monitoring.<br /><br /></p></div>
+					</div>
+					<div class="landing-block-node-card-price js-animation fadeInRight d-inline-block g-line-height-1 g-font-weight-700 g-font-size-11 g-bg-primary g-color-primary--parent-hover g-bg-white--parent-hover g-pa-10" href="#"><a href="https://cyberhq.co.uk/consulting323222/" target="_self" style="color: rgb(224, 224, 224);">More Info</a></div>
+				</div>
+			</div>
+		</div></div>
+	<!-- Product Blocks -->
+</section></div><div id="block1629" class="block-wrapper block-33-1-form-1-transparent-black-left-text"><section class="landing-block g-pos-rel landing-block-node-bgimg g-bg-size-cover g-bg-img-hero g-bg-cover g-bg-black-opacity-0_7--after g-pt-20 g-pb-20" style="background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIwIiBoZWlnaHQ9IjEwODAiPjxyZWN0IGlkPSJiYWNrZ3JvdW5kcmVjdCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgeD0iMCIgeT0iMCIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIuNyIgc3Ryb2tlPSJub25lIi8+PC9zdmc+);" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}" data-lazy-bg="Y" data-bg="url('https://cdn.bitrix24.site/bitrix/images/landing/business/1920x1080/img4.jpg')" data-src="https://cdn.bitrix24.site/bitrix/images/landing/business/1920x1080/img4.jpg">
+
+	<div class="container g-z-index-1 g-pos-rel">
+		<div class="row align-items-center">
+
+			
+
+
+			<div class="col-md-4 g-mb-60">
+				<h2 class="landing-block-node-main-title js-animation fadeInUp h1 g-color-white mb-4" data-form-style-main-font-color="1" data-form-style-main-font-family="1">Contact Us</h2>
+
+				<div class="landing-block-node-text js-animation fadeInUp g-line-height-1_5 text-left g-mb-40 g-color-white-opacity-0_6" data-form-style-main-font-weight="1" data-form-style-header-text-font-size="1" data-form-style-label-font-weight="1" data-form-style-label-font-size="1" data-form-style-second-font-color="1" data-selector=".landing-block-node-text@0"><p>Complete the form and one of our security experts will reach out to discuss your security requirements.</p></div>
+
+				<h3 class="h4 g-color-white mb-4 landing-block-node-title">Contact Info</h3>
+
+				<div class="landing-block-node-card-contact-container"><div class="landing-block-node-card-contact" data-card-preset="text">
+						<div class="media align-items-center mb-4">
+							<div class="d-flex">
+								<span class="landing-block-card-contact-icon-container u-icon-v1 u-icon-size--sm g-color-white mr-2">
+									<i class="landing-block-card-contact-icon icon-hotel-restaurant-235 u-line-icon-pro" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}"></i>
+								</span>
+							</div>
+							<div class="media-body">
+								<div class="landing-block-node-contact-text g-color-white-opacity-0_6 mb-0">Cyber HQ<br />UCLan <br />Preston<br />Lancashire <br />PR1 2XY</div>
+							</div>
+						</div>
+					</div></div>
+			</div>
+
+
+			<div class="col-md-8">
+				<div class="bitrix24forms landing-block-node-form js-animation fadeInUp g-brd-none g-brd-around--sm g-brd-white-opacity-0_6 g-px-0 g-px-20--sm g-px-45--lg g-py-0 g-py-30--sm g-py-60--lg u-form-alert-v1" data-b24form="3|zg6yie|https://cdn.bitrix24.eu/b9975165/crm/form/loader_3.js" data-form-style-input-border-color="1" data-b24form-use-style="Y" data-b24form-embed="" data-b24form-design="{&quot;dark&quot;:true,&quot;style&quot;:&quot;modern&quot;,&quot;shadow&quot;:false,&quot;compact&quot;:false,&quot;color&quot;:{&quot;primary&quot;:&quot;--primary&quot;,&quot;primaryText&quot;:&quot;#fff&quot;,&quot;text&quot;:&quot;#fff&quot;,&quot;background&quot;:&quot;#00000000&quot;,&quot;fieldBorder&quot;:&quot;#fff&quot;,&quot;fieldBackground&quot;:&quot;#ffffff00&quot;,&quot;fieldFocusBackground&quot;:&quot;#ffffff00&quot;},&quot;border&quot;:{&quot;top&quot;:false,&quot;bottom&quot;:false,&quot;left&quot;:false,&quot;right&quot;:false}}"></div>
+			</div>
+
+		</div>
+	</div>
+</section></div><div id="block1631" class="block-wrapper block-12-image-carousel-6-cols-fix"><section class="landing-block text-center js-animation g-py-20 g-bg-main zoomIn g-pl-0">
+	<div class="container g-px-35 g-px-0--md">
+		<div class="js-carousel row" data-autoplay="true" data-pause-hover="true" data-infinite="true" data-slides-show="6" data-arrows-classes="u-arrow-v1 g-absolute-centered--y g-width-45 g-height-45 g-font-size-30 g-color-gray-light-v1" data-arrow-left-classes="fa fa-angle-left g-left-minus-35" data-arrow-right-classes="fa fa-angle-right g-right-minus-35" data-responsive="[{
+					 &quot;breakpoint&quot;: 1200,
+					 &quot;settings&quot;: {
+					   &quot;slidesToShow&quot;: 5
+					 }
+				   }, {
+					 &quot;breakpoint&quot;: 992,
+					 &quot;settings&quot;: {
+					   &quot;slidesToShow&quot;: 4
+					 }
+				   }, {
+					 &quot;breakpoint&quot;: 768,
+					 &quot;settings&quot;: {
+					   &quot;slidesToShow&quot;: 3
+					 }
+				   }, {
+					 &quot;breakpoint&quot;: 576,
+					 &quot;settings&quot;: {
+					   &quot;slidesToShow&quot;: 2
+					 }
+				   }]" data-init-classes-exclude="[{
+					 &quot;selector&quot;: &quot;.landing-block-card-carousel-item&quot;,
+					 &quot;class&quot;: &quot;col-6 col-sm-4 col-lg-2&quot;
+				   }, {
+					 &quot;selector&quot;: &quot;.js-carousel&quot;,
+					 &quot;class&quot;: &quot;row&quot;
+				   }]"><div class="landing-block-card-carousel-item js-slide g-transition-0_2 g-px-10 col-6 col-sm-4 col-lg-2">
+				<div class="landing-block-card-container d-flex justify-content-center align-items-center flex-column h-100">
+					<a href="#" class="landing-block-card-logo-link" target="_self">
+						<img class="landing-block-node-carousel-img img-fluid g-max-width-170--md g-brd-around g-brd-gray-light-v1--hover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMTUwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="361" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/57f/57fafb482574402d0556d088af1117e0/AlienVault_Cyber_HQ_logo_2x.jpg" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/267/267ae0f0bab538afd43d6356580100b6/AlienVault_Cyber_HQ_logo_2x_2x.jpg 2x" />
+					</a>
+				</div>
+			</div><div class="landing-block-card-carousel-item js-slide g-transition-0_2 g-px-10 col-6 col-sm-4 col-lg-2">
+				<div class="landing-block-card-container d-flex justify-content-center align-items-center flex-column h-100">
+					<a href="#" class="landing-block-card-logo-link" target="_self">
+						<img class="landing-block-node-carousel-img img-fluid g-max-width-170--md g-brd-around g-brd-gray-light-v1--hover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMTUwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="369" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/c24/c249161bc53b9bb7cfc79d53272409d6/CheckPoint_Cyber_HQ_2x.jpg" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/a24/a24987901aa318b254b661e119daa81f/CheckPoint_Cyber_HQ_2x_2x.jpg 2x" />
+					</a>
+				</div>
+			</div><div class="landing-block-card-carousel-item js-slide g-transition-0_2 g-px-10 col-6 col-sm-4 col-lg-2">
+				<div class="landing-block-card-container d-flex justify-content-center align-items-center flex-column h-100">
+					<a href="#" class="landing-block-card-logo-link" target="_self">
+						<img class="landing-block-node-carousel-img img-fluid g-max-width-170--md g-brd-around g-brd-gray-light-v1--hover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMTUwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="377" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/de3/de3c02c9cdfe5630e04160d28ac2e333/cisco_2x.jpg" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/6cb/6cbcb44f9781ec4b6dceeafca63981e1/cisco_2x_2x.jpg 2x" />
+					</a>
+				</div>
+			</div><div class="landing-block-card-carousel-item js-slide g-transition-0_2 g-px-10 col-6 col-sm-4 col-lg-2">
+				<div class="landing-block-card-container d-flex justify-content-center align-items-center flex-column h-100">
+					<a href="#" class="landing-block-card-logo-link" target="_self">
+						<img class="landing-block-node-carousel-img img-fluid g-max-width-170--md g-brd-around g-brd-gray-light-v1--hover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMTUwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="385" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/e9b/e9b3091d4b27d71927726fa9e20bc4ea/Darktrace_2x.jpg" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/3f1/3f1ba036fe26a0fbf5a2a145d0eebe74/Darktrace_2x_2x.jpg 2x" />
+					</a>
+				</div>
+			</div><div class="landing-block-card-carousel-item js-slide g-transition-0_2 g-px-10 col-6 col-sm-4 col-lg-2">
+				<div class="landing-block-card-container d-flex justify-content-center align-items-center flex-column h-100">
+					<a href="#" class="landing-block-card-logo-link" target="_self">
+						<img class="landing-block-node-carousel-img img-fluid g-max-width-170--md g-brd-around g-brd-gray-light-v1--hover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMTUwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="389" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/9bd/9bd69ff303e721983be665f63f21c2e6/Draytek.png" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/2d0/2d03eb5bbfe3b381aa1b13dc6a062dd0/Draytek_2x.png 2x" />
+					</a>
+				</div>
+			</div><div class="landing-block-card-carousel-item js-slide g-transition-0_2 g-px-10 col-6 col-sm-4 col-lg-2">
+				<div class="landing-block-card-container d-flex justify-content-center align-items-center flex-column h-100">
+					<a href="#" class="landing-block-card-logo-link" target="_self">
+						<img class="landing-block-node-carousel-img img-fluid g-max-width-170--md g-brd-around g-brd-gray-light-v1--hover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMTUwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="397" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/0e3/0e32ce92d5eba239e12056607f3d81b8/Exabeam_Cyber_HQ_2x.jpg" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/f3a/f3aeeeddd09e25aad73c4b919cb2e85f/Exabeam_Cyber_HQ_2x_2x.jpg 2x" />
+					</a>
+				</div>
+			</div><div class="landing-block-card-carousel-item js-slide g-transition-0_2 g-px-10 col-6 col-sm-4 col-lg-2">
+				<div class="landing-block-card-container d-flex justify-content-center align-items-center flex-column h-100">
+					<a href="#" class="landing-block-card-logo-link" target="_self">
+						<img class="landing-block-node-carousel-img img-fluid g-max-width-170--md g-brd-around g-brd-gray-light-v1--hover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMTUwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="401" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/252/2524b552c83f402fde1dfb437b3ab4bd/FireEye_Cyber_HQ.jpg" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/d17/d17ce25e4215386afdf6f5ebbe90f8dc/FireEye_Cyber_HQ_2x.jpg 2x" />
+					</a>
+				</div>
+			</div><div class="landing-block-card-carousel-item js-slide g-transition-0_2 g-px-10 col-6 col-sm-4 col-lg-2">
+				<div class="landing-block-card-container d-flex justify-content-center align-items-center flex-column h-100">
+					<a href="#" class="landing-block-card-logo-link" target="_self">
+						<img class="landing-block-node-carousel-img img-fluid g-max-width-170--md g-brd-around g-brd-gray-light-v1--hover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="405" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/e59/e594f89828ff59c401230992740bb276/fortinet.jpg" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/8e7/8e7f320664e9164078bab92649dae672/fortinet_2x.jpg 2x" />
+					</a>
+				</div>
+			</div><div class="landing-block-card-carousel-item js-slide g-transition-0_2 g-px-10 col-6 col-sm-4 col-lg-2">
+				<div class="landing-block-card-container d-flex justify-content-center align-items-center flex-column h-100">
+					<a href="#" class="landing-block-card-logo-link" target="_self">
+						<img class="landing-block-node-carousel-img img-fluid g-max-width-170--md g-brd-around g-brd-gray-light-v1--hover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMTUwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="409" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/787/7870ad9e5ad31a3a523e1214eaf13a6c/mimecast_Cyber_HQ.jpg" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/402/40257e8324680911e32b886f5c298762/mimecast_Cyber_HQ_2x.jpg 2x" />
+					</a>
+				</div>
+			</div><div class="landing-block-card-carousel-item js-slide g-transition-0_2 g-px-10 col-6 col-sm-4 col-lg-2">
+				<div class="landing-block-card-container d-flex justify-content-center align-items-center flex-column h-100">
+					<a href="#" class="landing-block-card-logo-link" target="_self">
+						<img class="landing-block-node-carousel-img img-fluid g-max-width-170--md g-brd-around g-brd-gray-light-v1--hover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMTUwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="413" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/43a/43a3cccc1afe1ef2dcd1c081ebbb8b72/PaloAlto_Cyber_HQ.jpg" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/e07/e076436fa9d3775ce938fc88b76d39fb/PaloAlto_Cyber_HQ_2x.jpg 2x" />
+					</a>
+				</div>
+			</div><div class="landing-block-card-carousel-item js-slide g-transition-0_2 g-px-10 col-6 col-sm-4 col-lg-2">
+				<div class="landing-block-card-container d-flex justify-content-center align-items-center flex-column h-100">
+					<a href="#" class="landing-block-card-logo-link" target="_self">
+						<img class="landing-block-node-carousel-img img-fluid g-max-width-170--md g-brd-around g-brd-gray-light-v1--hover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMTUwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="421" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/a02/a022d256cf07fe48afcee705910d65b1/Splunk_2x.jpg" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/d0a/d0a1d2dd39ee446b7bb5942d0f382f53/Splunk_2x_2x.jpg 2x" />
+					</a>
+				</div>
+			</div><div class="landing-block-card-carousel-item js-slide g-transition-0_2 g-px-10 col-6 col-sm-4 col-lg-2">
+				<div class="landing-block-card-container d-flex justify-content-center align-items-center flex-column h-100">
+					<a href="#" class="landing-block-card-logo-link" target="_self">
+						<img class="landing-block-node-carousel-img img-fluid g-max-width-170--md g-brd-around g-brd-gray-light-v1--hover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMTUwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="429" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/3d2/3d249107b18512cde47642d72b2e5413/tenable_2x.jpg" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/f95/f955b0edc57017df6c37455b26973b59/tenable_2x_2x.jpg 2x" />
+					</a>
+				</div>
+			</div><div class="landing-block-card-carousel-item js-slide g-transition-0_2 g-px-10 col-6 col-sm-4 col-lg-2">
+				<div class="landing-block-card-container d-flex justify-content-center align-items-center flex-column h-100">
+					<a href="#" class="landing-block-card-logo-link" target="_self">
+						<img class="landing-block-node-carousel-img img-fluid g-max-width-170--md g-brd-around g-brd-gray-light-v1--hover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMTUwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="433" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/ff8/ff80e7cc950eefc4528e2203557eb694/TrendMicro.jpg" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/ee0/ee0de123962c57e119df69ab70ce359a/TrendMicro_2x.jpg 2x" />
+					</a>
+				</div>
+			</div><div class="landing-block-card-carousel-item js-slide g-transition-0_2 g-px-10 col-6 col-sm-4 col-lg-2">
+				<div class="landing-block-card-container d-flex justify-content-center align-items-center flex-column h-100">
+					<a href="#" class="landing-block-card-logo-link" target="_self">
+						<img class="landing-block-node-carousel-img img-fluid g-max-width-170--md g-brd-around g-brd-gray-light-v1--hover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMTQyIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="437" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/8e3/8e31afc31823df46dd8c9c8a2b462f04/VMWare.jpg" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/d0b/d0b005b32b21d339b1c7ef14227dfb02/VMWare_2x.jpg 2x" />
+					</a>
+				</div>
+			</div><div class="landing-block-card-carousel-item js-slide g-transition-0_2 g-px-10 col-6 col-sm-4 col-lg-2">
+				<div class="landing-block-card-container d-flex justify-content-center align-items-center flex-column h-100">
+					<a href="#" class="landing-block-card-logo-link" target="_self">
+						<img class="landing-block-node-carousel-img img-fluid g-max-width-170--md g-brd-around g-brd-gray-light-v1--hover" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMTUwIj48cmVjdCBpZD0iYmFja2dyb3VuZHJlY3QiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHg9IjAiIHk9IjAiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iLjciIHN0cm9rZT0ibm9uZSIvPjwvc3ZnPg==" alt="" data-fileid="457" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}" data-lazy-img="Y" data-src="https://cdn.bitrix24.eu/b9975165/landing/3c3/3c350ba7f768c6afd8d0292e9b1cf205/cyber-essentials_Lancashire_2x.png" loading="lazy" data-srcset="https://cdn.bitrix24.eu/b9975165/landing/727/727c2c9edd0e27a1452ae2c10609cd07/cyber-essentials_Lancashire_2x_2x.png 2x" />
+					</a>
+				</div>
+			</div></div>
+	</div>
+</section></div><div id="block1633" class="block-wrapper block-17-copyright"><section class="landing-block js-animation animation-none">
+	<div class="landing-semantic-text-medium text-center g-pa-10">
+		<div class="g-width-600 mx-auto">
+			<div class="landing-block-node-text g-font-size-12 js-animation animation-none"><p><a href="https://cyberhq.co.uk/consulting33/" target="_self">Privacy Policy</a></p></div>
+		</div>
+	</div>
+</section></div><div id="block1893" class="block-wrapper block-17-copyright"><section class="landing-block js-animation animation-none">
+	<div class="landing-semantic-text-medium text-center g-pa-10">
+		<div class="g-width-600 mx-auto">
+			<div class="landing-block-node-text g-font-size-12 js-animation animation-none"><p>© 2022 All rights reserved.</p></div>
+		</div>
+	</div>
+</section></div>
+	<div class="bx-landing-cookies-popup" id="bx-landing-cookies-popup">
+		<div class="bx-landing-cookies-popup-title">We use cookies</div>
+		<div class="bx-landing-cookies-popup-content">
+			<div class="bx-landing-cookies-main-agreement"></div>
+			<div class="bx-landing-cookies-popup-subtitle">Cookie preferences</div>
+			<div class="bx-landing-cookies-popup-subtitle-detail">Below you may find information about the purposes for which we and our partners use cookies and process data. You can exercise your preferences for processing, and/or see details on our partners' websites. </div>
+
+			<div>
+				<div class="bx-landing-cookies-main-agreement-block">
+					<span class="bx-landing-cookies-main-agreement-block-name">Analytical cookies</span>
+					<span class="bx-landing-cookies-switcher" data-type="analytic">Disable all</span>
+				</div>
+				<div class="bx-landing-cookies-analytic-agreements"></div>
+			</div>
+
+			<div>
+				<div class="bx-landing-cookies-main-agreement-block">
+					<span class="bx-landing-cookies-main-agreement-block-name">Functional cookies</span>
+				</div>
+				<div class="bx-landing-cookies-technical-agreements" data-type="technical"></div>
+			</div>
+
+			<div>
+				<div class="bx-landing-cookies-main-agreement-block">
+					<span class="bx-landing-cookies-main-agreement-block-name">Other cookies</span>
+				</div>
+				<div class="bx-landing-cookies-other-agreements" data-type="other"></div>
+			</div>
+
+		</div>
+		<div class="bx-landing-cookies-popup-footer">
+			<button class="ui-btn ui-btn-lg ui-btn-primary ui-btn-round bx-landing-cookies-button-save">
+				Accept all			</button>
+			<button class="ui-btn ui-btn-lg ui-btn-light-border ui-btn-round bx-landing-cookies-button-cancel">
+				Decline all			</button>
+		</div>
+		<span class="bx-landing-cookies-button-close"></span>
+	</div>
+	<div class="bx-landing-cookies-popup-warning" id="bx-landing-cookies-popup-warning">
+		<div class="bx-landing-cookies-popup-warning-inner">
+			<div class="bx-landing-cookies-popup-warning-left">
+				<span class="bx-landing-cookies-popup-warning-text">We use cookies to analyze our traffic.</span>
+				<span class="bx-landing-cookies-popup-warning-link" id="bx-landing-cookies-opt-link">Learn more about our cookie policy.</span>
+			</div>
+			<div class="bx-landing-cookies-popup-warning-right">
+				<span class="ui-btn ui-btn-lg ui-btn-primary ui-btn-round" id="bx-landing-cookies-accept">
+					Accept all				</span>
+				<span class="ui-btn ui-btn-lg ui-btn-light-border ui-btn-round bx-landing-cookies-button-cancel bx-landing-cookies-button-cancel-second">
+					Decline all				</span>
+				<span class="ui-btn ui-btn-lg ui-btn-light-border ui-btn-round" id="bx-landing-cookies-opt">
+					Change preferences				</span>
+			</div>
+		</div>
+	</div>
+	<div class="bx-landing-cookies-popup-notice" id="bx-landing-cookies-popup-notice"
+		 style="left: 75px; bottom: 23px;				 background:#03c1fe;
+				 color:#fff;">
+		<div class="bx-landing-cookies-popup-notice-svg-wrap">
+			<svg style="fill:#fff;" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#FFF" class="bx-landing-cookies-popup-notice-svg">
+				<path fill-rule="evenodd" d="M7.328.07c.463 0 .917.043 1.356.125.21.04.3.289.228.49a1.5 1.5 0 001.27 1.99h.001a.22.22 0 01.213.243 3.218 3.218 0 003.837 3.453c.18-.035.365.078.384.26A7.328 7.328 0 117.329.07zm.263 10.054a1.427 1.427 0 100 2.854 1.427 1.427 0 000-2.854zM3.697 7.792a.884.884 0 100 1.769.884.884 0 000-1.769zm5.476-.488a.884.884 0 100 1.768.884.884 0 000-1.768zM5.806 3.628a1.427 1.427 0 100 2.854 1.427 1.427 0 000-2.854z"></path>
+			</svg>
+		</div>
+		<span class="bx-landing-cookies-popup-notice-text-wrap">
+			<span class="bx-landing-cookies-popup-notice-text">Cookies</span>
+		</span>
+
+	</div>
+
+
+</main>
+<script data-skip-moving="true">
+					(function(w,d,u,b){ 'use strict';
+					var s=d.createElement('script');var r=(Date.now()/1000|0);s.async=1;s.src=u+'?'+r;
+					var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+				})(window,document,'https://cdn.bitrix24.eu/b9975165/crm/site_button/loader_1_bglpu7.js');
+				</script> <div class="bitrix-footer"><span class="bitrix-footer-text"><div class="bitrix-footer-seo">Powered by <img src="//b24-vasbka.bitrix24.eu/bitrix/images/landing/copyright/logo_en.svg?1" alt="Bitrix24">. <a class="bitrix-footer-link" target="_blank" href="https://www.bitrix24.com/tools/websites/?utm_medium=referral&amp;utm_source=bitrix24.com&amp;utm_campaign=com_sites_websites">Create websites online</a></div>	<div class="bitrix-footer-terms">
+        <span class="bitrix-footer-link bitrix-footer-link-report"><a class="bitrix-footer-link" target="_blank" rel="nofollow" href="https://www.bitrix24.com/abuse/?sender_page=PAGE&hostname=b24-vasbka.bitrix24.eu&siteId=1&from_url=https%253A%252F%252Fb24-vasbka.bitrix24.eu%252Fpub%252Fsite%252F1%252F%253Fuser_lang%253Den">Report abuse</a></span>
+		<span class="bitrix-footer-hint" data-hint="Bitrix24 bears no responsibility for the content of the site, please contact us, if any violations are found."></span>
+	</div></span></div><script>if(!window.BX)window.BX={};if(!window.BX.message)window.BX.message=function(mess){if(typeof mess==='object'){for(let i in mess) {BX.message[i]=mess[i];} return true;}};</script>
+<script>(window.BX||top.BX).message({"JS_CORE_LOADING":"Loading...","JS_CORE_WINDOW_CLOSE":"Close","JS_CORE_WINDOW_EXPAND":"Expand","JS_CORE_WINDOW_NARROW":"Restore","JS_CORE_WINDOW_SAVE":"Save","JS_CORE_WINDOW_CANCEL":"Cancel","JS_CORE_H":"h","JS_CORE_M":"m","JS_CORE_S":"s","JS_CORE_NO_DATA":"- No data -","JSADM_AI_HIDE_EXTRA":"Hide extra items","JSADM_AI_ALL_NOTIF":"All notifications","JSADM_AUTH_REQ":"Authentication is required!","JS_CORE_WINDOW_AUTH":"Log In","JS_CORE_IMAGE_FULL":"Full size","JS_CORE_WINDOW_CONTINUE":"Continue"});</script><script src="/bitrix/js/main/core/core.min.js?1763721063242882"></script><script>BX.Runtime.registerExtension({"name":"main.core","namespace":"BX","loaded":true});</script>
+<script>BX.setJSList(["\/bitrix\/js\/main\/core\/core_ajax.js","\/bitrix\/js\/main\/core\/core_promise.js","\/bitrix\/js\/main\/polyfill\/promise\/js\/promise.js","\/bitrix\/js\/main\/loadext\/loadext.js","\/bitrix\/js\/main\/loadext\/extension.js","\/bitrix\/js\/main\/polyfill\/promise\/js\/promise.js","\/bitrix\/js\/main\/polyfill\/find\/js\/find.js","\/bitrix\/js\/main\/polyfill\/includes\/js\/includes.js","\/bitrix\/js\/main\/polyfill\/matches\/js\/matches.js","\/bitrix\/js\/ui\/polyfill\/closest\/js\/closest.js","\/bitrix\/js\/main\/polyfill\/fill\/main.polyfill.fill.js","\/bitrix\/js\/main\/polyfill\/find\/js\/find.js","\/bitrix\/js\/main\/polyfill\/matches\/js\/matches.js","\/bitrix\/js\/main\/polyfill\/core\/dist\/polyfill.bundle.js","\/bitrix\/js\/main\/core\/core.js","\/bitrix\/js\/main\/polyfill\/intersectionobserver\/js\/intersectionobserver.js","\/bitrix\/js\/main\/lazyload\/dist\/lazyload.bundle.js","\/bitrix\/js\/main\/polyfill\/core\/dist\/polyfill.bundle.js","\/bitrix\/js\/main\/parambag\/dist\/parambag.bundle.js"]);
+</script>
+<script>BX.Runtime.registerExtension({"name":"ui.dexie","namespace":"BX.DexieExport","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"fc","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"pull.protobuf","namespace":"BX","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"rest.client","namespace":"window","loaded":true});</script>
+<script>(window.BX||top.BX).message({"pull_server_enabled":"Y","pull_config_timestamp":1764093278,"shared_worker_allowed":"Y","pull_guest_mode":"N","pull_guest_user_id":0,"pull_worker_mtime":1743166765});(window.BX||top.BX).message({"PULL_OLD_REVISION":"This page must be reloaded to ensure proper site functioning and to continue work."});</script>
+<script>BX.Runtime.registerExtension({"name":"pull.client","namespace":"BX","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"pull","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"intranet.design-tokens.bitrix24","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"ui.design-tokens","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"ui.fonts.opensans","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"landing.metrika","namespace":"BX.Landing","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"main.pageobject","namespace":"BX","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"main.popup","namespace":"BX.Main","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"popup","namespace":"window","loaded":true});</script>
+<script>(window.BX||top.BX).message({"CORE_CLIPBOARD_COPY_SUCCESS":"Copy done","CORE_CLIPBOARD_COPY_FAILURE":"Copy failed"});</script>
+<script>BX.Runtime.registerExtension({"name":"clipboard","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"ui.design-tokens.air","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"ui.icon-set","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"ui.icon-set.actions","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"ui.icon-set.main","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"ui.icon-set.outline","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"ui.system.skeleton","namespace":"BX.UI.System","loaded":true});</script>
+<script>(window.BX||top.BX).message({"MAIN_SIDEPANEL_CLOSE":"Close","MAIN_SIDEPANEL_COPY_LINK":"Copy link","MAIN_SIDEPANEL_MINIMIZE":"Minimize","MAIN_SIDEPANEL_NEW_WINDOW":"Open in a new window","MAIN_SIDEPANEL_PRINT":"Print","MAIN_SIDEPANEL_REMOVE_ALL":"Empty page bar"});</script>
+<script>BX.Runtime.registerExtension({"name":"main.sidepanel","namespace":"BX.SidePanel","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"sidepanel","namespace":"window","loaded":true});</script>
+<script>(window.BX||top.BX).message({"AMPM_MODE":false});(window.BX||top.BX).message({"CAL_BUTTON":"Select","CAL_TIME":"Time","CAL_TIME_SET":"Set time","DAY_OF_WEEK_0":"Sunday","DAY_OF_WEEK_1":"Monday","DAY_OF_WEEK_2":"Tuesday","DAY_OF_WEEK_3":"Wednesday","DAY_OF_WEEK_4":"Thursday","DAY_OF_WEEK_5":"Friday","DAY_OF_WEEK_6":"Saturday","DOW_0":"Sun","DOW_1":"Mon","DOW_2":"Tue","DOW_3":"Wed","DOW_4":"Thu","DOW_5":"Fri","DOW_6":"Sat","FD_DAY_AGO_0":"#VALUE# days ago","FD_DAY_AGO_1":"#VALUE# day ago","FD_DAY_AGO_10_20":"#VALUE# days ago","FD_DAY_AGO_MOD_1":"#VALUE# days ago","FD_DAY_AGO_MOD_2_4":"#VALUE# days ago","FD_DAY_AGO_MOD_OTHER":"#VALUE# days ago","FD_DAY_AT_TIME":"#DAY# at #TIME#","FD_DAY_DIFF_0":"#VALUE# days","FD_DAY_DIFF_1":"#VALUE# day","FD_DAY_DIFF_10_20":"#VALUE# days","FD_DAY_DIFF_MOD_1":"#VALUE# days","FD_DAY_DIFF_MOD_2_4":"#VALUE# days","FD_DAY_DIFF_MOD_OTHER":"#VALUE# days","FD_DAY_SHORT":"#VALUE# d","FD_HOUR_AGO_0":"#VALUE# hours ago","FD_HOUR_AGO_1":"#VALUE# hour ago","FD_HOUR_AGO_10_20":"#VALUE# hours ago","FD_HOUR_AGO_MOD_1":"#VALUE# hours ago","FD_HOUR_AGO_MOD_2_4":"#VALUE# hours ago","FD_HOUR_AGO_MOD_OTHER":"#VALUE# hours ago","FD_HOUR_DIFF_0":"#VALUE# hours","FD_HOUR_DIFF_1":"#VALUE# hour","FD_HOUR_DIFF_10_20":"#VALUE# hours","FD_HOUR_DIFF_MOD_1":"#VALUE# hours","FD_HOUR_DIFF_MOD_2_4":"#VALUE# hours","FD_HOUR_DIFF_MOD_OTHER":"#VALUE# hours","FD_HOUR_SHORT":"#VALUE# h","FD_LAST_SEEN_MORE_YEAR":"more than a year ago","FD_LAST_SEEN_NOW":"just now","FD_LAST_SEEN_TODAY":"today at #TIME#","FD_LAST_SEEN_TOMORROW":"tomorrow at #TIME#","FD_LAST_SEEN_YESTERDAY":"yesterday at #TIME#","FD_MINUTE_0":"#VALUE# minutes","FD_MINUTE_1":"#VALUE# minute","FD_MINUTE_10_20":"#VALUE# minutes","FD_MINUTE_AGO_0":"#VALUE# minutes ago","FD_MINUTE_AGO_1":"#VALUE# minute ago","FD_MINUTE_AGO_10_20":"#VALUE# minutes ago","FD_MINUTE_AGO_MOD_1":"#VALUE# minutes ago","FD_MINUTE_AGO_MOD_2_4":"#VALUE# minutes ago","FD_MINUTE_AGO_MOD_OTHER":"#VALUE# minutes ago","FD_MINUTE_DIFF_0":"#VALUE# minutes","FD_MINUTE_DIFF_1":"#VALUE# minute","FD_MINUTE_DIFF_10_20":"#VALUE# minutes","FD_MINUTE_DIFF_MOD_1":"#VALUE# minutes","FD_MINUTE_DIFF_MOD_2_4":"#VALUE# minutes","FD_MINUTE_DIFF_MOD_OTHER":"#VALUE# minutes","FD_MINUTE_MOD_1":"#VALUE# minutes","FD_MINUTE_MOD_2_4":"#VALUE# minutes","FD_MINUTE_MOD_OTHER":"#VALUE# minutes","FD_MINUTE_SHORT":"#VALUE# m","FD_MONTH_AGO_0":"#VALUE# months ago","FD_MONTH_AGO_1":"#VALUE# month ago","FD_MONTH_AGO_10_20":"#VALUE# months ago","FD_MONTH_AGO_MOD_1":"#VALUE# months ago","FD_MONTH_AGO_MOD_2_4":"#VALUE# months ago","FD_MONTH_AGO_MOD_OTHER":"#VALUE# months ago","FD_MONTH_DIFF_0":"#VALUE# months","FD_MONTH_DIFF_1":"#VALUE# month","FD_MONTH_DIFF_10_20":"#VALUE# months","FD_MONTH_DIFF_MOD_1":"#VALUE# months","FD_MONTH_DIFF_MOD_2_4":"#VALUE# months","FD_MONTH_DIFF_MOD_OTHER":"#VALUE# months","FD_MONTH_SHORT":"#VALUE# mon","FD_SECOND_AGO_0":"#VALUE# seconds ago","FD_SECOND_AGO_1":"#VALUE# second ago","FD_SECOND_AGO_10_20":"#VALUE# seconds ago","FD_SECOND_AGO_MOD_1":"#VALUE# seconds ago","FD_SECOND_AGO_MOD_2_4":"#VALUE# seconds ago","FD_SECOND_AGO_MOD_OTHER":"#VALUE# seconds ago","FD_SECOND_DIFF_0":"#VALUE# seconds","FD_SECOND_DIFF_1":"#VALUE# second","FD_SECOND_DIFF_10_20":"#VALUE# seconds","FD_SECOND_DIFF_MOD_1":"#VALUE# seconds","FD_SECOND_DIFF_MOD_2_4":"#VALUE# seconds","FD_SECOND_DIFF_MOD_OTHER":"#VALUE# seconds","FD_SECOND_SHORT":"#VALUE# s","FD_SEPARATOR":"\u0026#32;","FD_SEPARATOR_SHORT":"\u0026#32;","FD_TODAY":"today","FD_TOMORROW":"tomorrow","FD_UNIT_ORDER":"Y m d H i s","FD_YEARS_AGO_0":"#VALUE# years ago","FD_YEARS_AGO_1":"#VALUE# year ago","FD_YEARS_AGO_10_20":"#VALUE# years ago","FD_YEARS_AGO_MOD_1":"#VALUE# years ago","FD_YEARS_AGO_MOD_2_4":"#VALUE# years ago","FD_YEARS_AGO_MOD_OTHER":"#VALUE# years ago","FD_YEARS_DIFF_0":"#VALUE# years","FD_YEARS_DIFF_1":"#VALUE# year","FD_YEARS_DIFF_10_20":"#VALUE# years","FD_YEARS_DIFF_MOD_1":"#VALUE# years","FD_YEARS_DIFF_MOD_2_4":"#VALUE# years","FD_YEARS_DIFF_MOD_OTHER":"#VALUE# years","FD_YEARS_SHORT_0":"#VALUE# y","FD_YEARS_SHORT_1":"#VALUE# y","FD_YEARS_SHORT_10_20":"#VALUE# y","FD_YEARS_SHORT_MOD_1":"#VALUE# y","FD_YEARS_SHORT_MOD_2_4":"#VALUE# y","FD_YEARS_SHORT_MOD_OTHER":"#VALUE# y","FD_YESTERDAY":"yesterday","MONTH_1":"January","MONTH_1_S":"January","MONTH_2":"February","MONTH_2_S":"February","MONTH_3":"March","MONTH_3_S":"March","MONTH_4":"April","MONTH_4_S":"April","MONTH_5":"May","MONTH_5_S":"May","MONTH_6":"June","MONTH_6_S":"June","MONTH_7":"July","MONTH_7_S":"July","MONTH_8":"August","MONTH_8_S":"August","MONTH_9":"September","MONTH_9_S":"September","MONTH_10":"October","MONTH_10_S":"October","MONTH_11":"November","MONTH_11_S":"November","MONTH_12":"December","MONTH_12_S":"December","MON_1":"Jan","MON_2":"Feb","MON_3":"Mar","MON_4":"Apr","MON_5":"May","MON_6":"Jun","MON_7":"Jul","MON_8":"Aug","MON_9":"Sep","MON_10":"Oct","MON_11":"Nov","MON_12":"Dec"});</script>
+<script>BX.Runtime.registerExtension({"name":"main.date","namespace":"BX.Main","loaded":true});</script>
+<script>(window.BX||top.BX).message({"WEEK_START":1});</script>
+<script>BX.Runtime.registerExtension({"name":"date","namespace":"window","loaded":true});</script>
+<script>(window.BX||top.BX).message({"JS_CORE_LOADING":"Loading...","JS_CORE_WINDOW_CLOSE":"Close","JS_CORE_WINDOW_EXPAND":"Expand","JS_CORE_WINDOW_NARROW":"Restore","JS_CORE_WINDOW_SAVE":"Save","JS_CORE_WINDOW_CANCEL":"Cancel","JS_CORE_H":"h","JS_CORE_M":"m","JS_CORE_S":"s","JS_CORE_NO_DATA":"- No data -","JSADM_AI_HIDE_EXTRA":"Hide extra items","JSADM_AI_ALL_NOTIF":"All notifications","JSADM_AUTH_REQ":"Authentication is required!","JS_CORE_WINDOW_AUTH":"Log In","JS_CORE_IMAGE_FULL":"Full size","JS_CORE_WINDOW_CONTINUE":"Continue"});</script>
+<script>BX.Runtime.registerExtension({"name":"window","namespace":"window","loaded":true});</script>
+<script>(window.BX||top.BX).message({"JC_CORE_TREE_SELECT_CONTROL":"Select condition","JC_CORE_TREE_ADD_CONTROL":"Add condition","JC_CORE_TREE_DELETE_CONTROL":"Delete condition","JC_CORE_TREE_CONTROL_DATETIME_ICON":"Click to select date","JC_CORE_TREE_CONDITION_ERROR":"Condition error","JC_CORE_TREE_CONDITION_FATAL_ERROR":"Unrecoverable condition error. It is recommended to delete the condition."});</script>
+<script>BX.Runtime.registerExtension({"name":"core_condtree","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"ui.icon-set.api.core","namespace":"BX.UI.IconSet","loaded":true});</script>
+<script>(window.BX||top.BX).message({"UI_SWITCHER_ON":"on","UI_SWITCHER_OFF":"off"});(window.BX||top.BX).message({"UI_SWITCHER_ON":"on","UI_SWITCHER_OFF":"off"});</script>
+<script>BX.Runtime.registerExtension({"name":"ui.switcher","namespace":"BX.UI","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"ui.cnt","namespace":"BX.UI","loaded":true});</script>
+<script>(window.BX||top.BX).message({"UI_BUTTONS_SAVE_BTN_TEXT":"Save","UI_BUTTONS_CREATE_BTN_TEXT":"Create","UI_BUTTONS_ADD_BTN_TEXT":"Add","UI_BUTTONS_SEND_BTN_TEXT":"Send","UI_BUTTONS_CANCEL_BTN_TEXT":"Cancel","UI_BUTTONS_CLOSE_BTN_TEXT":"Close","UI_BUTTONS_APPLY_BTN_TEXT":"Apply"});</script>
+<script>BX.Runtime.registerExtension({"name":"ui.buttons","namespace":"BX.UI","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"ui.hint","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"landing_grid","namespace":"window","loaded":true});</script>
+<script>(window.BX||top.BX).message({"LANGUAGE_ID":"en","FORMAT_DATE":"DD.MM.YYYY","FORMAT_DATETIME":"DD.MM.YYYY HH:MI:SS","COOKIE_PREFIX":"BITRIX_SM","SERVER_TZ_OFFSET":"10800","UTF_MODE":"Y","SITE_ID":"s1","SITE_DIR":"\/","USER_ID":"","SERVER_TIME":1764544565,"USER_TZ_OFFSET":0,"USER_TZ_AUTO":"Y","bitrix_sessid":"4d04d440c2df5e4db801c446bf99d75c"});</script><script src="/bitrix/js/ui/dexie/dist/dexie.bundle.min.js?1744124719102530"></script>
+<script src="/bitrix/js/main/core/core_frame_cache.min.js?176372106310214"></script>
+<script src="/bitrix/js/pull/protobuf/protobuf.js?1592315491274055"></script>
+<script src="/bitrix/js/pull/protobuf/model.min.js?159231549114190"></script>
+<script src="/bitrix/js/rest/client/rest.client.min.js?16015491189240"></script>
+<script src="/bitrix/js/pull/client/pull.client.min.js?174471771449849"></script>
+<script src="/bitrix/js/landing/metrika/dist/metrika.bundle.min.js?17532634263685"></script>
+<script src="/bitrix/js/main/pageobject/dist/pageobject.bundle.min.js?1753699557531"></script>
+<script src="/bitrix/js/main/popup/dist/main.popup.bundle.min.js?176372106367515"></script>
+<script src="/bitrix/js/main/core/core_clipboard.min.js?17637210632246"></script>
+<script src="/bitrix/js/ui/system/skeleton/dist/skeleton.bundle.min.js?17640822101127"></script>
+<script src="/bitrix/js/main/sidepanel/dist/side-panel.bundle.min.js?176372106391665"></script>
+<script src="/bitrix/js/main/date/main.date.min.js?174161463721981"></script>
+<script src="/bitrix/js/main/core/core_date.min.js?176372106326729"></script>
+<script src="/bitrix/js/main/core/core_window.min.js?176372106376324"></script>
+<script src="/bitrix/js/catalog/core_tree.min.js?172546552845402"></script>
+<script src="/bitrix/js/ui/icon-set/api/core/dist/ui.icon-set.core.bundle.min.js?176277737642939"></script>
+<script src="/bitrix/js/ui/switcher/dist/ui.switcher.bundle.min.js?17640822108553"></script>
+<script src="/bitrix/js/ui/cnt/dist/cnt.bundle.min.js?174954703710460"></script>
+<script src="/bitrix/js/ui/buttons/dist/ui.buttons.bundle.min.js?176408221061227"></script>
+<script src="/bitrix/js/ui/hint/ui.hint.min.js?17640822105010"></script>
+<script src="/bitrix/js/main/polyfill/intersectionobserver/js/intersectionobserver.min.js?15362428577124"></script>
+<script>
+					if (Intl && Intl.DateTimeFormat)
+					{
+						const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+						document.cookie = "BITRIX_SM_TZ=" + timezone + "; path=/; expires=Tue, 01 Dec 2026 00:00:00 +0300";
+						
+					}
+				</script>
+<script>
+	(function(w,d,u){
+		var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/86400000|0);
+		var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+	})(window,document,'https://cdn.bitrix24.eu/b9975165/landing/assets/assets_webpack_8dc233849f_1761783527.js');
+</script>
+
+
+
+<script src="/bitrix/templates/landing24/assets/js/helpers/lazyload.min.js?16989351202187"></script>
+<script src="/bitrix/components/bitrix/landing.pub/templates/.default/script.min.js?17126771928487"></script>
+<script src="/bitrix/components/bitrix/landing.cookies/templates/.default/script.min.js?172494367011112"></script>
+<script>
+	BX.namespace("BX.Landing");
+	BX.Landing.getMode = () => "view";
+</script>
+
+
+<script>
+	// don't use BX.ready here
+	window.addEventListener('load', function()
+	{
+		new BX.Landing.Cookies({
+			enable: true,
+			siteId: 1,
+			onlyInformation: false,
+			availableCodes: ["ga","gtm"],
+			idButtonOpt: 'bx-landing-cookies-opt',
+			idButtonOptLink: 'bx-landing-cookies-opt-link',
+			idButtonAccept: 'bx-landing-cookies-accept',
+			idAgreementPopup: 'bx-landing-cookies-popup',
+			idAgreementSmallPopup: 'bx-landing-cookies-popup-warning',
+			idCookiesNotice: 'bx-landing-cookies-popup-notice',
+			classNameMainAgreement: 'bx-landing-cookies-main-agreement',
+			classNameAnalyticAgreements: 'bx-landing-cookies-analytic-agreements',
+			classNameTechnicalAgreements: 'bx-landing-cookies-technical-agreements',
+			classNameOtherAgreements: 'bx-landing-cookies-other-agreements',
+			classNameButtonSave: 'bx-landing-cookies-button-save',
+			classNameButtonCancel: 'bx-landing-cookies-button-cancel',
+			classNameButtonClose: 'bx-landing-cookies-button-close',
+			classNameCookiesSwitcher: 'bx-landing-cookies-switcher',
+			agreementAjaxPath: '/bitrix/services/main/ajax.php',
+			messages: {
+				acceptAll: 'Accept all',
+				acceptModified: 'Save and accept',
+				declineAll: 'Decline all',
+				declineModified: 'Cancel',
+				switcherOn: 'Enable all',
+				switcherOff: 'Disable all'
+			}
+		});
+	});
+</script>
+
+<script>
+	(function()
+	{
+		new BX.Landing.Metrika();
+	})();
+</script>
+
+<script>
+	BX.ready(function() {
+		void new BX.Landing.Pub.PageTransition();
+	});
+</script>
+
+<script>
+	(function(w,d,u){
+		var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+		var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+	})(window,document,'https://cdn.bitrix24.eu/b9975165/crm/tag/call.tracker.js');
+</script>
+<script>BX.ready(function() {BX.UI.Hint.init(BX('.bitrix-footer-terms'))})</script>
+
+</body>
+</html>

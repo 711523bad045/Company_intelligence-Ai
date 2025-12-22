@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+	<head>
+        <base href="/" />
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=9">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="google-site-verification" content="gN9xxEXGSAkjvlwge9TpoZz3yuvl-a0w_RMIgs8YPDU" />
+        		<meta name="title" content="DATCOM | Fully Managed, service focused IT for Small, Medium and Large Enterprise" />
+		<meta name="description" content="Here at Datcom, we are an energetic IT company that have a proactive approach with our expert team who excel in exceptional customer service. Get in touch with us" />        <style>*,*::before,*::after { box-sizing: border-box;}* { margin: 0; padding: 0; font: inherit;}::-moz-selection { background-color: #b3d4fc; color: #000000; text-shadow: none;}::selection { background-color: #b3d4fc; color: #000000; text-shadow: none;}html { font-size: 62.5%; scroll-behavior: smooth; height: 100%;}html, body { min-height: 100%;}ul, ol { list-style: none;}a { color: inherit; display: inline-block; text-decoration: none;}svg { display: inline-block; max-width: 100%;}img, picture, video, canvas { display: block; max-width: 100%;}button { cursor: pointer; border-radius: 0; border: none; background-color: transparent;}input, textarea, select { color: inherit; letter-spacing: inherit;}p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word;}body { line-height: 1.5; -webkit-font-smoothing: antialiased; text-rendering: optimizeSpeed; font-size: 1.6rem;}</style>
+        <style>:root { --blue: #11264b; --grey: #7e8084; --green: #b0bb00; --orange: #f3b823; --red: #e50064; --turquoise: #42bac5; --highlight-green: #b0bb00; --highlight-turquoise: #42bac5; --background-blue: #11264b; --light-blue: #00447b; --background-light-grey: #d4d4d4; --background-shadow-grey: #f5f5f5; /* #F4F5F9;*/ --background-dark-grey: #adaaaa; /* #F4F5F9;*/ --error-red: #e50064; --error-dark-red: rgb(136, 2, 35); --border-radius: 10px; --box-shadow: 4px 4px 30px -20px var(--blue); --box-margin: 0.2em 0.2em 0.2em 0.2em; --section-shadow: 1px 1px 25px -20px var(--blue); --title-bg: rgba(153, 170, 187, .8); --spring-duration: 0.125s; --spring-timing-function: ease-in-out; @supports (transition-timing-function: linear(1, 2, 3)) { --spring-duration: 0.75s; --spring-timing-function: linear( 0, 0.013 0.6%, 0.05 1.2%, 0.199 2.5%, 0.395 3.7%, 0.948 6.7%, 1.201 8.4%, 1.289 9.2%, 1.354 10%, 1.396 10.8%, 1.416 11.6%, 1.418 12.2%, 1.405 12.9%, 1.345 14.3%, 1.258 15.6%, 1.012 18.8%, 0.909 20.5%, 0.851 22%, 0.826 23.6%, 0.83 24.8%, 0.854 26.2%, 0.996 30.8%, 1.039 32.5%, 1.063 34%, 1.073 35.5%, 1.061 38.2%, 0.984 44.4%, 0.97 47.4%, 0.973 49.8%, 1.004 55.8%, 1.013 59.2%, 0.995 71%, 1.002 82.8%, 1 ); } }/**GLOBAL**/.a-highlight { color: var(--green);}.a_seo_text { border: 0; clip: rect(1px, 1px, 1px, 1px); -webkit-clip-path: inset(50%); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute !important; width: 1px; word-wrap: normal !important; word-break: normal;}a:hover { text-decoration: underline;}.button { background-color: var(--background-blue); color: #ffffff; cursor: pointer; font-family: 'din-pro-bold'; transition: var(--spring-duration) scale; transition-timing-function: var(--spring-timing-function);}.button:active { scale: 0.875; transition-timing-function: ease-in; transition-duration: 0.25s;}code { display: block; font-family: monospace; white-space: pre-wrap; overflow-wrap: anywhere;}pre { background-color: var(--background-light-grey); border-radius: 1em; unicode-bidi: isolate;}.form-input-error { border-bottom-color: var(--error-red);}.lazy-bg { background-image: none;}.bg-img { background-size: cover; background-position: center; background-image: none; background-color: #f0f0f0; /* Placeholder color */ transition: opacity 0.3s ease;}.bg-img:not(.loaded) { opacity: 0.7;}.bg-img.loaded { opacity: 1;}.bg-img.loading { position: relative;}.bg-img.loading::after { content: ''; position: absolute; top: 50%; left: 50%; width: 20px; height: 20px; margin: -10px 0 0 -10px; border: 2px solid #ddd; border-top-color: #333; border-radius: 50%; animation: spin 1s linear infinite;}@keyframes spin { to { transform: rotate(360deg); }}/**EFFECTS**//**LAYOUT**/body { display: flex; flex-direction: column; font-family: "din-pro-regular"; justify-content: space-between; width: 100%;}header { color: #ffffff; background: linear-gradient(175deg, var(--light-blue) 0%, var(--background-blue) 50%); border-bottom: solid .4rem #b0bb00; display: flex; flex-direction: column; justify-content: space-between; padding-bottom: .5em; min-height: 96px;}header > div.header-menu-row > nav { padding: 0 2rem 0 0;}header > div.header-menu-row > nav > ul { display: flex; font-family: "din-pro-light"; flex-direction: row; flex-wrap: wrap; justify-content: right; padding: 0 .2rem 0 .5rem;}header > div.header-menu-row > nav > ul > li { font-size: 0.8em; padding: .2rem 1rem .2rem 1rem;}header > div.header-menu-row > nav > ul > li > a:hover { color: var(--light-blue); text-decoration: none;}header > div.header-menu-row > nav > ul > li.chevron { background-color: var(--light-blue); clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%); min-width: 8px; padding: 0;}header > div.header-menu-row > nav > ul > li:last-child { padding-right: 0;}header > div.header-main { align-items: end; display: grid; grid-template-columns: repeat(3, 1fr); justify-content: space-between; min-height: 64px; padding: 0 2rem 0 .5rem;}header > div.header-main > div.logo { height: 100%; justify-self: left; padding: .8em 0 0 1em; margin-top: 0 auto;}header > div.header-main > div.logo > a > img { width: 160px;}.header-head-line { color: var(--green); font-family: 'hand-of-sean'; font-size: 4rem; padding: 0 0 1rem 0; text-align: center; text-shadow: 1px 2px 3px var(--highlight-turquoise);}header > div.header-main > nav { align-items: right; font-family: "din-pro-bold"; font-size: 1.0em; grid-column: 1 / -1; grid-row: 2; width: 100%;}header > div.header-main > nav > ul { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: right; padding: 0 0 0 .4rem; }header > div.header-main > nav > ul > li { padding: .2rem 2rem .2rem 0rem; }header > div.header-main > nav > ul > li:last-child { padding-right: 0; }@media (max-width: 48em) { header > div.header-menu-row > nav > ul { justify-content: center; } header > div.header-main { grid-template-columns: repeat(1, 1fr); } header > div.header-main > nav > ul { justify-content: center; } header > div.header-main > div.logo { padding: 1.3em 0 1em 0; text-align: center; width: 100%; } header > div.header-main > nav { text-align: center; width: 100%; } }@media (max-width: 950px) { .header-head-line { display: none; }}footer { background-color: var(--blue); border-top: solid .2rem var(--highlight-green); color: #ffffff; font-size: .65em; min-height: 128px; padding: 0px 0px 0px 0px;}footer > div.footer-certification-row { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; padding: 1em 0 1em 0;}footer > div.footer-certification-row > img { padding: 1em 1em 1em 1em;}footer > nav { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center}footer > nav > section { padding: 1em 1em 1em 1em; min-width: 220px;}footer > nav > section a { text-decoration: none;}footer > nav > section > h2 { border-bottom: 1px solid var(--highlight-green); color: #ffffff; font-family: 'din-pro-bold'; font-size: 1.5em; margin: 0 0 .8em; padding: 0 0 .5em;}footer > nav > section > ul { font-size: 1.3em;}footer > nav > section > ul > li { padding: 0 0 .5em 0;}.footer-subscribe {}.footer-subscribe > form { background-color: #ffffff; border: 1px solid grey; color: #000000; display: flex; flex-direction: row; font-family: "din-pro-bold"; height: 32px; padding:1px;}.footer-subscribe > form:focus-within { outline: 1px solid var(--highlight-green);}@keyframes highlight { 0% { border-color: red } 100% { border-color: none; }}.footer-subscribe-error > form:focus-within { animation: highlight 3s;}.footer-subscribe > form > input { flex-grow: 2; font-size: 1.2em; border: none;}.footer-subscribe > form > input:focus { outline: none;}.footer-subscribe > form > button { background-color: var(--background-shadow-grey); height: 28px; font-size: 1.2em; width: 40px;}.footer-subscribe > form > button:hover { background-color: var(--highlight-green); }.footer-subscribed, .footer-loading { color: var(--highlight-green); font-family: 'hand-of-sean'; font-size: 1.9em; min-height: 32px; text-align: center;}.footer-social { padding: 2em 0 2em 0;}.footer-social > ul { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;}.footer-social > ul > li { padding: 0 4px 0 0;}.footer-social-logo { background: url("/lib/img/footer/social_light_grey_32x594.png"); height: 32px; width: 32px;}.footer-social-logo:hover { background: url("/lib/img/footer/social_light_green_32x594.png");}.footer-social-logo-facebook, .footer-social-logo-facebook:hover { background-position: -41px 0px;}.footer-social-logo-instagram, .footer-social-logo-instagram:hover { background-position: 0px 0px;}.footer-social-logo-linkedin, .footer-social-logo-linkedin:hover { background-position: -202px 0px;}.footer-social-logo-youtube, .footer-social-logo-youtube:hover { background-position: -80px 0px;}.footer-social-logo-x, .footer-social-logo-x:hover { background-position: -120px 0px;}.footer-kinbrook-group { justify-content: center; padding: 1px 0 3em 0; text-align: center; width: auto;}.footer-kinbrook-group-img { display: block; margin-left: auto; margin-right: auto; max-width: none;}footer > .copyright { padding: 32px 0px 32px 0px; font-size: 1rem; text-align: center;}main { flex-grow: 1; height: auto; width: 100%;}/**ARTICLE LAYOUT**/.article-container { margin: 0 auto; max-width: 964px; padding: 0 32px 4em 32px;}.article-content { max-width: 900px;}.article-title { background-color: var(--background-light-grey); font-family: "din-pro-medium"; font-size: 2.2em; padding: 1em 32px 1em 32px;}.article-title-container { display: flex; height: 100%; justify-content: left; margin: 0 auto; max-width: 900px;}.article-title-h1 { color: var(--background-blue); bottom: -16px; font-family: 'din-pro-bold'; font-size: 1.2em; position: relative; text-align: left;}.article-introduction { color: var(--blue); font-family: "din-pro-medium"; font-size: 1.3em; padding: .5em 0 0 0;}.article-break { padding: .9em 0 .9em 0; text-align: center;}.article-break-line { border-bottom: 1px solid var(--green); margin: 0 auto; width : 128px;}.article-body > h1, h2, h3, h4, h5, h6 { color: var(--blue); font-family: "din-pro-medium"; font-size: 1.3em; padding: .5em 0 0 0; }.article-body > p { font-size: 1.1em; padding: 0 0 .9em 0;}.article-body > p:last-child { padding: 0 0 0 0;}.article-body > blockquote, .article-body-blockquote { color: var(--green); font-size: 3rem; margin: 2rem 0 2rem 0; text-align: center;}.article-sub-title { color: var(--highlight-green); font-family: 'hand-of-sean'; font-size: 1.5em; padding: 1em 0 1em 0;}.article-meta { padding: 1em 0 0 0;}.article-author { }.article-published { font-size: .9em;}/*LISTS*//*SINGLE*/.article-list-single { display: grid; gap: 32px; grid-template-columns: 600px 268px; padding-top: 32px;}.article-list-single-wout-side { display: flex; flex-direction: row; flex-wrap: wrap; gap: 8px; grid-template-columns: 1fr; padding-top: 8px;}@media (max-width: 963px) { .article-list-single { grid-template-columns: none; grid-template-rows: auto; } .article-side-bar { order: -1; }}/*DUAL*/.article-list-dual-with-side { display: grid; gap: 8px; grid-template-columns: repeat(2, 1fr) 300px; padding-top: 8px;}.article-list-dual-wout-side { display: grid; gap: 8px; grid-template-columns: repeat(2, 1fr); padding-top: 8px;}@media (max-width: 963px) { .article-list-dual-with-side { } .article-list-dual-wout-side { grid-template-columns: 1fr; } }/*TRIPLE*/.article-list-triple-with-side { display: grid; gap: 8px; grid-template-columns: repeat(3, 1fr) 300px; padding-top: 8px;}.article-list-triple-wout-side { display: grid; gap: 8px; grid-template-areas: "article side"; grid-template-columns: repeat(3, 1fr); padding-top: 8px;}@media (max-width: 963px) { .article-list-dual-with-side { } .article-list-dual-wout-side { grid-template-columns: 1fr; } }/*BOX*/.article-content-box-container { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; min-height: 5em;}.article-content-box, .article-content-box-no-img { background-color: var(--background-shadow-grey); border-radius: 15px; display: grid; grid-template-rows: 300px 150px 50px; margin-bottom: 8px; text-align: center;}.article-content-box-no-img { grid-template-rows: auto 150px 50px; }.article-content-box-img { height: 300px;}.article-content-box-no-img {}.article-content-box-h2 { background-color: var(--title-bg); color: #EEEEEE; font-size: 2em; padding: .8em; }.article-content-box-p { font-size: 1em; padding: .8em; overflow: hidden; text-align: left; text-overflow: clip; width: 100%;}.article-content-box-button { height: 100%; padding: .2em; text-align: center; width: 100%;}.article-content-box-a { background-color: var(--background-blue); border-radius: 10px; color: #ffffff; padding: .5em 2em .5em 2em; width: auto;}/**SIDEBAR*/.article-side-bar { width: auto;}.article-side-bar-section { background-color: var(--background-shadow-grey); border-radius: 15px; box-shadow: 0px 0px 10px 0px var(--background-light-grey); margin-bottom: 32px; padding: 10px 20px 10px 20px;}.article-side-bar-section-body { display: flex; flex-direction: column; flex-wrap: wrap;}.article-side-bar-section-component { margin-bottom: 1em; padding: 0 1em 0 0;}.article-side-bar-section-component-break { padding: .9em 3em .9em 3em; text-align: center;}.article-side-bar-section-component-break-line { border-bottom: 1px var(--green) solid;}.article-side-bar-h2 { border-bottom: 3px var(--green) solid; border-radius: 10px; box-shadow: 0px 1px 0px 0px var(--background-dark-grey); font-size: 1.5em; padding: 0 0 .5em 0; text-align: center;}.article-side-bar-h3 { font-size: 1.1em; padding: 1em 0 .5em 0;}.article-side-bar-article-p { font-size: 1em; padding-bottom: .8em; text-align: left;}.article-side-bar-button { width: 100%;}.article-side-bar-filter-selected { color: var(--green); font-weight: bold;}@media (max-width: 963px) { .article-side-bar { width: auto; } .article-side-bar-section-body { flex-direction: row; }}/***/.article-callout-container { display: flex; flex-wrap: wrap; margin-top: 2em;}.article-callout { background-color: var(--background-shadow-grey); border-radius: 15px; box-shadow: 4px 4px 30px -20px var(--blue); display: grid; grid-template-rows: 48px 1fr 64px; margin: .5em; min-height: 214px; padding: 1em; text-shadow: 1px 1px 1px #fff; width: 280px;}.article-callout > h1 { border-bottom: 3px var(--green) solid; border-radius: 15px; color: var(--blue); font-family: 'din-pro-bold'; font-size: 2rem; margin: 0; padding: 0 0 1em 0; text-align: center;}.article-callout > .action { padding: 2em 0 2em 0; text-align: center;}.article-callout > .action > a { background-color: var(--background-blue); border-radius: 5px; color: #ffffff; padding: .5em 3em .5em 3em; width: auto;}.article-callout > p { padding: 1em 0 0 0;}/* MODULE */section.module-background-no-color { background-color: none;}section.module-background-color-1 { background-color: var(--background-light-grey); box-shadow: var(--section-shadow);}section.module-background-color-2 { background-color: var(--background-shadow-grey);}section.module-row {}.module-row-container { margin: 0 auto; padding: .5em 1em 2.5em 1em; max-width: 1024px; }section.module-row > div.module-row-container > h1 { padding: .5em 0 .5em 0; text-align: center;}section.module-row > div.module-row-container > ul { display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center; min-height: 5em;}section.module-row > div.module-row-container > ul > li { border-right: 1px solid var(--background-light-grey); padding: 0 2em 0 2em}section.module-row > div.module-row-container > ul > li:last-child { border-right: 0;}.module-row-h1 { color: var(--background-blue); font-size: 1.5em; font-family: 'din-pro-bold'; margin: 8px 0 8px 0; padding: 0 0 .5em 0; text-align: center;}.module-row-h2 { color: var(--background-blue); font-size: 1.5em; min-height: 40px; text-align: center; padding: 0 0 0 0;}.module-row-p { font-size: 1em; padding: 0 0 .5em 0; text-align: center;}/* MODULE::ROW::articles */.module-row-articles { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; min-height: 5em;}.module-row-article { background-color: var(--background-light-grey); border-radius: var(--border-radius); box-shadow: 4px 4px 30px -20px var(--blue); display: grid; height: 400px; flex-grow: 1; grid-template-rows: 200px 150px 50px; margin: .2em; text-align: center; width: 240px;}.module-row-article-img { background-position: center;}.module-row-article-h2 { background-color: var(--title-bg); color: #ffffff;; padding: .4em .3em 0 .3em; }.module-row-article-p { box-shadow: 0px 0px 20px 0px var(--background-light-grey); color: #ffffff; font-size: 1em; padding: .8em; overflow: hidden; text-align: left; text-overflow: clip; width: 100%;}.module-row-article-button { border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; height: 100%; padding: .2em; text-align: center; width: 100%;}.module-row-article-a { background-color: var(--background-blue); border-radius: 15px; color: #ffffff; padding: .5em 2em .5em 2em; width: auto;}/* MODULE::ROW::casestudy */.module-row-case-study { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; min-height: 5em;}.module-row-case-study-article { background-color: var(--background-shadow-grey); border-radius: var(--border-radius); box-shadow: var(--box-shadow); display: grid; height: 400px; grid-template-rows: 170px 100px 80px 50px; margin: .4em; text-align: center; width: 400px;}.module-row-case-study-meta { color: #FFFFFF;}.module-row-case-study-meta-item { background-color: var(--background-dark-grey); border-radius: 5px; display: inline-block; margin: .2em; padding: .1em .5em .1em .5em; text-align: center; }/* MODULE::ROW::CALLOUTS */.module-row-callouts-container { display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center; min-height: 5em;}.module-row-callout { background-color: var(--background-shadow-grey); border-radius: 15px; margin: .2em; padding: .4em; width: 250px; }/**/.module-row-partner { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; min-height: 5em; align-items: center;}.module-row-partner-box { margin: .5em; }.module-row-partner-img { max-height: 128px; max-width: 128px; }/* MODULE::ROW::services */.module-row-location { padding: 0 0 2em 0;}.module-row-location-title { border-bottom: 1px solid var(--green); margin: 0 0 1em 0;}.module-row-location-title-h1 { color: var(--blue); font-family: 'din-pro-bold';}.module-row-location-details { display: flex;}.module-row-location-contact { width: 256px;}.module-row-location-address {}.module-row-location-address-w3 { padding: 1em 0 0 0;}.module-row-location-map { height:300px; width: 100%; overflow: hidden; resize:none;}/* MODULE::ROW::services */.module-row-services { display: flex; flex-direction: row; justify-content: center; min-height: 5em;}.module-row-service { background-color: var(--background-shadow-grey); border-radius: 15px; display: grid; height: 400px; grid-template-rows: 200px 150px 50px; margin: .2em; text-align: center; width: 300px;}.module-row-service-h2 { padding: .8em; }.module-row-service-p { font-size: .8em; padding: .8em; overflow: hidden; text-align: left; text-overflow: clip; width: 100%;}.module-row-service-button { height: 100%; padding: .2em; text-align: center; width: 100%;}.module-row-service-a { background-color: var(--background-blue); border-radius: 15px; color: #ffffff; padding: .5em 2em .5em 2em; width: auto;}/* MODULE::STATS */.module-row-stats > h1 {}.module-row-stats > ul { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; min-height: 5em;}.module-row-stats > ul > li { background-color: var(--background-shadow-grey); border-radius: 15px; margin: .2em; padding: .4em; width: 203px; }.module-row-stats > ul > li:last-child { border: none;}.module-row-stats > ul > li > h1 { color: var(--background-blue); font-size: 1.5em; min-height: 40px; text-align: center; padding: 0 0 0 0;}.module-row-stats > ul > li > p { text-align: center;}/* MODULES carousel */div.carousel { background-color: var(--background-light-grey); min-height: 340px; padding: 2em 0 2em 0; width: auto;}div.carousel > ul { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;}div.carousel > ul > li { background-color: var(--background-shadow-grey); height: 320px; margin: 0 2em 0 0; padding: 1em 0 1em 0; width: 320px;}div.carousel > ul > li:last-child { margin: 0 0 0 0;}@media (max-width: 1088px) { .article-container { flex-direction: column; }}/* MODULE::newsletter */.module-row-newsletter { /*background-color: var(--green);*/ background: repeating-conic-gradient( from 3deg at 10% 60%, rgba(176, 187, 0, 1) 10deg 60deg, rgba(102, 186, 197, .8) 90deg 95deg, rgba(176, 187, 0, 1) 320deg 360deg ); border-radius: var(--border-radius); box-shadow: 4px 4px 30px -20px var(--green); display: flex; flex-direction: column; justify-content: center; margin-top: 50px; min-height: 96px; padding: 16px; text-align: center;}.module-newsletter-h2 { font-family: 'hand-of-sean'; font-size: 1.5em; padding: 0 0 16px 0; text-align: center; text-shadow: 1px 2px 3px var(--highlight-turquoise); width: 100%;}.module-newsletter-subscribed { font-family: 'hand-of-sean'; font-size: 1.8em; text-shadow: 1px 2px 3px var(--highlight-turquoise);}.module-newsletter-email {}.module-newsletter-email-form { background: #ffffff; border: 3px solid var(--blue); border-radius: 10px; display: flex; font-size: 1em; justify-content: flex-end; padding: .3em; width: 100%;}.module-newsletter-email-input { border: 0; font-size: 1.5em; padding: 0 16px 0 16px; width: 100%;}.module-newsletter-email-input:focus { outline: none;}.module-row-newsletter-button { background-color: var(--blue); border: 2px solid var(--green); border-radius: 10px; color: var(--green); font-family: 'hand-of-sean'; font-size: 1em; min-height: 46px; padding: .5em 2em .5em 2em; text-shadow: 1px 2px 3px var(--highlight-turquoise); width: 232px;}/* MODULE::COMPONENTS *//* MODULE::COMPONENTS::in_numbers */.module-component-in-numbers-gradient-circle { width: 80px; height: 80px; border-radius: 50%; background: conic-gradient( from 0deg, #e50064 0deg, #b0bb00 60deg, #42bac5 120deg, #00447b 180deg, #f3b823 240deg, #7e8084 300deg, #e50064 360deg ); display: flex; justify-content: center; align-items: center; margin: 0px; mask: radial-gradient(circle, transparent 65%, black 66%); -webkit-mask: radial-gradient(circle, transparent 65%, black 66%); position: relative; animation: rotate 10s linear infinite;}.module-component-in-numbers-gradient-circle::before { content: ''; width: 85px; height: 75px; border-radius: 50%; background: none; position: absolute;}@keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); }}@keyframes rrotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); }}.module-component-in-numbers { min-height: 176px; width: 192px;}.module-component-in-numbers-circle-container { margin-left: 56px; position: absolute; text-align: center;}.module-component-in-numbers-the-number { color: var(--background-blue); font-size: 1.5em; margin-top: 22px; position: absolute; text-align: center; width: 192px;}.module-component-in-numbers-text { padding-top: 84px; text-align: center;}/*PAGE::home*/.proof-chevron { background-color: var(--light-blue); clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%); margin: 0 .5em 0 .5em; width: 1em;}section.home { position: relative; z-index: -2; /* background-color: var(--background-blue); */ background: url('/lib/img/home/background-1.png'); background-repeat: no-repeat; background-position: center; z-index: -1; }section.home > div.container { margin: 0 auto; position: relative; max-width: 1024px; }section.home > div > div.text { padding: 7em 1em 5em 1em;}section.home > div > div.text > div.proof > ul { background-color: rgba(255,255,255,0.6); display: flex; font-size: 0.9em; padding: 1em; width: fit-content;}section.home > div > div.text > div.proof > ul > li { display: flex;}section.home > div > div.text > div.proof > ul > li > h2 { font-family: 'din-pro-regular';}section.home > div > div.text > div.proof > ul > li > h2 > font { color: var(--light-blue);}section.home > div > div.text > div.what-why { padding: 1em 0 1em 0;}section.home > div > div.text > div.what-why > h1 { background-color: rgba(255,255,255,0.6); border-radius: 15px; font-size: 2em; font-family: 'din-pro-bold'; width: fit-content; }section.home > div > div.text > div.what-why > h1.p2 { background-color: rgba(255,255,255,0.6); border-radius: 15px; color: var(--light-blue); padding: 0 1em 0 0; width: fit-content;}section.home > div > div.text > p.benefits { background-color: rgba(255,255,255,0.6); border-radius: 15px; padding: 1em; max-width: 448px; width: fit-content;}section.home > div > div.text > div.cta1 { margin: 1em 0 0 0; padding: 0 0 2em 0;}section.home > div > div.text > div.cta1 > button { background-color: var(--light-blue); border-radius: 15px; color: #ffffff; font-family: 'din-pro-bold'; font-size: 1em; padding: .8em 3em .8em 3em; width: 256px;}section.home > div > div.text > div.cta1 > button > p { display: inline-block;}section.home > div > div.text > div.cta1 > button > div { display: inline-block; padding: 0 0 0 1em;}section.home > div > div.text > div.cta1 > button > div > .chevron { background-color: #ffffff; clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%); width: 3em;}section.home > div > div.text > div.cta2 { font-size: 0.8em;}section.home > div.image-shadow { filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5)); height: 100%; position: absolute; left: 40%; top: 0px; width: 60%; z-index: -2; }section.home > div.image-shadow> div.image { /* background-color: var(--background-blue); */ background: url('/lib/img/home/headline2.jpeg'); background-repeat: no-repeat; background-position: left; clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); height: 100%; position: absolute; left: 0px; top: 0px; width: 100%; z-index: -1; }/* HOME1 */.home-1 {}div.home-1 > ul { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;} div.home-1 > ul > li { min-height: 320px; margin: 0 2em 0 0; padding: 1em 0 1em 0; max-width: 450px;}div.home-1 > ul > li > h1 { color: var(--background-blue); font-family: 'din-pro-bold'; margin: 0 0 1em 0;}div.home-1 > ul > li > p { font-size: .9em; margin: 0 0 1em 0;}@media (max-width: 500px) { section.home > div.image { background-position: center; left: 20%; width: 80%; }}/* PAGE:contact */.contact-form-li { display: flex; flex-wrap: wrap; padding: 0 0 1em 0; width: 100%;}.contact-form-var { display: inline-block; width: 150px;}.contact-form-val { display: inline-block; flex: 1;}.contact-form-input, .contact-form-textarea { display: inline-block; border: 0; border-bottom: 1px solid var(--blue); width: 100%;}.contact-form-textarea { padding: .5em; min-height: 196px;}.contact-form-input-error { border-bottom: 1px solid var(--error-red);}.contact-form-success-li { display: none;}.contact-form-success { color: var(--green); font-family: 'hand-of-sean'; font-size: 1.9em;}.contact-form-button { padding: .6em .0 .6em 0; width: 100%;}@media (max-width: 30em) { section.home > div.image { background-position: center; left: 20%; width: 80%; }}/* PAGE::Feedback */ul.feedback-score { align-items: center; display: flex; justify-content: space-around;}ul.feedback-score > li { color: var(--grey); padding: 1em 0em 2em 0;}ul.feedback-score > li > a { /* color: var(--background-blue); */ font-size: 2em;}.feedback-score-selected { color: var(--green); font-family: 'din-pro-black'; font-size: 4rem !important;}.feedback-thank-you { color: var(--green); text-align: center;}.feedback-comment { height: 6em; padding: .5em; width: 100%;}.feedback-comment:focus { outline-color: var(--green);}</style>
+        <style>@font-face { font-display: swap; font-family: "din-pro-regular"; src: local("din-pro-regular"), url("/lib/font/din-pro-regular.woff2") format('woff2'), url("/lib/font/din-pro-regular.woff") format('woff'); unicode-range: U+000-5FF;}@font-face { font-display: swap; font-family: "din-pro-light"; src: local("din-pro-light"), url("/lib/font/din-pro-light.woff2") format('woff2'), url("/lib/font/din-pro-light.woff") format('woff'); unicode-range: U+000-5FF;}@font-face { font-display: swap; font-family: "din-pro-medium"; src: local("din-pro-medium"), url("/lib/font/din-pro-medium.woff2") format('woff2'), url("/lib/font/din-pro-medium.woff") format('woff'); unicode-range: U+000-5FF;}@font-face { font-display: swap; font-family: "din-pro-bold"; src: local("din-pro-bold"), url("/lib/font/din-pro-bold.woff2") format('woff2'), url("/lib/font/din-pro-bold.woff") format('woff'); unicode-range: U+000-5FF;}@font-face { font-display: swap; font-family: "din-pro-black"; src: local("din-pro-black"), url("/lib/font/din-pro-black.woff2") format('woff2'), url("/lib/font/din-pro-black.woff") format('woff'); unicode-range: U+000-5FF;}@font-face { font-display: swap; font-family: "hand-of-sean"; src: local("hand-of-sean"), url("/lib/font/hand-of-sean.woff2") format('woff2'), url("/lib/font/hand-of-sean.woff") format('woff'); unicode-range: U+000-5FF;}</style>
+        <link href="//datcom.co.uk" rel="dns-prefetch" />
+        <link rel="shortcut icon" type="image/ico" href="/lib/img/2025.ico" />
+        <link rel="alternate" title="Datcom's News" href="/feed.php" TYPE="application/rss+xml">
+        <title>DATCOM | Fully Managed, service focused IT for Small, Medium and Large Enterprise</title>
+        <script type="application/ld+json"></script>
+		<script>if(window.performance && performance.mark){performance.mark('test');}</script>
+        <script>
+			var aid='d558499c6fd1f3cf72acff439181e67c';
+			var pid='2360951';
+			var tid='FB3E7705764DDBA3B55F7D215058937F';
+		</script>
+        <script>
+            document.addEventListener('mouseover', function() { if (event.target.tagName === 'A') { pd(event, aid); } }, false);
+            document.addEventListener('click', function() { if (event.target.tagName === 'A') { p(event, aid); } }, false);            
+        </script>
+        <script src="https://www.googletagmanager.com/gtag/js?id=G-GNYW3H8N9W" async></script>
+        <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-GNYW3H8N9W');</script>        
+		<script src="https://eprocode.com/js.js" id="eX-datcom-2" async defer></script>
+        <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcAQ9grAAAAAFxzHHbbKcxhZ50sh5Rd_BM6W8bT"></script>
+        <!--<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', '928425744243314');fbq('track', 'PageView');</script>
+        <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=928425744243314&ev=PageView&noscript=1"/></noscript>-->
+        <script src='/lib/default.js' async></script>
+	</head> 
+	<body onload="o();">
+		<header>
+            <div class="header-menu-row">
+                <nav> 
+                    <ul>        
+                        <li><a href="/en/support" target="_blank" data-dcsc="header.support">support</a></li>
+                        <li class="chevron"></li>
+                        <li><a href="/en/contact" data-dcsc="header.enquiry">enquiry</a></li> 
+                        <li class="chevron"></li>
+                        <li><a href="/en/go/portal" target="_blank" data-dcsc="header.portal">portal</a></li>
+                        <!--<li class="chevron"></li>
+                        <li><a href="https://datcom.support/emergency" target="_blank" data-dcsc="header">emergency</a></li>-->
+                        <li class="chevron"></li>
+                        <li><a href="/en/contact/call/03330003210" data-dcsc="header.call">0333 000 3210</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header-main">
+                <div class="logo">
+                    <a href="/" data-dcsc="header.logo">
+                        <img 
+                            alt="Datcom Fully Managed IT Logo"
+                            loading="lazy"
+                            src="/lib/img/header/logo.png"
+                            title="Datcom Fully Managed IT and Security Support and Automation and Application development">
+                    </a>
+                </div>
+                <div class="header-head-line">fully managed IT</div>
+                <div></div>
+                <nav>
+                    <ul>
+                        <li><a href="/" data-dcsc="header.home">home</a></li>
+                        <li><a href="/en/projects" data-dcsc="header.projects">projects</a></li>
+                        <li><a href="/en/services" data-dcsc="header.services">services</a></li>
+                        <li><a href="/en/go/group/careers" data-dcsc="header.careers">careers</a></li>
+                        <li><a href="/en/contact" data-dcsc="header.contact">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+		</header>
+
+        <main>
+
+    <section class="module-row">
+        <div class="module-row-container">
+            <div class="home-1"> 
+                <ul>
+                    <li>
+                        <h1>About us</h1>
+                        <p>Established in 2011, we’re based in the East Midlands and are trusted by customers nationwide. We’re experts in fully managed IT services, secure internet connections, cloud services and secure business communications. We’re proud to lead the way in technology for SMEs, making sure that our clients’ systems, data, files and storage are efficient and protected.</p>
+                        <p>We offer a premium service at a cost-effective price, and you’ll find our tailored support easy to use, fully accredited and the best available. You’ll get to know us, and we’ll get to know you, so you can be sure of first-class technical service delivered by the same friendly faces.</p>
+                        <p>We’ve been providing IT services since 2011, although as a team we have been together since 1998, and we take pride in the quality of our service. Our long-standing clients, across the East Midlands, are testament to the strong relationships we build.</p> 
+                    </li>
+                    <li>
+                        <h1>Accreditations and awards</h1>
+                        <p>We offer Cloud Computing, Cyber Security, Business Broadband, Managed IT Services, Outsourced IT Support and Remote IT Support to the East Midlands, including Lincoln, Peterborough and Nottingham.</p> 
+                        <p>Our service level agreements guarantee regular contact and feedback throughout any project or ticket with a consistent group of engineers will serve you, backed by a large, wider team.</p>
+                        <p>We pride ourselves on our professionalism and top-notch customer service. We’re fully accredited and year after year, we invest in our business, training our team and gaining business accreditations to make sure that we’re always ahead of the curve. Part of this continuous improvement comes from vendors and accredited bodies that are market leaders in their specialist areas. Get in touch with us to find out how we can help you.</p>
+                    </li>              
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="module-row module-background-color-1">
+        <div class="module-row-container">
+            <div class="module-row-stats">
+                <h1 class="module-row-h1">Support in numbers</h1>
+                <ul>
+                    <li>
+                        <div class="module-component-in-numbers">
+                            <div class="module-component-in-numbers-the-number">24</div>
+                            <div class="module-component-in-numbers-circle-container">
+                                <div class="module-component-in-numbers-gradient-circle"></div>
+                            </div>
+                            <div class="module-component-in-numbers-text">years providing quality IT support and services</divp>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="module-component-in-numbers">
+                            <div class="module-component-in-numbers-the-number">240</div>
+                            <div class="module-component-in-numbers-circle-container">
+                                <div class="module-component-in-numbers-gradient-circle"></div>
+                            </div>
+                            <div class="module-component-in-numbers-text">hours ahead of SLA target resolution</divp>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="module-component-in-numbers">
+                            <div class="module-component-in-numbers-the-number">247</div>
+                            <div class="module-component-in-numbers-circle-container">
+                                <div class="module-component-in-numbers-gradient-circle"></div>
+                            </div>
+                            <div class="module-component-in-numbers-text">remote, onsite, noc, soc support</divp>
+                        </div>
+                    </li>                                        
+                    <li>
+                        <div class="module-component-in-numbers">
+                            <div class="module-component-in-numbers-the-number">37</div>
+                            <div class="module-component-in-numbers-circle-container">
+                                <div class="module-component-in-numbers-gradient-circle"></div>
+                            </div>
+                            <div class="module-component-in-numbers-text">fully managed services suitable for small, medium and large enterprises</divp>
+                        </div>
+                    </li>              
+                    <li>
+                        <div class="module-component-in-numbers">
+                            <div class="module-component-in-numbers-the-number">&#8734;</div>
+                            <div class="module-component-in-numbers-circle-container">
+                                <div class="module-component-in-numbers-gradient-circle"></div>
+                            </div>
+                            <div class="module-component-in-numbers-text">service customisations, transparency, adaptibility to your requirements</divp>
+                        </div>
+                    </li>  
+                    <li>
+                        <div class="module-component-in-numbers">
+                            <div class="module-component-in-numbers-the-number">3000+</div>
+                            <div class="module-component-in-numbers-circle-container">
+                                <div class="module-component-in-numbers-gradient-circle"></div>
+                            </div>
+                            <div class="module-component-in-numbers-text">documented processes, checklists, templates</divp>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="module-component-in-numbers">
+                            <div class="module-component-in-numbers-the-number">2000+</div>
+                            <div class="module-component-in-numbers-circle-container">
+                                <div class="module-component-in-numbers-gradient-circle"></div>
+                            </div>
+                            <div class="module-component-in-numbers-text">users supported across a wide range of organisations types and sectors</divp>
+                        </div>
+                    </li>                                                                   
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="module-row">
+        <div class="module-row-container">
+            <h1 class="module-row-h1">Projects</h1>
+            <div class="module-row-case-study">
+                           
+                <div class="module-row-case-study-article">
+                    <div class="module-row-img bg-img" data-bg-src="/data/file/3a9872cd6a1b338d9fc0dfa2758e360a.png">
+                        <h2 class="module-row-article-h2">Automation of cloud project workflow</h2>
+                    </div>
+                    <p class="module-row-case-study-article-p">Datcom introduced an automated workflow to eliminate inconsistencies and increase productivity among project teams, saving hundreds of hours per year.</p>
+                    <div class="module-row-case-study-meta">
+                                            </div>
+                    <div class="module-row-article-button">
+                     <a class="module-row-article-a"
+                        href="en/automation-of-cloud-project-workflow"
+                        title="Automation of cloud project workflow;Datcom introduced an automated workflow to eliminate inconsistencies and increase productivity among project teams, saving hundreds of hours per year."
+                        >
+                        Read more
+                        <span class="a_seo_text">Automation of cloud project workflow;Datcom introduced an automated workflow to eliminate inconsistencies and increase productivity among project teams, saving hundreds of hours per year.</span></a>
+                    </div>
+                </div> 
+                           
+                <div class="module-row-case-study-article">
+                    <div class="module-row-img bg-img" data-bg-src="/data/file/845ead94435da43224e0f24e9c2320b5.png">
+                        <h2 class="module-row-article-h2">Wireless in the workplace</h2>
+                    </div>
+                    <p class="module-row-case-study-article-p">Unreliable wireless across their large and complex site was causing our client problems. Here’s how we helped them get to the root of the issue. </p>
+                    <div class="module-row-case-study-meta">
+                                            </div>
+                    <div class="module-row-article-button">
+                     <a class="module-row-article-a"
+                        href="en/projects/wireless-in-the-workplace"
+                        title="Wireless in the workplace;Unreliable wireless across their large and complex site was causing our client problems. Here’s how we helped them get to the root of the issue. "
+                        >
+                        Read more
+                        <span class="a_seo_text">Wireless in the workplace;Unreliable wireless across their large and complex site was causing our client problems. Here’s how we helped them get to the root of the issue. </span></a>
+                    </div>
+                </div> 
+                              
+            </div>
+        </div>
+    </section>
+
+
+    <section class="module-row module-background-color-1">
+        <div class="module-row-container module-partners">
+            <h1 class="module-row-h1">Partners</h1>
+            <div class="module-row-partner">
+                       
+                <div class="module-row-partner-box">
+                    <img
+                        alt="Omnissa"
+                        class="module-row-partner-img"
+                        loading="lazy"
+                        src="/data/file/a6e3b10dfff93fe0c603263cffbb0066.png"
+                        title="Omnissa"
+                        >
+                </div> 
+                           
+                <div class="module-row-partner-box">
+                    <img
+                        alt="ThreatLocker"
+                        class="module-row-partner-img"
+                        loading="lazy"
+                        src="/data/file/1e03a339f43f2c5109ca81346dd2d986.png"
+                        title="ThreatLocker"
+                        >
+                </div> 
+                           
+                <div class="module-row-partner-box">
+                    <img
+                        alt="APC"
+                        class="module-row-partner-img"
+                        loading="lazy"
+                        src="/data/file/becc661d7ca6fca0bb0743e198064618.png"
+                        title="APC"
+                        >
+                </div> 
+                           
+                <div class="module-row-partner-box">
+                    <img
+                        alt="Apple"
+                        class="module-row-partner-img"
+                        loading="lazy"
+                        src="/data/file/a3b4a6ed540f8db9007f7721d75c0f3c.png"
+                        title="Apple"
+                        >
+                </div> 
+                           
+                <div class="module-row-partner-box">
+                    <img
+                        alt="BitDefender"
+                        class="module-row-partner-img"
+                        loading="lazy"
+                        src="/data/file/b4b0aea61af5c5cd32b074f69163f504.png"
+                        title="BitDefender"
+                        >
+                </div> 
+                           
+                <div class="module-row-partner-box">
+                    <img
+                        alt="Cisco"
+                        class="module-row-partner-img"
+                        loading="lazy"
+                        src="/data/file/2495d67139526586802b3ed98b5810d3.png"
+                        title="Cisco"
+                        >
+                </div> 
+                           
+                <div class="module-row-partner-box">
+                    <img
+                        alt="Citrix"
+                        class="module-row-partner-img"
+                        loading="lazy"
+                        src="/data/file/f0ae9a26409224b44717a1bc81e6de5a.png"
+                        title="Citrix"
+                        >
+                </div> 
+                           
+                <div class="module-row-partner-box">
+                    <img
+                        alt="Dell"
+                        class="module-row-partner-img"
+                        loading="lazy"
+                        src="/data/file/2e1049a442108888d431a4d885392eb3.png"
+                        title="Dell"
+                        >
+                </div> 
+                           
+                <div class="module-row-partner-box">
+                    <img
+                        alt="HP"
+                        class="module-row-partner-img"
+                        loading="lazy"
+                        src="/data/file/d43917cad423296ac901b36dc9cbe7f0.png"
+                        title="HP"
+                        >
+                </div> 
+                           
+                <div class="module-row-partner-box">
+                    <img
+                        alt="Meraki"
+                        class="module-row-partner-img"
+                        loading="lazy"
+                        src="/data/file/4b0941d94c63d3ae2bddcb3ef7d85807.png"
+                        title="Meraki"
+                        >
+                </div> 
+                           
+                <div class="module-row-partner-box">
+                    <img
+                        alt="Microsoft"
+                        class="module-row-partner-img"
+                        loading="lazy"
+                        src="/data/file/06335c8540d1e973cc3e8dc708166d75.png"
+                        title="Microsoft"
+                        >
+                </div> 
+                           
+                <div class="module-row-partner-box">
+                    <img
+                        alt="Mimecast"
+                        class="module-row-partner-img"
+                        loading="lazy"
+                        src="/data/file/c7df81cf9001f851206925901f98d9ea.png"
+                        title="Mimecast"
+                        >
+                </div> 
+                           
+                <div class="module-row-partner-box">
+                    <img
+                        alt="VMware"
+                        class="module-row-partner-img"
+                        loading="lazy"
+                        src="/data/file/f6cfadecb9d5c425af95c9474ad4551f.png"
+                        title="VMware"
+                        >
+                </div> 
+                           
+                <div class="module-row-partner-box">
+                    <img
+                        alt="Duo"
+                        class="module-row-partner-img"
+                        loading="lazy"
+                        src="/data/file/016226e92fcc7eaa76c31177a1b683c9.png"
+                        title="Duo"
+                        >
+                </div> 
+                           
+                <div class="module-row-partner-box">
+                    <img
+                        alt="Veeam"
+                        class="module-row-partner-img"
+                        loading="lazy"
+                        src="/data/file/89d4f8d6062d65c216203d58234dfef6.png"
+                        title="Veeam"
+                        >
+                </div> 
+                                
+            </div>
+        </div>
+    </section>
+
+    <section class="module-row">
+        <div class="module-row-container">
+            <div class="module-row-newsletter" id="newsletter_home">
+                <h2 class="module-newsletter-h2">Subscribe to our newsletter</h2>
+                <div class="module-newsletter-email">
+                    <form class="module-newsletter-email-form" id="subscribe_form" name="subscribe_form" onsubmit="javascript: newsletter_subscribe_home(event, document.getElementById('module_newsletter_email_input').value);">
+                        <input autocomplete="off" class="module-newsletter-email-input" data-bsid="4c5078ebb5ea439094505a48aadaeb34" id="module_newsletter_email_input" onkeyup="b2(event, this.value);" title="enter your email address">
+                        <button class="button module-row-newsletter-button">Subscribe Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="module-row">
+        <div class="module-row-container">
+            <h1 class="module-row-h1">Latest updates</h1>
+            <div class="module-row-articles">
+                                <style>
+                
+                </style>
+                <div class="module-row-article">
+                    <div class="module-row-article-img bg-img" data-bg-src="/data/file/f3abd853f96d26cdb85476b5291fca3d.jpg"> <!-- loading="lazy" style="background-image: url('/data/file/f3abd853f96d26cdb85476b5291fca3d.jpg');">-->
+                        <h2 class="module-row-article-h2">Microsoft now sending MFA codes via WhatsApp</h2>
+                    </div>
+                    <p class="module-row-article-p" id="e_p_76e4938796d7b1395c887b4ef62b9918">New methods to MFA your Microsoft 365 account</p>
+                    <div class="module-row-article-button" id="e_button_76e4938796d7b1395c887b4ef62b9918">
+                        <a class="module-row-article-a"
+                            href="en/news/tech/microsoft-now-sending-mfa-codes-via-whatsapp"
+                            title="Microsoft now sending MFA codes via WhatsApp;New methods to MFA your Microsoft 365 account"
+                            >Read more<span class="a_seo_text">Microsoft now sending MFA codes via WhatsApp;New methods to MFA your Microsoft 365 account</span></a>
+                    </div>
+                </div>
+                <script>
+                window.addEventListener("load", function() {
+                    hCssBackgroundRand(['e_p_76e4938796d7b1395c887b4ef62b9918','e_button_76e4938796d7b1395c887b4ef62b9918']);
+                });
+                //hCssBackgroundGradLinearRand('e76e4938796d7b1395c887b4ef62b9918_img');
+                </script>
+                                <style>
+                
+                </style>
+                <div class="module-row-article">
+                    <div class="module-row-article-img bg-img" data-bg-src="/data/file/e0e1f704a52ba4ff33b078549b174a52.png"> <!-- loading="lazy" style="background-image: url('/data/file/e0e1f704a52ba4ff33b078549b174a52.png');">-->
+                        <h2 class="module-row-article-h2">Cyber risks in the education sector</h2>
+                    </div>
+                    <p class="module-row-article-p" id="e_p_fd922509fe8bcdd48bd3175b0bfb4573">Methods education establishments can use to protect themselves against cyber crime</p>
+                    <div class="module-row-article-button" id="e_button_fd922509fe8bcdd48bd3175b0bfb4573">
+                        <a class="module-row-article-a"
+                            href="en/news/tech/cyber-risks-in-the-education-sector"
+                            title="Cyber risks in the education sector;Methods education establishments can use to protect themselves against cyber crime"
+                            >Read more<span class="a_seo_text">Cyber risks in the education sector;Methods education establishments can use to protect themselves against cyber crime</span></a>
+                    </div>
+                </div>
+                <script>
+                window.addEventListener("load", function() {
+                    hCssBackgroundRand(['e_p_fd922509fe8bcdd48bd3175b0bfb4573','e_button_fd922509fe8bcdd48bd3175b0bfb4573']);
+                });
+                //hCssBackgroundGradLinearRand('efd922509fe8bcdd48bd3175b0bfb4573_img');
+                </script>
+                                <style>
+                
+                </style>
+                <div class="module-row-article">
+                    <div class="module-row-article-img bg-img" data-bg-src="/data/file/f36e2c9102946f4c26e109a5f1a02e9d.png"> <!-- loading="lazy" style="background-image: url('/data/file/f36e2c9102946f4c26e109a5f1a02e9d.png');">-->
+                        <h2 class="module-row-article-h2">Security best practices for all users</h2>
+                    </div>
+                    <p class="module-row-article-p" id="e_p_ffb55dc17e099bbe602619b8d7bc637a">Simple practices that anyone can use to reduce the risk of a security breach</p>
+                    <div class="module-row-article-button" id="e_button_ffb55dc17e099bbe602619b8d7bc637a">
+                        <a class="module-row-article-a"
+                            href="en/news/tech/security-best-practices-for-all-users"
+                            title="Security best practices for all users;Simple practices that anyone can use to reduce the risk of a security breach"
+                            >Read more<span class="a_seo_text">Security best practices for all users;Simple practices that anyone can use to reduce the risk of a security breach</span></a>
+                    </div>
+                </div>
+                <script>
+                window.addEventListener("load", function() {
+                    hCssBackgroundRand(['e_p_ffb55dc17e099bbe602619b8d7bc637a','e_button_ffb55dc17e099bbe602619b8d7bc637a']);
+                });
+                //hCssBackgroundGradLinearRand('effb55dc17e099bbe602619b8d7bc637a_img');
+                </script>
+                                <style>
+                
+                </style>
+                <div class="module-row-article">
+                    <div class="module-row-article-img bg-img" data-bg-src="/data/file/bad777416df3f360d42284c43f8f9298.png"> <!-- loading="lazy" style="background-image: url('/data/file/bad777416df3f360d42284c43f8f9298.png');">-->
+                        <h2 class="module-row-article-h2">Priceless: Knowing your business systems are safe</h2>
+                    </div>
+                    <p class="module-row-article-p" id="e_p_02af6956c13f3a6df3799f07b68d8a6e">What could be worse than your systems being down indefinately and also being held to ransom?</p>
+                    <div class="module-row-article-button" id="e_button_02af6956c13f3a6df3799f07b68d8a6e">
+                        <a class="module-row-article-a"
+                            href="en/news/tech/priceless-knowing-your-business-systems-are-safe"
+                            title="Priceless: Knowing your business systems are safe;What could be worse than your systems being down indefinately and also being held to ransom?"
+                            >Read more<span class="a_seo_text">Priceless: Knowing your business systems are safe;What could be worse than your systems being down indefinately and also being held to ransom?</span></a>
+                    </div>
+                </div>
+                <script>
+                window.addEventListener("load", function() {
+                    hCssBackgroundRand(['e_p_02af6956c13f3a6df3799f07b68d8a6e','e_button_02af6956c13f3a6df3799f07b68d8a6e']);
+                });
+                //hCssBackgroundGradLinearRand('e02af6956c13f3a6df3799f07b68d8a6e_img');
+                </script>
+                            </div>                                    
+        </div>
+    </section>
+
+</main>
+
+		<footer>
+            <div class="footer-certification-row"> 
+                <img
+                    loading="lazy"
+                    src="/lib/img/footer/iso_9001.png"
+                    alt="Alcumus ISOQAR ISO 9001 #12248"
+                    title="Alcumus ISOQAR ISO 9001 #12248">
+                <img
+                    loading="lazy"
+                    src="/lib/img/footer/iso_20000.png"
+                    alt="Alcumus ISOQAR ISO 20000 #12248"
+                    title="Alcumus ISOQAR ISO 20000 #12248">
+                <img
+                    loading="lazy"
+                    src="/lib/img/footer/iso_27001.png"
+                    alt="Alcumus ISOQAR ISO 27001 #12248"
+                    title="Alcumus ISOQAR ISO 27001 #12248">
+                <img
+                    loading="lazy"
+                    src="/lib/img/footer/cyber_essentials_plus.png"
+                    alt="Cyber Essentials Plus certification badge"
+                    title="Datcom are Cyber Essentials Plus certificated">
+            </div>
+
+            <nav>
+                <section>
+
+					<div class="footer-kinbrook-group">
+						<img class="footer-kinbrook-group-img" src="/lib/img/footer/a-duncan-toplis-company-light.svg">
+					</div>
+
+                    <!--
+                    <div class="footer-search">
+                        <form action="/en/search/?">
+                            <label for="search">Search</label>
+                            <input id="search" type="search" name="q">
+                            <button>Go</button>
+                        </form>
+                    </div>
+                    -->
+
+                    <div class="footer-subscribe" id="footer-subscribe">
+                        <form id="subscribe_form" name="subscribe_form" onsubmit="javascript: newsletter_subscribe_footer(event, document.getElementById('email').value, 2);">
+                            <input autocomplete="off" data-bsid="642374e425f84195a0016383cc87f549" id="email" name="email" placeholder="newsletter" onkeyup="b2(event, this.value);" title="enter your email address">
+                            <button>Sub</button>
+                        </form>
+                    </div>
+
+                    <div class="footer-social">
+                        <ul>
+                            <li>
+                                <a href="/en/go/linkedin" target="_blank" data-dcsc="footer.linked">
+                                    <div class="footer-social-logo footer-social-logo-linkedin" title="LinkedIn"></div>
+                                </a>
+                            </li>                          
+                            <li>
+                                <a href="/en/go/facebook" target="_blank" data-dcsc="footer.facebook">
+                                    <div class="footer-social-logo footer-social-logo-facebook" title="Facebook"></div>
+                                </a>
+                            </li>    
+                            <li>
+                                <a href="/en/go/instagram" target="_blank" data-dcsc="footer.instagram">
+                                    <div class="footer-social-logo footer-social-logo-instagram" title="Instagram"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/en/go/youtube" target="_blank" data-dcsc="footer.youtube">
+                                    <div class="footer-social-logo footer-social-logo-youtube" title="YouTube"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/en/go/x" target="_blank" data-dcsc="footer.x">
+                                    <div class="footer-social-logo footer-social-logo-x" title="X"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2>About</h2>
+                    <ul>
+                        <li><a href="/en/contact" data-dcsc="footer.contact">Contact Us</a></li>
+                        <li><a href="/en/support" data-dcsc="footer.support">Get Support</a></li>
+                        <li><a href="/en/support/portal" data-dcsc="footer.portal">Use Our Portal</a></li>
+                        <li><a href="/en/legal" data-dcsc="footer.legal">Legal</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Information</h2>
+                    <ul>
+                        <li><a href="/en/site/accessibility" data-dcsc="footer.accessibility">Accessibility</a></li>
+                        <li><a href="/en/site/disclaimer" data-dcsc="footer.disclaimer">Disclaimer</a></li>
+                        <li><a href="/en/site/privacy" data-dcsc="footer.privacy">Privacy</a></li>
+                        <li><a href="/en/site/map" data-dcsc="footer.map">Map</a></li>
+                     </ul>
+                </section>
+                <section>
+                    <h2>Duncan & Toplis Group</h2>
+                    <ul>
+                        <li><a href="https://duncantoplis.co.uk" target="_blank" data-dcsc="footer.duntop">Audit, Accountancy, Tax</a></li>
+                        <li><a href="https://www.fidentiallp.co.uk/" target="_blank" data-dcsc="footer.fidentia">Services for Lloyd's Members</a></li>
+                        <li><a href="https://duncantoplislegal.co.uk/" target="_blank" data-dcsc="footer.duntoplegal">Legal Services</a></li>
+                        <li><a href="https://casfin.co.uk/" target="_blank" data-dcsc="footer.cfm">Wealth Management</a></li>
+                    </ul>                
+                </section>                
+            </nav>
+
+            <div class="copyright">
+                <p>© 2011 - 2025 Datcom LLP</p>
+            </div>
+		</footer>
+	</body>
+</html>

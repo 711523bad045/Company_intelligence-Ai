@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>Codemina Ltd</title>
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="title"
+      content="Codemina Ltd - Crafting Your Digital Services"
+    />
+    <meta
+      name="description"
+      content="Transform your business with custom software development services. Expert web & mobile app development, email hosting, and domain registration. Book a free consultation today!"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://codemina.com/" />
+    <meta
+      property="og:title"
+      content="Codemina Ltd - Crafting Your Digital Services"
+    />
+    <meta
+      property="og:description"
+      content="Transform your business with custom software development services. Expert web & mobile app development, email hosting, and domain registration."
+    />
+    <meta
+      property="og:image"
+      content="https://codemina.com/images/og-image.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://codemina.com/" />
+    <meta property="og:locale" content="en_GB" />
+    <meta
+      property="twitter:title"
+      content="Codemina Ltd - Crafting Your Digital Services"
+    />
+    <meta
+      property="twitter:description"
+      content="Transform your business with custom software development services. Expert web & mobile app development, email hosting, and domain registration."
+    />
+    <meta
+      property="twitter:image"
+      content="https://codemina.com/images/og-image.jpg"
+    />
+
+    <!-- Additional SEO Meta Tags -->
+    <meta
+      name="keywords"
+      content="software development, web applications, mobile apps, email hosting, domain registration, custom software solutions"
+    />
+    <meta name="author" content="Codemina Ltd" />
+    <meta name="geo.region" content="GB-LND" />
+    <meta name="geo.placename" content="London" />
+    <link rel="canonical" href="https://codemina.com/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://connect.facebook.net" />
+
+    <style>
+      /* Original CSS remains the same */
+      :root {
+        --primary: #6b4796;
+        --secondary: #45b7b8;
+        --accent: #ffb946;
+        --text: #333;
+        --light: #f8f9fa;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        color: var(--text);
+      }
+
+      header {
+        background: white;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        width: 200px;
+        height: auto; /* Added for better SEO */
+      }
+
+      .hero {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: white;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      .section {
+        padding: 4rem 2rem;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .service-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .benefits {
+        background: var(--light);
+      }
+
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      .benefit-card {
+        padding: 1.5rem;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: var(--accent);
+        color: var(--text);
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: bold;
+        margin-top: 2rem;
+        transition: transform 0.3s ease;
+      }
+
+      .cta-link {
+        color: #ffffff;
+      }
+
+      .cta-button:hover {
+        transform: scale(1.05);
+      }
+
+      .location {
+        background: var(--primary);
+        color: white;
+      }
+
+      /* Added SEO-friendly responsive design improvements */
+      @media (max-width: 768px) {
+        .services-grid,
+        .benefits-grid {
+          grid-template-columns: 1fr;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        h2 {
+          font-size: 1.75rem;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+        }
+      }
+
+      /* Added for accessibility */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+    </style>
+
+    <style>
+      .cookie-consent-banner {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(20px);
+        z-index: 9999;
+        padding: 1rem;
+        font-family: Arial, sans-serif;
+      }
+
+      .cookie-consent-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .cookie-consent-content h3 {
+        margin: 0 0 1rem;
+        color: #333;
+        font-size: 1.5rem;
+      }
+
+      .cookie-consent-content p {
+        margin: 0 0 1.5rem;
+        color: #666;
+        line-height: 1.6;
+        font-size: 0.95rem;
+      }
+
+      .cookie-consent-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+
+      .cookie-consent-button {
+        padding: 0.75rem 2rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: transform 0.2s;
+      }
+
+      .cookie-consent-button:hover {
+        transform: translateY(-1px);
+      }
+
+      .cookie-consent-button.accept {
+        background: #6b4796;
+        color: white;
+      }
+
+      .cookie-consent-button.reject {
+        background: #f1f1f1;
+        color: #333;
+      }
+
+      .cookie-consent-link {
+        color: #6b4796;
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
+
+      .cookie-consent-link:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .cookie-consent-buttons {
+          flex-direction: column;
+        }
+
+        .cookie-consent-button {
+          width: 100%;
+        }
+      }
+    </style>
+
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Codemina Ltd",
+        "url": "https://codemina.com",
+        "logo": "https://codemina.com/images/logo.png",
+        "description": "Custom software development services, web & mobile app development, email hosting, and domain registration.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "71-75 Shelton Street, Covent Garden",
+          "addressLocality": "London",
+          "postalCode": "WC2H 9JQ",
+          "addressCountry": "GB"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+44-7309-650106",
+          "contactType": "customer service",
+          "email": "support@codemina.com",
+          "areaServed": "Worldwide",
+          "availableLanguage": "English"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/codemina",
+          "https://twitter.com/codeminaltd",
+          "https://www.facebook.com/codeminaltd"
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://codemina.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Privacy Policy",
+            "item": "https://codemina.com/privacy-policy.html"
+          }
+        ]
+      }
+    </script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+
+      class CookieConsent {
+        constructor() {
+          this.cookieName = "cookie_consent";
+          this.consentDuration = 365;
+          this.initializeConsentMode();
+        }
+
+        initializeConsentMode() {
+          const consent = this.getConsentCookie();
+          if (consent) {
+            this.updateConsentState(JSON.parse(consent));
+          } else {
+            this.showConsentBanner();
+          }
+        }
+
+        updateConsentState(consented) {
+          gtag("consent", "update", {
+            ad_storage: consented ? "granted" : "denied",
+            ad_user_data: consented ? "granted" : "denied",
+            ad_personalization: consented ? "granted" : "denied",
+            analytics_storage: consented ? "granted" : "denied",
+          });
+        }
+
+        setCookie(name, value, days) {
+          const date = new Date();
+          date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+          const expires = "; expires=" + date.toUTCString();
+          document.cookie =
+            name + "=" + value + expires + "; path=/; Secure; SameSite=Lax";
+        }
+
+        getConsentCookie() {
+          const match = document.cookie.match(
+            new RegExp("(^| )" + this.cookieName + "=([^;]+)")
+          );
+          return match ? match[2] : null;
+        }
+
+        acceptAll() {
+          this.setCookie(this.cookieName, true, this.consentDuration);
+          this.updateConsentState(true);
+          this.hideConsentBanner();
+        }
+
+        rejectAll() {
+          this.setCookie(this.cookieName, false, this.consentDuration);
+          this.updateConsentState(false);
+          this.hideConsentBanner();
+        }
+
+        showConsentBanner() {
+          if (!document.body) return;
+
+          const banner = document.createElement("div");
+          banner.id = "cookieConsentBanner";
+          banner.innerHTML = `
+      <div class="cookie-consent-banner">
+        <div class="cookie-consent-content">
+          <h3>We value your privacy</h3>
+          <p>We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+          <div class="cookie-consent-buttons">
+            <button class="cookie-consent-button reject" onclick="cookieConsent.rejectAll()">Reject All</button>
+            <button class="cookie-consent-button accept" onclick="cookieConsent.acceptAll()">Accept All</button>
+          </div>
+        </div>
+      </div>
+    `;
+          document.body.appendChild(banner);
+        }
+
+        hideConsentBanner() {
+          const banner = document.getElementById("cookieConsentBanner");
+          if (banner) {
+            banner.remove();
+          }
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        window.cookieConsent = new CookieConsent();
+      });
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-951V3H4YJ0"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-951V3H4YJ0");
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "527535776772206");
+      fbq("track", "PageView");
+    </script>
+    <!-- End Meta Pixel Code -->
+  </head>
+  <body>
+    <noscript
+      ><img
+        loading="lazy"
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=527535776772206&ev=PageView&noscript=1"
+    /></noscript>
+    <header>
+      <div class="container">
+        <a href="/" aria-label="Codemina Ltd Home">
+          <img
+            src="website_logo_transparent.png"
+            alt="Codemina Ltd - Software Development Company"
+            class="logo"
+            width="200"
+            height="60"
+          />
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" role="banner">
+        <div class="container">
+          <h1>
+            Transform Your Digital Vision Into Reality with London's Top
+            Software Development Company
+          </h1>
+          <p>
+            Expert software development solutions tailored to your business
+            needs in the heart of London
+          </p>
+          <a
+            href="https://calendly.com/ebrahimalhaj/free-consultation"
+            target="_blank"
+            rel="noopener"
+            class="cta-button"
+            >Book a Free Consultation</a
+          >
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <h2>Our Software Development Services</h2>
+          <div class="services-grid">
+            <article class="service-card">
+              <h3>Web Applications</h3>
+              <p>
+                Custom web solutions built with modern technologies like React,
+                Node.js, and AWS to power your business growth
+              </p>
+            </article>
+            <article class="service-card">
+              <h3>Mobile Applications</h3>
+              <p>
+                Native and cross-platform mobile apps for iOS and Android using
+                React Native and Flutter
+              </p>
+            </article>
+            <article class="service-card">
+              <h3>Email Hosting</h3>
+              <p>
+                Professional email hosting solutions with advanced security and
+                99.9% uptime guarantee
+              </p>
+            </article>
+            <article class="service-card">
+              <h3>Domain Registration</h3>
+              <p>
+                Secure your online presence with premium domain registration
+                services and DNS management
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits section" id="benefits">
+        <div class="container">
+          <h2>Why Choose Codemina for Software Development</h2>
+          <div class="benefits-grid">
+            <article class="benefit-card">
+              <h3>Technical Expertise</h3>
+              <p>
+                Team of skilled developers with 10+ years of industry experience
+                in London's tech sector
+              </p>
+            </article>
+            <article class="benefit-card">
+              <h3>Quality Assurance</h3>
+              <p>
+                Robust solutions built with best practices, automated testing,
+                and modern technologies
+              </p>
+            </article>
+            <article class="benefit-card">
+              <h3>24/7 Support</h3>
+              <p>
+                Round-the-clock technical support and maintenance services with
+                rapid response times
+              </p>
+            </article>
+            <article class="benefit-card">
+              <h3>Enterprise Security</h3>
+              <p>
+                Enterprise-grade security with AWS infrastructure and ISO 27001
+                compliance
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="location section" id="contact">
+        <div class="container">
+          <h2>Contact Our London Office</h2>
+          <address>
+            <p>
+              71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United
+              Kingdom
+            </p>
+            <p>
+              Email:
+              <a href="mailto:support@codemina.com" class="cta-link"
+                >support@codemina.com</a
+              >
+            </p>
+            <p>
+              Whatsapp & Phone Support:
+              <a href="tel:+447309650106" class="cta-link">+44 7309 650106</a>
+            </p>
+            <p>
+              Tech Support:
+              <a href="tel:+442081232903" class="cta-link">+44 2081 232903</a>
+            </p>
+          </address>
+          <p>
+            <a href="privacy-policy.html" class="cta-link">Privacy Policy</a>
+          </p>
+          <a
+            href="https://calendly.com/ebrahimalhaj/free-consultation"
+            target="_blank"
+            rel="noopener"
+            class="cta-button"
+            >Schedule a Free Consultation</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Codemina Ltd. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
