@@ -7,7 +7,6 @@ Optimized HTML Text Extraction
 
 from bs4 import BeautifulSoup
 
-
 def extract_text_from_html(html_path: str) -> str:
     """
     Fast HTML parsing with intelligent content extraction.
