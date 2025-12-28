@@ -125,12 +125,7 @@ def extract_contact_info(html_path: str, text: str) -> Dict:
 
 
 def extract_technologies(html_path: str) -> List[str]:
-    """
-    Detect technologies from <script> tags and meta tags.
-    
-    Returns:
-        ["React", "WordPress", "Shopify", ...]
-    """
+
     
     tech_signatures = {
         "React": ["react.js", "react.min.js", "_react", "reactdom"],
@@ -149,7 +144,6 @@ def extract_technologies(html_path: str) -> List[str]:
     }
     
     detected = set()
-    
     try:
         with open(html_path, 'r', encoding='utf-8', errors='ignore') as f:
             content = f.read().lower()

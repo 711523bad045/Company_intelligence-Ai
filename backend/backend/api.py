@@ -103,7 +103,6 @@ def root():
         "companies_loaded": len(companies_cache)
     }
 
-
 @app.get("/api/companies")
 def list_companies():
     """
@@ -112,7 +111,7 @@ def list_companies():
     """
     companies = [
         {
-            "domain": c["domain"],
+            "domain":c["domain"],
             "company_name": c["company_name"],
             "logo": c.get("logo"),
             "sector": c.get("sector"),
