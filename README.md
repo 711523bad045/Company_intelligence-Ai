@@ -335,11 +335,7 @@ Valid structured profiles generated: 67
 ### Search Functionality
 <img width="1890" height="381" alt="Screenshot 2026-01-13 063827" src="https://github.com/user-attachments/assets/67272b22-8a01-4fd5-9b59-8b2fcd9714db" />
 
-### Company List
 
-============================
-Resume One-Line Description
-Built an end-to-end AI-powered company intelligence system that automatically scrapes websites, extracts structured business data using a local LLM, and visualizes it in a React dashboard.
 
 Future Improvements
 Add async and parallel processing
