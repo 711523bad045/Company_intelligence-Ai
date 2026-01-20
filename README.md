@@ -5,6 +5,8 @@
 Company Intelligence Agent is an end-to-end AI-powered data extraction and intelligence system designed to automatically collect, process, structure, and visualize company information from real-world websites.
 
 The system takes a list of company domains as input, visits each website, extracts meaningful content, processes it using a local Large Language Model (LLM), and produces structured company intelligence in JSON format. The final output is displayed in a clean, fast, and simple React-based dashboard.
+<img width="1919" height="360" alt="Screenshot 2026-01-20 184631" src="https://github.com/user-attachments/assets/d9583fea-0418-45b5-ae92-34b2a3aebc70" />
+<img width="1909" height="913" alt="Screenshot 2026-01-20 184519" src="https://github.com/user-attachments/assets/7771dec9-9593-4e43-8a6f-7cd1ede39911" />
 
 This project demonstrates real-world skills in data engineering, backend pipeline design, LLM integration, web scraping, data processing, and frontend visualization.
 
@@ -333,7 +335,8 @@ Valid structured profiles generated: 67
 
 
 ### Search Functionality
-<img width="1890" height="381" alt="Screenshot 2026-01-13 063827" src="https://github.com/user-attachments/assets/67272b22-8a01-4fd5-9b59-8b2fcd9714db" />
+<img width="1890" height="381" alt="Screenshot <img width="1893" height="812" alt="Screenshot 2026-01-20 184639" src="https://github.com/user-attachments/assets/e032a994-7825-4300-b97f-157fde0db887" />
+2026-01-13 063827" src="https://github.com/user-attachments/assets/67272b22-8a01-4fd5-9b59-8b2fcd9714db" />
 
 
 
